@@ -1,0 +1,902 @@
+body {
+    margin: 0px;
+    padding: 0px;
+    background-color: rgb(64, 86, 119);
+    font-family: 'Nunito';
+    width: 100%;
+}
+
+.contenedor-global{
+    height: 100%;
+    margin: 0 auto;
+    position: relative;
+    overflow-x: hidden;
+}
+
+.img-fluid{
+    width: 100%;
+    height: auto;
+}
+
+#svg{
+    position: relative;
+    top: 145px;
+    width: 100%;
+    height: 198px;
+}
+
+@keyframes flash {
+  from, 50%, to {
+    opacity: 0;
+  }
+
+  25%{opacity: 1; color: rgb(255, 0, 0);}
+  75% {opacity: 1; color: rgb(27, 78, 255);}
+}
+
+.flash {
+  animation: flash 3s 2;
+}
+
+
+@-webkit-keyframes parpadeo {
+  from, 50%, to { opacity: 1; }
+  25%, 75% { opacity: 0; }
+}
+
+@keyframes parpadeo {
+  from, 50%, to { opacity: 1; }
+  25%, 75% { opacity: 0; }
+}
+
+.parpadeo { animation: parpadeo 3s infinite; -webkit-animation: parpadeo 3s infinite;}
+
+/*Luces mas cortas*/
+
+@-webkit-keyframes luces {
+  from, 50%, to { box-shadow: 0px 0px 10px 12px rgba(254, 214, 50, 0) }
+  25%, 75% { box-shadow: 0px 0px 10px 12px rgba(254, 214, 50, 1) }
+}
+
+@keyframes luces {
+  from, 50%, to { box-shadow: 0px 0px 10px 12px rgba(254, 214, 50, 0) }
+  25%, 75% { box-shadow: 0px 0px 10px 12px rgba(254, 214, 50, 1) }
+}
+
+.luces { animation: luces 3s 2; -webkit-animation: luces 3s 2;}
+
+/*Luces mas largas*/
+
+@-webkit-keyframes luces-largas {
+  from, 50%, to { box-shadow: 0px 0px 10px 12px rgba(254, 214, 50, 0) }
+  25%, 75% { box-shadow: 0px 0px 10px 12px rgba(254, 214, 50, 1) }
+}
+
+@keyframes luces-largas {
+  from, 50%, to { box-shadow: 0px 0px 10px 12px rgba(254, 214, 50, 0) }
+  25%, 75% { box-shadow: 0px 0px 10px 12px rgba(254, 214, 50, 1) }
+}
+
+.luces-largas { animation: luces-largas 3s 3; -webkit-animation: luces-largas 3s 3;}
+
+
+@font-face{
+	font-family: 'Nunito';
+	font-style: normal;
+	src: url('fonts/Nunito/Nunito-Regular.ttf') format('truetype');
+}
+
+/* ***************************************
+Grid Template
+*************************************** */
+.navigation {grid-area: nav;}
+.introduction, .content, .information{background-color: rgb(54, 66, 86); height: 78vh}
+.introduction {grid-area: intr; overflow: hidden;}
+.content {grid-area: conte;}
+.collapse {grid-area: collap; display: none;}
+.information {grid-area: info; overflow: hidden;}
+.footer {grid-area: footer; background-color: #f7f6e7;}
+
+.wrapper {
+    color: #404969;
+    margin: 0 auto;
+    background-color: rgb(64, 86, 119);
+    width: 97%;
+}
+
+.wrapper {
+    display: grid;
+    grid-gap: 13px 20px;
+    grid-template-columns: 25% auto 25%;
+    grid-template-areas:
+    "nav  nav  nav"
+    "intr conte info"
+    "footer  footer  footer";
+}
+
+.box {
+    color: white;
+    border-radius: 5px;
+    padding: 9px;
+}
+
+.header, .footer {background-color: white;}
+
+/* ***************************************
+Navigation
+*************************************** */
+.logo {grid-area: logo;}
+.nav {
+    grid-area: nav-bar;
+    text-align: center;
+    font-weight: bold;
+}
+
+.container-navigation{
+    display: grid;
+    grid-template-columns: 25% 75%;
+    grid-template-areas:
+    "logo  nav-bar";
+}
+
+.nav ul{
+    text-decoration: none;
+    padding: 0px;
+    background: #f7f6e7;
+    color: red;
+    border-radius: 5px;
+    margin: 0px auto;
+    height: 54px;
+}
+
+.nav li{
+    display: inline-block;
+    width: 16%;
+    padding-top: 17px;
+    height: 37px;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.nav li:hover{
+    cursor: pointer;
+    background-color: rgba(0, 0, 0, 0.3);
+}
+
+.span-nav{
+    position: relative;
+    top: -15px;
+    left: -18px;
+    font-size: 9px;
+}
+
+/* ***************************************
+How to play
+*************************************** */
+.container-introduction{
+    width: 100%;
+    overflow: auto;
+    height: 100%;
+}
+
+.tittle-how-to-play{
+    background-color: #f7f6e7;
+    border-radius: 5px;
+    color: red;
+    text-align: center;
+    height: 40px;
+    position: sticky;
+    top: 0px;
+}
+
+.tittle-how-to-play h3{
+    margin: 0px;
+    padding: 10px 0px;
+}
+
+.container-introduction ol{padding-left: 24px;}
+.container-introduction ol p{margin: 12px 0px;}
+.container-introduction p {font-size: 18px;}
+
+.wallets ul{
+    text-decoration: none;
+    padding: 0px;
+}
+
+.wallets li{
+    display: inline-block;
+    height: 44px;
+    width: 44px;
+}
+
+.contenedor-premios{width: 80%;}
+.links{
+    color: #59c8cc;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    text-align: center;
+}
+div:focus{background-color: yellow;}
+.links:hover{cursor: pointer;}
+
+.address-game{
+    letter-spacing: -1.8px;
+    border-radius: 5px;
+    box-shadow: 0px 2px 5px rgba(255, 255, 255, 0.4);
+    padding: 5px;
+    transition: all 500ms;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    text-align: center;
+}
+
+.address-game:hover{
+    box-shadow: 0px 2px 5px rgba(255, 255, 255, 0.9);
+    font-weight: bold;
+    cursor: pointer;
+}
+
+
+.cuerpo-how-to-play button{
+    color: black;
+    font-weight: bold;
+    border: 1px solid #fed632;
+    border-radius: 10px;
+    height: 57px;
+    width: 50%;
+    background-color: #fed632;
+    transition: all 500ms;
+    font-size: 13px;
+}
+
+.btn-prizes:hover{
+    cursor: pointer;
+    box-shadow: 1px 5px 1px #8a7311b0;
+}
+
+/* ***************************************
+Game
+*************************************** */
+.tittle-game{
+    background-color: #f7f6e7;
+    border-radius: 5px;
+    color: red;
+    text-align: center;
+    height: 40px;
+}
+
+.tittle-game h3{
+    margin: 0px;
+    padding: 10px 0px;
+}
+
+.machine {grid-area: machine;}
+.address-machine{grid-area: add-mach;}
+.bet {grid-area: bet;}
+.btn-play {grid-area: btn-play;}
+
+.container-game{
+    display: grid;
+    grid-gap: 20px;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-areas:
+    "machine machine machine machine"
+    "add-mach add-mach add-mach add-mach"
+    "bet bet btn-play btn-play";
+}
+
+.machine{margin: 0px auto;}
+
+.img-machine{
+    background: url("../assets/game/machine.png");
+    background-size: 350px 350px;
+    height: 350px;
+    width: 350px;
+}
+
+#pote{
+    position: relative;
+    top: -150px;
+    left: 0px;
+    font-size: 27px;
+    font-weight: bold;
+    color: #fed632;
+    text-align: center;
+    text-shadow: 3px 3px 1px #43100d;
+}
+
+#article{
+    display:inline-block;
+    position: absolute;
+    top: 297px;
+    width: 399px;
+    height: 226px;
+    overflow: hidden;
+}
+
+#article div{
+    width: 5rem;
+    height: 5rem;
+    margin-top: auto;
+    margin-bottom: auto;
+    margin-top:5px;
+    margin-bottom: 5px;
+    float:left;
+}
+
+.slot-1{margin-left: 37px;}
+.slot-2{margin-left: 45px;}
+.slot-3{margin-left: 47px;}
+
+.bet{
+    text-align: end;
+    margin-right: 20px;
+}
+.bet input{width: 142px;}
+.contenedor-address{
+    width: 340px;
+    background: #001335;
+    border-radius: 5px;
+    height: 25px;
+    margin: 0px auto;
+    padding-top: 7px;
+    box-shadow: 1px 1px 5px 1px rgba(0, 0, 0,0.5);
+}
+
+.contenedor-address p{
+    margin: 0px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    width: 100%;
+    text-align:center;
+    font-size: .8em;
+    color: white;
+}
+
+.contenedor-profit p{
+    margin: 0px;
+    font-weight: bold;
+    color: white;
+}
+.contenedor-profit{
+    width: 142px;
+    height: 26px;
+    margin-left: 100px;
+    background-color: #001335;
+    border-radius: 5px;
+    text-align: center;
+    padding-top: 6px;
+    box-shadow: 1px 1px 5px 1px rgba(0, 0, 0,0.5);
+}
+
+.btn-play{
+    text-align: center;
+    margin-right: 18px;
+}
+
+.btn-play input{
+    width: 80px;
+    height: auto;
+}
+
+.remove{
+    color: black;
+    -webkit-animation: parpadeo 3s 3;
+            animation: parpadeo 3s 3;
+}
+/* ***************************************
+Chat o tabla
+*************************************** */
+.tittle-chat{
+    background-color: #f7f6e7;
+    border-radius: 5px;
+    color: red;
+    text-align: center;
+    height: 40px;
+    transition: all 500ms;
+    position: sticky;
+    top: 0px;
+}
+
+.tittle-chat:hover{
+    cursor: pointer;
+    transform: scale(1.02);
+}
+
+.tittle-chat h3{
+    margin: 0px;
+    padding: 10px 0px;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+.activo{
+    font-weight: bold;
+    color: black !important;
+}
+
+#datos{margin-top: 10px;}
+#chat-con{visibility: hidden;}
+
+.rojo{
+  color: rgb(255, 0, 0) !important;
+  font-weight: 800;
+}
+
+.verde{
+  color: rgb(0, 195, 6) !important;
+  font-weight: 800;
+}
+
+.contenedor_datos{
+    background-color: #001335;
+    border-radius: 5px;
+    padding: 0 3px;
+    box-shadow: 1px 1px 1px 1px rgba(255, 255, 255, 0.2);
+    margin-bottom: 10px;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+.contenedor_datos:hover{
+    cursor: pointer;
+}
+.contenedor_datos:active{background-color: rgb(159,0,167);}
+
+.contenedor_address{
+    padding-left: 5px;
+    padding-top: 5px;
+}
+.contenedor_address div {display: inline-block;}
+.contenedor_address img{margin-right: 10px;}
+.address{
+    position: relative;
+    top:-8px;
+    width: 79%;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+.blocki img{
+    height: 35px;
+    border-radius: 7px;
+}
+
+.contenedor_juego div{
+    display: inline-block;
+    margin: 0px 5px;
+    width: max-content;
+    font-size: 14px;
+}
+/* ***************************************
+Footer
+*************************************** */
+.footer{color: black;}
+
+.social-media {grid-area: social;}
+.copyright {grid-area: copyr;}
+.con-btn-news {grid-area: c-btn-news;}
+
+.container-footer{
+    display: grid;
+    grid-gap: 20px;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-areas:
+    "social copyr c-btn-news";
+}
+
+.social-img{height: 48px;}
+.social-img a{text-decoration: none;}
+.social-img img{margin-left: 15px;}
+.social-img img:hover{cursor: pointer;}
+
+.copyright{text-align: center;}
+.copyright p{
+    margin: 0px;
+    padding: 3px 0px;;
+    font-size: 12px;
+    font-weight: bold;
+}
+
+.con-btn-news{
+    margin-left: auto;
+    margin-right: 0px;
+    text-align: center;
+}
+
+.btn-news{
+    border-radius: 5px;
+    color: red;
+    height: 32px;
+    width: 300px;
+    padding-top: 16px;
+    box-shadow: 0 4px 4px rgba(0, 0, 0, 0.4);
+    transition: all 500ms;
+    font-weight: bold;
+    border: 1px solid rgba(0, 0, 0, 0.2);
+}
+.btn-news:hover{
+    cursor: pointer;
+    box-shadow: 0 4px 4px rgba(0, 0, 0, 0.7);
+}
+
+.btn-news span{font-weight: bold;}
+
+/* ***************************************
+Frecuents Questions
+*************************************** */
+.faqs, .terms, .contact{
+    display: none;
+    position: absolute;
+    top: 84px;
+    height: 83vh;
+    background-color: rgb(54, 66, 86);
+    border-radius: 5px;
+    overflow-x: auto;
+    padding-left: 15px;
+    width: 100%;
+}
+
+.container-faqs{color: white;}
+.container-faqs h4{color: #fdee34; font-size: 22px;}
+.container-faqs h2, .faqs h2{
+    text-align: center;
+    color: #fed232;
+    font-weight: bold;
+    font-size: 29px;
+}
+
+.table{
+    width: 98%;
+    border-radius: 5px;
+    box-shadow: 1px 1px 1px 1px rgba(255, 255, 255, 0.5);
+}
+
+.table img{margin-top: 8px;}
+
+.borde-vertical{border-right: 1px solid rgba(255, 255, 255, 0.2);}
+.borde-horizontal{border-top: 1px solid rgba(255, 255, 255, 0.2);}
+.container-faqs a{margin-right: 10px}
+
+.tutorial, .bitcoiner-today, .medium, .steemit{
+    text-shadow: 0 1px 0 rgba(0, 0, 0, 0.2);
+    background-color: black;
+    transition: all 500ms;
+}
+
+.tutorial, .bitcoiner-today, .medium, .steemit{
+    height: 40px;
+    border: none;
+    width: 97px;
+    color: white;
+}
+
+.tutorial{box-shadow: 2px 2px 2px 0 rgba(0, 0, 0, 0.1), 4px 4px 0 0 #f00;}
+.tutorial:hover{
+    background-color: #f00;
+    box-shadow: 2px 2px 2px 0 rgba(0, 0, 0, 0.1), 4px 4px 0 0 #171F24;
+    text-shadow: 0 1px 0 rgba(0, 0, 0, 0.2);
+}
+
+.bitcoiner-today{box-shadow: 2px 2px 2px 0 rgba(0, 0, 0, 0.1), 4px 4px 0 0 #ff9900;}
+.bitcoiner-today:hover{
+    background-color: #ff9900;
+    box-shadow: 2px 2px 2px 0 rgba(0, 0, 0, 0.1), 4px 4px 0 0 #171F24;
+    text-shadow: 0 1px 0 rgba(0, 0, 0, 0.2);
+}
+
+.medium{box-shadow: 2px 2px 2px 0 rgba(0, 0, 0, 0.1), 4px 4px 0 0 #fff;}
+.medium:hover{
+    background-color: #fff;
+    box-shadow: 2px 2px 2px 0 rgba(0, 0, 0, 0.1), 4px 4px 0 0 #171F24;
+    text-shadow: 0 1px 0 rgba(0, 0, 0, 0.2);
+}
+
+.steemit{box-shadow: 2px 2px 2px 0 rgba(0, 0, 0, 0.1), 4px 4px 0 0 #06D6A9;}
+.steemit:hover{
+    background-color: #06D6A9;
+    box-shadow: 2px 2px 2px 0 rgba(0, 0, 0, 0.1), 4px 4px 0 0 #171F24;
+    text-shadow: 0 1px 0 rgba(0, 0, 0, 0.2);
+}
+
+.tutorial:hover, .bitcoiner-today:hover, .medium:hover, .steemit:hover{cursor: pointer; color: black;}
+
+/* ***************************************
+contrato
+*************************************** */
+.contrato, .newsletter, .how-play, .prizes{
+    background-color: rgba(0,0,0,0.4);
+    height: 100%;
+    width: 100%;
+    position: fixed;
+    top: 0px;
+    display: none;
+}
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    left: 0;
+    top: 5px;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+}
+
+.modal-content {
+    position: relative;
+    background-color: #364155;
+    color: white;
+    margin: auto;
+    padding: 0;
+    border: 1px solid #888;
+    width: 70%;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
+    animation-name: animatetop;
+    animation-duration: 0.4s
+}
+
+.modal-content a{color: white;}
+.img-git{text-align: center;}
+.img-git img{margin-left: auto; margin-right: auto;}
+
+/* The Close Button */
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+/* Modal Header */
+.modal-header {
+    padding: 5px 16px;
+    background-color: #405577;
+    color: #fed232;
+}
+.modal-header h2{margin: 0px;}
+
+/* Modal Body */
+.modal-body {padding: 2px 16px;}
+
+/* Add Animation */
+@keyframes animatetop {
+    from {top: -20px; opacity: 0}
+    to {top: 0px; opacity: 1}
+}
+
+/* ***************************************
+Terminos
+*************************************** */
+.terms{
+    color: white;
+}
+
+.terms h2{
+    color: #fed232;
+    font-size: 29px;
+    text-align: center;
+}
+
+/* ***************************************
+contacto
+*************************************** */
+.contact{padding: 0px;}
+.informacion-adicional {grid-area: info-adicional;}
+.contactanos {
+    grid-area: contactanos;
+    box-shadow: 1px 1px 5px 1px rgba(255, 255, 255, .3);
+    border-radius: 5px;
+}
+
+.container-contact{
+    padding: 10px;
+    display: grid;
+    grid-gap: 13px 20px;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-areas:
+    "contactanos info-adicional";
+}
+.container-contact h2{text-align: center;}
+
+.contactanos form { max-width:420px; margin:44px auto; }
+
+.feedback-input {
+  color:white;
+  font-weight:500;
+  font-size: 18px;
+  border-radius: 5px;
+  line-height: 22px;
+  background-color: transparent;
+  border:2px solid #f55;
+  transition: all 0.3s;
+  padding: 13px;
+  margin-bottom: 15px;
+  width:100%;
+  box-sizing: border-box;
+  outline:0;
+}
+
+.feedback-input:focus { border:2px solid #f00; }
+
+.contactanos textarea {
+  height: 150px;
+  line-height: 150%;
+  resize:vertical;
+}
+
+.contactanos form input[type="submit"] {
+  width: 100%;
+  background:#bd4848;
+  border-radius:5px;
+  border:0;
+  cursor:pointer;
+  color:white;
+  font-size:24px;
+  padding-top:10px;
+  padding-bottom:10px;
+  transition: all 0.3s;
+  margin-top:-4px;
+  font-weight:700;
+}
+.contactanos form input[type="submit"]:hover { background:#c00; }
+.contactanos h2{color: #fed232}
+
+.informacion-adicional{
+    box-shadow: 1px 1px 5px 1px rgba(255, 255, 255, .3);
+    border-radius: 5px;
+    padding: 5px 10px;
+    height: auto;
+}
+.informacion-adicional h2{color: #fed232;}
+.informacion-adicional p,.informacion-adicional a{
+    font-size: 20px;
+    text-align: center;
+    color: #fff;
+}
+/* ***************************************
+NEWSLETTER
+*************************************** */
+#subscribebox {
+    background:#314d5b;
+    padding:20px;
+}
+.widget_follow_subscribe .widget-detail {padding: 36px 30px 40px 30px;}
+
+#subscribebox p {
+    color: white;
+    font-size: 15px;
+    text-align: center;
+    font-weight: 700;
+}
+
+.follow-subscribe-social {
+     margin: 0 0 15px;
+     padding: 0 0 14px;
+     border-bottom: #858585 solid 1px;
+}
+
+.follow-subscribe-social ul {
+     list-style: none;
+     margin: 0;
+     padding: 0;
+     text-align: center;
+}
+
+.follow-subscribe-social ul li {
+     display: inline;
+     margin: 0 15px 0 0;
+     border-bottom: none;
+}
+
+.follow-subscribe-social ul li:last-child {margin: 0;}
+.follow-subscribe-social ul li a {
+     font-size: 17px;
+     color: #cacaca;
+             transition: color 0.2s ease-in-out;
+          -o-transition: color 0.2s ease-in-out;
+         -ms-transition: color 0.2s ease-in-out;
+        -moz-transition: color 0.2s ease-in-out;
+     -webkit-transition: color 0.2s ease-in-out;
+}
+
+.follow-subscribe-social ul li a:hover {color: #fff;}
+#subscribebox form .subscribe {margin-top: -7px;}
+
+#subscribebox form .subscribe input {
+    display: block;
+    width: 100%;
+}
+
+.subscribe-email {
+    height: 45px;
+    border: none;
+    margin: 0 0 10px;
+    font-size: 0.928571em;
+    background-color: #ffffff;
+    text-align: center;
+    color:efefef;
+}
+
+.subscribe-email:focus {outline: 0;}
+
+/* ===== Placeholder color ===== */
+#subscribebox form .subscribe .placeholder {color: #cacaca;}
+#subscribebox form .subscribe input:-ms-input-placeholder {color: #cacaca;}
+#subscribebox form .subscribe input::-webkit-input-placeholder {color: #cacaca;}
+#subscribebox form .subscribe input:-moz-placeholder {color: #fafafa;}
+#subscribebox form .subscribe input::-moz-placeholder {color: #fafafa;}
+
+.subscribe-button {
+    height: 45px;
+    font-weight: 700;
+    font-size:16px;
+    color: #fff;
+    text-transform: uppercase;
+    border: none;
+    background-color:#ea5217;
+            transition: background-color 0.2s ease-in-out;
+         -o-transition: background-color 0.2s ease-in-out;
+        -ms-transition: background-color 0.2s ease-in-out;
+       -moz-transition: background-color 0.2s ease-in-out;
+    -webkit-transition: background-color 0.2s ease-in-out;
+}
+
+.subscribe-button:hover {background-color: #f4b458;}
+.subscribe-button:focus {outline: 0;}
+.creadit a {
+    background:#F35D5C;
+    color:white;
+    margin-top:30px;
+    padding:20px;
+    font-size:15px;
+}
+/* ***************************************
+prizes
+*************************************** */
+.contenedor-prizes{
+    width: 530px;
+    height: 335px;
+    margin: 0px auto;
+}
+
+.all-prizes{
+    width: 80%;
+    display: none;
+}
+
+#how-play-modal .contenedor-premios img{width: 25%;}
+#how-play-modal .contenedor-premios{width: 100%; text-align: center;}
+
+
+/* ***************************************
+Ul imagenes
+*************************************** */
+
+ul.git {
+list-style-image: url('../assets/contract/git.png');
+}
+ul.eth {
+list-style-image: url('../assets/contract/eth.png');
+}
