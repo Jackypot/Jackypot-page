@@ -940,6 +940,7 @@ Free bets
     width: 90%;
 }
 
+.contenedor-Bdatos .search{text-align: center;}
 
 .contenedor-Bdatos .con-table{margin-bottom: 10px;}
 
@@ -951,7 +952,8 @@ Free bets
     outline: 0;
     padding: 0px 10px;
     text-align: center;
-    width: 65%;
+    width: 90%;
+    margin: 0px auto;
 }
 
 .contenedor-Bdatos .search button{
@@ -962,6 +964,7 @@ Free bets
     box-shadow: 1px 1px 5px 1px rgba(0, 0, 0,0.5);
     color: white;
     font-weight: bold;
+    margin-top: 5px;
 }
 
 .contenedor-Bdatos .search button:focus {outline: 0;}
@@ -992,7 +995,7 @@ Free bets
     color: #fff;
 }
 .contenedor-player-bets div{ display: inline-flex; }
-.contenedor-player-bets .posicion-player{width: 4%;}
+.contenedor-player-bets .posicion-player{width: 6%;}
 .contenedor-player-bets .adr-bet{width: 69%;}
 .contenedor-player-bets .total-bet{width: 15%;}
 .contenedor-player-bets .img-player{
