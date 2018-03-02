@@ -955,7 +955,7 @@ Free bets
 }
 
 .contenedor-Bdatos .search button{
-    height: 35px; 
+    height: 35px;
     width: 69px;
     border-radius: 5px;
     border: none;
@@ -969,7 +969,7 @@ Free bets
 .contenedor-Bdatos .search #btn-private{ background-color: rgb(255, 0, 0); }
 .contenedor-Bdatos .search #btn-all{ background-color: rgb(0, 29, 255); }
 
-.title-bets{margin-top: 15px;}
+.title-bets{margin-top: 5px;}
 .title-bets div{ display: inline-flex; }
 .title-bets .title-adr{width: 77%;}
 .title-bets .title-bets{width: 20%;}
