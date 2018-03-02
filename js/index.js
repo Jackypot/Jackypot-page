@@ -13,15 +13,25 @@ width_wrapper();
 window.addEventListener("resize", function(){
     width_wrapper();
     vw = window.innerWidth;
+    vh = window.innerHeight;
     otro();
+    cambiarHeight();
 });
 otro();
+
 // **********************************************************
 // Comportamiento de ventanas
 // **********************************************************
 var vista_activa;
+var vw, vh;
 vw = window.innerWidth;
-var vw;
+vh = window.innerHeight;
+
+function cambiarHeight(){
+    let a = document.getElementById("contenedor-free-bets");
+        a.setAttribute("height", (vh-100)+"px");
+}
+cambiarHeight();
 
 
 function otro(){
@@ -166,3 +176,56 @@ var mostrar_premios_m = () => {
         mostrar = true;
     }
 }
+
+// **********************************************************
+// Funcion para free bets
+// **********************************************************
+
+function mostrarJugadores(){
+
+    var nu = 60;
+
+    for (var i = 0; i < 5; i++){
+        let padre = document.getElementById("con-table");
+
+        let contenedor_player = document.createElement("div");
+        let cont_address = document.createElement("div");
+        let img_player = document.createElement("div");
+        let cont_bets = document.createElement("div");
+        let posicion = document.createElement("div");
+        let address_p = document.createElement("p");
+        let bets_p = document.createElement("p");
+        
+        let img = new Image();
+            img.src = blockies.toDataUrl("0xFeac34425a3Ba2FAfbbEEDB367aC5F4b4bB701D2");
+        
+        /*Imprimir datos*/
+        posicion.innerHTML = "#"+(i+1);
+        address_p.innerHTML = "0xFeac34425a3Ba2FAfbbEEDB367aC5F4b4bB701D2";
+        bets_p.innerHTML = nu;
+        nu = nu - 12;
+
+        /*Agregar clases*/
+        contenedor_player.classList.add("contenedor-player-bets")
+        posicion.classList.add("posicion-player");
+        img_player.classList.add("img-player");
+        cont_address.classList.add("adr-bet");
+        address_p.classList.add("adr-res");
+        cont_bets.classList.add("total-bet");
+
+        /*Uniendo todo*/
+        img_player.appendChild(img);
+        cont_address.appendChild(address_p);
+        cont_bets.appendChild(bets_p);
+
+        contenedor_player.appendChild(posicion);
+        contenedor_player.appendChild(img_player);
+        contenedor_player.appendChild(cont_address);
+        contenedor_player.appendChild(cont_bets);
+
+        padre.appendChild(contenedor_player);
+
+    }
+}
+
+mostrarJugadores();

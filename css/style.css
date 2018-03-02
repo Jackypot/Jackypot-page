@@ -539,7 +539,7 @@ Footer
 /* ***************************************
 Frecuents Questions
 *************************************** */
-.faqs, .terms, .contact{
+.faqs, .terms, .contact, .free-bets{
     display: none;
     position: absolute;
     top: 84px;
@@ -547,7 +547,7 @@ Frecuents Questions
     background-color: rgb(54, 66, 86);
     border-radius: 5px;
     overflow-x: auto;
-    padding-left: 15px;
+    padding-left: 17px;
     width: 100%;
 }
 
@@ -899,4 +899,118 @@ list-style-image: url('../assets/contract/git.png');
 }
 ul.eth {
 list-style-image: url('../assets/contract/eth.png');
+}
+
+/* ***************************************
+Free bets
+*************************************** */
+.free-bets-promocion{grid-area: b-promocion;}
+.free-bets-datos{grid-area: b-datos;}
+.contenedor-free-bets{
+    display: grid;
+    grid-gap: 13px 20px;
+    grid-template-areas: "b-promocion b-datos";
+    grid-template-columns: repeat(2, 1fr);
+    padding: 10px;
+    width: 96%;
+}
+
+.free-bets-datos{
+    background-color: rgb(65, 70, 95);
+    border-radius: 5px;
+    box-shadow: 0px 2px 5px 0px rgba(0, 0, 0, 0.5);
+}
+.contenedor-free-bets h2{text-align: center;}
+
+.contenedor-promocion{
+    border-radius: 5px;
+    height: auto;
+    width: 100%;
+}
+
+.contenedor-Bdatos{
+    height: max-content;
+    width: 100%;
+}
+
+.contenedor-Bdatos h2{ color: #fed232; }
+
+.contenedor-Bdatos .search, .contenedor-Bdatos .con-table{
+    margin:0px auto;
+    width: 90%;
+}
+
+
+.contenedor-Bdatos .con-table{margin-bottom: 10px;}
+
+.contenedor-Bdatos .search input{
+    border-radius: 5px;
+    border: none;
+    box-shadow: 1px 1px 5px 1px rgba(0, 0, 0,0.5);
+    height: 35px;
+    outline: 0;
+    padding: 0px 10px;
+    text-align: center;
+    width: 65%;
+}
+
+.contenedor-Bdatos .search button{
+    height: 35px; 
+    width: 69px;
+    border-radius: 5px;
+    border: none;
+    box-shadow: 1px 1px 5px 1px rgba(0, 0, 0,0.5);
+    color: white;
+    font-weight: bold;
+}
+
+.contenedor-Bdatos .search button:focus {outline: 0;}
+.contenedor-Bdatos .search button:hover{cursor: pointer;}
+.contenedor-Bdatos .search #btn-private{ background-color: rgb(255, 0, 0); }
+.contenedor-Bdatos .search #btn-all{ background-color: rgb(0, 29, 255); }
+
+.title-bets{margin-top: 15px;}
+.title-bets div{ display: inline-flex; }
+.title-bets .title-adr{width: 77%;}
+.title-bets .title-bets{width: 20%;}
+.title-bets p{
+    width: 100%;
+    text-align: center;
+    color: #fdee34;
+    font-weight: bold;
+    font-size: 18px;
+}
+
+.contenedor-Bdatos .con-table{text-align: center;}
+.contenedor-player-bets{
+    width: 100%;
+    text-align: center;
+    background-color: #001335;
+    box-shadow: 1px 1px 5px 1px rgba(0, 0, 0,0.5);
+    margin-bottom: 10px;
+    border-radius: 5px;
+    color: #fff;
+}
+.contenedor-player-bets div{ display: inline-flex; }
+.contenedor-player-bets .posicion-player{width: 4%;}
+.contenedor-player-bets .adr-bet{width: 69%;}
+.contenedor-player-bets .total-bet{width: 15%;}
+.contenedor-player-bets .img-player{
+    width: 10%;
+    position: relative;
+    top: 9px;
+}
+.img-player img{
+    width: 32px;
+    height: 32px;
+    border-radius: 5px;
+    margin: 0px auto;
+}
+.total-bet p {width: 100%;}
+.adr-res{
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    width: 100%;
+    font-size: 14px;
 }
