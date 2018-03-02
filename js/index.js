@@ -13,9 +13,7 @@ width_wrapper();
 window.addEventListener("resize", function(){
     width_wrapper();
     vw = window.innerWidth;
-    vh = window.innerHeight;
     otro();
-    cambiarHeight();
 });
 otro();
 
@@ -23,16 +21,8 @@ otro();
 // Comportamiento de ventanas
 // **********************************************************
 var vista_activa;
-var vw, vh;
+var vw;
 vw = window.innerWidth;
-vh = window.innerHeight;
-
-function cambiarHeight(){
-    let a = document.getElementById("contenedor-free-bets");
-        a.setAttribute("height", (vh-100)+"px");
-}
-cambiarHeight();
-
 
 function otro(){
     if (vw > 480 && vw < 1023) {
@@ -195,10 +185,10 @@ function mostrarJugadores(){
         let posicion = document.createElement("div");
         let address_p = document.createElement("p");
         let bets_p = document.createElement("p");
-        
+
         let img = new Image();
             img.src = blockies.toDataUrl("0xFeac34425a3Ba2FAfbbEEDB367aC5F4b4bB701D2");
-        
+
         /*Imprimir datos*/
         posicion.innerHTML = "#"+(i+1);
         address_p.innerHTML = "0xFeac34425a3Ba2FAfbbEEDB367aC5F4b4bB701D2";
