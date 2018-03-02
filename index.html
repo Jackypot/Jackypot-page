@@ -493,6 +493,9 @@
                     <div class="contenedor-promocion">
                         <div class="img-promo">
                             <img src="assets/freeBets/promo.png" alt="" class="img-fluid" height="250px">
+                            <div class="">
+                                <p onclick="openModal(this.id)" id="reglas">Read promotion rules</p>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -669,7 +672,39 @@
             </div>
         </div>
     </div>
+    <!-- Reglas de la promocion en vigencia -->
+    <div class="reglas" id="reglas-window">
+        <!-- Modal content -->
+        <div class="modal" id="reglas-modal">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <span class="close" id="reglas-close">&times;</span>
+                    <h2>Rules of the promotion</h2>
+                </div>
+                <div class="modal-body">
+                    <p>1. Only those who have lost will receive their free bets</p>
+                    <p>2. The minimum bet of this promotion is .01 ETH, up to a maximum bet of 1 ETH.</p>
+                    <p>3. The url of the transaction made in the promotion thread must be published.</p>
+                    <p>4. The public address that is in the url is to which the free bets are sent.</p>
+                    <p>5. You will be awarded  free .01 ETH bets until you reach the lost amount.</p>
+                    <p>6. Each bet is awarded within 4 hours of your last free bet.</p>
+                    <p>7. No other free bet can be awarded until you play the previously one</p>
+                    <p class="strong">Example 1:</p>
+                    <p class="italic">Betting: .01 ETH = 1 free bet of .01 ETH</p>
+                    <p class="strong">Ejemplo 2:</p>
+                    <p class="italic">Betting: .05 ETH = 5 free bets .01 ETH</p>
+                    <p>In the course of 4 hours, you will be awarded 1 bet of .01 ETH</p>
+                    <p>If the first free bet is charged at 2:00 p.m., the next bet will be awarded at 6 p. M. At most, but if that bet is played until 7 p.m., the 4 hours will start running from that moment.</p>
+                    <p>* Until it reaches the amount of bets that matches the reward.</p>
+                    <p>8. To collect the free bets, you must make the transaction at 0 ETH in our contract, or click on the following link:</p>
+                    <p>9. This promotion is valid until the existence of the 2,000 available refunds is exhausted. (A refund equals a free bet of: 0.01 ETH), or until the limited date of March 31, 2018.</p>
+                    <p></p>
+                </div>
+            </div>
+        </div>
+    </div>
     <script type="text/javascript" src="js/index.js"></script>
     <script type="text/javascript" src="js/form.js"></script>
+    <script type="text/javascript" src="js/machine.js"></script>
 </body>
 </html>
