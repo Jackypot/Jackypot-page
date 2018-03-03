@@ -1053,3 +1053,15 @@ Free bets
     width: 100%;
     font-size: 14px;
 }
+
+#reglas-modal table th{
+    padding-right: 15px;
+    color: rgb(254, 210, 50);
+}
+
+#reglas-modal table{
+    text-align: center;
+    border: none;
+    border-radius: 5px;
+    box-shadow: 0px 2px 5px rgba(255, 210, 50, 0.9);
+}
