@@ -46,6 +46,7 @@ Responsive
         height: 200px;
         width: 200px;
     }
+    .contenedor-address{width: 100%;}
     .address-machine input{width: 100%; font-size: 12px;}
     .contenedor-profit{margin: 0px;}
     .btn-play{width: auto; margin: 0px;}
@@ -95,6 +96,38 @@ Responsive
     .information{display: none !important;}
     #how-play-modal .contenedor-premios img{width: 49%;}
 
+    /* ***************************************
+    Free bets
+    *************************************** */
+    .contenedor-btn-reglas{
+        text-align: center;
+        margin-top: 5px;
+    }
+
+    .img-promo-acostada{
+        width: 100%;
+        height: auto;
+        display: block;
+    }
+
+    .contenedor-Bdatos h2{
+        text-align: center;
+    }
+
+    .search input{position: initial!important; opacity: 1;}
+
+    .title-bets .title-adr{width: 65%;}
+    .title-bets .title-bets{width: 32%;}
+    .title-bets .title-bets p, .title-bets .title-adr p{margin: 0px;}
+    .title-bets .title-adr p{
+        text-align: end;
+        margin-right: 10px;
+    }
+    .title-bets .title-bets p{text-align: end;}
+    .contenedor-player-bets .posicion-player{width: 9%;}
+    .img-player img{width: 28px; height: 28px;}
+    .contenedor-player-bets .adr-bet{width: 65%;}
+    .adr-res, .total-bet p{margin:6px 3px!important;}
 }
 @media only screen and (max-width: 480px) and (orientation: portrait){
     .img-fluid{width: auto}
@@ -204,7 +237,7 @@ Responsive
 
 @media screen and (max-width: 768px) and (min-width: 481px){
     .introduction, .content, .information{height: 450px;}
-    .faqs, .terms, .contact{height: 480px;}
+    .faqs, .terms, .contact, .free-bets{height: 480px;}
     .wrapper {
         display: grid;
         grid-gap: 10px;
@@ -282,11 +315,28 @@ Responsive
 
 
     .contenedor-free-bets{
-        grid-template-columns: repeat(1, 1fr);
+        grid-template-columns: repeat(2, 1fr);
         grid-template-areas:
-        "b-promocion"
-        "b-datos";
+        "b-promocion b-promocion"
+        "b-datos b-datos";
+        width: 92%;
     }
+
+
+    /* ***************************************
+    Free bets
+    *************************************** */
+    .img-promo-pie{display: none;}
+    .img-promo-acostada{
+        display: block;
+        margin: 0px auto;
+    }
+
+    .img-promo img{
+        width: 84%;
+    }
+
+    .contenedor-btn-reglas{margin-top: 5px;}
 
 }
 @media screen and (max-width: 768px) and (min-width: 481px) and (orientation: landscape){

@@ -171,12 +171,17 @@ var mostrar_premios_m = () => {
 // Funcion para free bets
 // **********************************************************
 
+
+
 function mostrarJugadores(){
 
+    let div_correspondiente;
+    if (vw < 481) {div_correspondiente = "con-table-m";}
+    else {div_correspondiente = "con-table";}
     var nu = 60;
 
     for (var i = 0; i < 5; i++){
-        let padre = document.getElementById("con-table");
+        let padre = document.getElementById(div_correspondiente);
 
         let contenedor_player = document.createElement("div");
         let cont_address = document.createElement("div");
