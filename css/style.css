@@ -1087,7 +1087,6 @@ popovers
 
 .popover__wrapper {
     position: relative;
-    margin-top: 1.5rem;
     display: inline-block;
 }
 .popover__content {
