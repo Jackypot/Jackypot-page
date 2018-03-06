@@ -1,17 +1,5 @@
-// **********************************************************
-// Ajuste de tamaño de ventana o cambio de tamaño
-// **********************************************************
-function width_wrapper(){
-    let w = window.innerWidth;
-    let wrapper = document.getElementById("contenedor-global");
-
-    if (w <= 1200) {wrapper.style.width = '100%'}
-    if (w > 1200) {wrapper.style.width = '1200px'}
-}
-width_wrapper();
-
 window.addEventListener("resize", function(){
-    width_wrapper();
+
     vw = window.innerWidth;
     otro();
 });

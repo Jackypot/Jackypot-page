@@ -14,6 +14,7 @@
       <link rel="icon" type="image/ico" href="favicon.ico" sizes="16x16" />
 
       <!-- Styles -->
+      <link rel="stylesheet" href="css/grid.css">
       <link rel="stylesheet" href="css/style.css">
       <link rel="stylesheet" href="css/collapse.css">
       <link rel="stylesheet" href="css/responsive.css">
@@ -65,7 +66,14 @@
                             </ul>
                         </div>
                         <p>2. Send the amount of ETH you want to bet on this address:</p>
-                        <p class="address-game" id="address-game" data-clipboard-text="0xFeac34425a3Ba2FAfbbEEDB367aC5F4b4bB701D2">0 x F e a c 3 4 4 2 5 a 3 B a 2 F A f b b E E D B 3 6 7 a C 5 F 4 b 4 b B 7 0 1 D 2</p>
+                        <div class="popover__wrapper">
+                            <p class="address-game" id="address-game" data-clipboard-text="0xFeac34425a3Ba2FAfbbEEDB367aC5F4b4bB701D2">0 x F e a c 3 4 4 2 5 a 3 B a 2 F A f b b E E D B 3 6 7 a C 5 F 4 b 4 b B 7 0 1 D 2</p>
+                            <div class="push popover__content">
+                                <p>Data required for transactions: <br>
+                                    Gas required: 300,000. <br>
+                                    Gwei required: 21.</p>
+                            </div>
+                        </div>
                         <p>Wait for the result from 1 to 2 minutes, in <a href="https://etherscan.io/address/0xfeac34425a3ba2fafbbeedb367ac5f4b4bb701d2" title="Etherscan.io" target="_blank" class="links">Etherscan.io</a> or in our <a title="Bets" onclick="getfocus()" class="links">Bets</a>.</p>
                         <p>3. Our prizes are:</p>
                         <div class="contenedor-premios">
@@ -154,7 +162,14 @@
                                 </ul>
                             </div>
                             <p>2. Send the amount of ETH you want to bet on this address:</p>
-                            <p class="address-game" id="address-game" data-clipboard-text="0xFeac34425a3Ba2FAfbbEEDB367aC5F4b4bB701D2">0 x F e a c 3 4 4 2 5 a 3 B a 2 F A f b b E E D B 3 6 7 a C 5 F 4 b 4 b B 7 0 1 D 2</p>
+                            <div class="popover__wrapper">
+                                <p class="address-game" id="address-game" data-clipboard-text="0xFeac34425a3Ba2FAfbbEEDB367aC5F4b4bB701D2">0 x F e a c 3 4 4 2 5 a 3 B a 2 F A f b b E E D B 3 6 7 a C 5 F 4 b 4 b B 7 0 1 D 2</p>
+                                <div class="push popover__content">
+                                    <p>Data required for transactions: <br>
+                                        Gas required: 300,000. <br>
+                                        Gwei required: 21.</p>
+                                </div>
+                            </div>
                             <p>Wait for the result from 1 to 2 minutes, in <a href="https://etherscan.io/address/0xfeac34425a3ba2fafbbeedb367ac5f4b4bb701d2" title="Etherscan.io" target="_blank" class="links">Etherscan.io</a> or in our bets.</p>
                             <p>3. Our prizes are:</p>
                             <div class="contenedor-premios">
@@ -435,7 +450,14 @@
                 <ol>
                     <li>Go to your ETH portfolio</li>
                     <li>You will deposit to the following address:
-                        <p class="address-game" id="address-game" data-clipboard-text="0xFeac34425a3Ba2FAfbbEEDB367aC5F4b4bB701D2">0 x F e a c 3 4 4 2 5 a 3 B a 2 F A f b b E E D B 3 6 7 a C 5 F 4 b 4 b B 7 0 1 D 2</p>
+                        <div class="popover__wrapper">
+                            <p class="address-game" id="address-game" data-clipboard-text="0xFeac34425a3Ba2FAfbbEEDB367aC5F4b4bB701D2">0 x F e a c 3 4 4 2 5 a 3 B a 2 F A f b b E E D B 3 6 7 a C 5 F 4 b 4 b B 7 0 1 D 2</p>
+                            <div class="push popover__content">
+                                <p>Data required for transactions: <br>
+                                    Gas required: 300,000. <br>
+                                    Gwei required: 21.</p>
+                            </div>
+                        </div>
                     </li>
                     <li>The amount between 0.01 Ether up to 20 Ether what you want to play.</li>
                     <li>Complete your transaction and Done</li>
@@ -529,13 +551,13 @@
                                 <span></span>
                                 <p><span class="negro">1.</span> Only those who have lost will receive their free bets</p>
                                 <p><span class="negro">2.</span> The minimum bet of this promotion is .01 ETH, up to a maximum bet of 1 ETH.</p>
-                                <p><span class="negro">3.</span> The url of the transaction made in the promotion thread must be published.</p>
+                                <p><span class="negro">3.</span> The url of the transaction made, must be published in the thread of the promotion.</p>
                             </div>
                         </div>
                         <div class="slider">
                             <div class="slider-content">
                                 <p><span class="negro">4.</span> The public address that is in the url is to which the free bets are sent.</p>
-                                <p><span class="negro">5.</span> You will be awarded free .01 ETH bets until you reach the lost amount.</p>
+                                <p><span class="negro">5.</span> Free bets with a value of 0.01 will be awarded until the amount lost is reached.</p>
                                 <p><span class="negro">6.</span> Each bet is awarded within 4 hours of your last free bet.</p>
                             </div>
                         </div>
@@ -543,10 +565,11 @@
                             <div class="slider-content">
                                 <p><span class="negro">7.</span> No other free bet can be awarded until you play the previously one.</p>
                                 <p><span class="negro">8.</span> To collect the free bets, you must make the transaction at 0 ETH in our contract.</p>
-                                <p></p>
+                                <p><span class="negro">9.</span> Promotion valid until awarding 2000 free throws or until March 31, 2018.</p>
                             </div>
                         </div>
                     </div>
+                    <button type="button" name="button" class="btn-free-bet">Go post</button>
                 </div>
                 <div class="free-bets-datos" id="contenedor-free-bets">
                     <!-- Contenedor de los datos -->
@@ -637,7 +660,7 @@
                 </div>
             </div>
         </div>
-        <!-- Preguntas frecuentes -->
+        <!-- Transparencia -->
         <div class="transparencia" id="transparencia-window">
             <h2>Transparency</h2>
             <div class="container-transparencia">
@@ -707,7 +730,14 @@
                         </ul>
                     </div>
                     <p>2. Send the amount of ETH you want to bet on this address:</p>
-                    <p class="address-game" id="address-game" data-clipboard-text="0xFeac34425a3Ba2FAfbbEEDB367aC5F4b4bB701D2">0 x F e a c 3 4 4 2 5 a 3 B a 2 F A f b b E E D B 3 6 7 a C 5 F 4 b 4 b B 7 0 1 D 2</p>
+                    <div class="popover__wrapper">
+                        <p class="address-game" id="address-game" data-clipboard-text="0xFeac34425a3Ba2FAfbbEEDB367aC5F4b4bB701D2">0 x F e a c 3 4 4 2 5 a 3 B a 2 F A f b b E E D B 3 6 7 a C 5 F 4 b 4 b B 7 0 1 D 2</p>
+                        <div class="push popover__content">
+                            <p>Data required for transactions: <br>
+                                Gas required: 300,000. <br>
+                                Gwei required: 21.</p>
+                        </div>
+                    </div>
                     <p>Wait for the result from 1 to 2 minutes, in <a href="https://etherscan.io/address/0xfeac34425a3ba2fafbbeedb367ac5f4b4bb701d2" title="EtherSacn.io" target="_blank">Etherscan.io</a> or in our bets.</p>
                     <p>3. Our prizes are:</p>
                     <div class="contenedor-premios">
