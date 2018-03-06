@@ -86,6 +86,13 @@ body {
 	src: url('fonts/Nunito/Nunito-Regular.ttf') format('truetype');
 }
 
+@font-face{
+	font-family: 'Archivo Black';
+	font-style: normal;
+	src: url('fonts/Archivo_Black/ArchivoBlack-Regular.ttf') format('truetype');
+}
+
+
 /* ***************************************
 Grid Template
 *************************************** */
@@ -536,10 +543,28 @@ Footer
 
 .btn-news span{font-weight: bold;}
 
+
+/* ***************************************
+transparencia
+*************************************** */
+.transparencia h2{
+    text-align: center;
+    color: rgb(254,210,49);
+    font-size: 29px;
+}
+
+.container-transparencia{
+    margin: 0px auto;
+    color: white;
+}
+
+.container-transparencia .img-fluid{width: 530px;}
+.container-transparencia a{color: white;}
+
 /* ***************************************
 Frecuents Questions
 *************************************** */
-.faqs, .terms, .contact, .free-bets{
+.faqs, .terms, .contact, .free-bets, .transparencia{
     display: none;
     position: absolute;
     top: 84px;
@@ -618,7 +643,7 @@ Frecuents Questions
 /* ***************************************
 contrato
 *************************************** */
-.contrato, .newsletter, .how-play, .reglas{
+.contrato, .how-play, .reglas{
     background-color: rgba(0,0,0,0.4);
     height: 100%;
     width: 100%;
@@ -777,103 +802,7 @@ contacto
 }
 
 .informacion-adicional table{margin: 0px auto;}
-/* ***************************************
-NEWSLETTER
-*************************************** */
-#subscribebox {
-    background:#314d5b;
-    padding:20px;
-}
-.widget_follow_subscribe .widget-detail {padding: 36px 30px 40px 30px;}
 
-#subscribebox p {
-    color: white;
-    font-size: 15px;
-    text-align: center;
-    font-weight: 700;
-}
-
-.follow-subscribe-social {
-     margin: 0 0 15px;
-     padding: 0 0 14px;
-     border-bottom: #858585 solid 1px;
-}
-
-.follow-subscribe-social ul {
-     list-style: none;
-     margin: 0;
-     padding: 0;
-     text-align: center;
-}
-
-.follow-subscribe-social ul li {
-     display: inline;
-     margin: 0 15px 0 0;
-     border-bottom: none;
-}
-
-.follow-subscribe-social ul li:last-child {margin: 0;}
-.follow-subscribe-social ul li a {
-     font-size: 17px;
-     color: #cacaca;
-             transition: color 0.2s ease-in-out;
-          -o-transition: color 0.2s ease-in-out;
-         -ms-transition: color 0.2s ease-in-out;
-        -moz-transition: color 0.2s ease-in-out;
-     -webkit-transition: color 0.2s ease-in-out;
-}
-
-.follow-subscribe-social ul li a:hover {color: #fff;}
-#subscribebox form .subscribe {margin-top: -7px;}
-
-#subscribebox form .subscribe input {
-    display: block;
-    width: 100%;
-}
-
-.subscribe-email {
-    height: 45px;
-    border: none;
-    margin: 0 0 10px;
-    font-size: 0.928571em;
-    background-color: #ffffff;
-    text-align: center;
-    color:efefef;
-}
-
-.subscribe-email:focus {outline: 0;}
-
-/* ===== Placeholder color ===== */
-#subscribebox form .subscribe .placeholder {color: #cacaca;}
-#subscribebox form .subscribe input:-ms-input-placeholder {color: #cacaca;}
-#subscribebox form .subscribe input::-webkit-input-placeholder {color: #cacaca;}
-#subscribebox form .subscribe input:-moz-placeholder {color: #fafafa;}
-#subscribebox form .subscribe input::-moz-placeholder {color: #fafafa;}
-
-.subscribe-button {
-    height: 45px;
-    font-weight: 700;
-    font-size:16px;
-    color: #fff;
-    text-transform: uppercase;
-    border: none;
-    background-color:#ea5217;
-            transition: background-color 0.2s ease-in-out;
-         -o-transition: background-color 0.2s ease-in-out;
-        -ms-transition: background-color 0.2s ease-in-out;
-       -moz-transition: background-color 0.2s ease-in-out;
-    -webkit-transition: background-color 0.2s ease-in-out;
-}
-
-.subscribe-button:hover {background-color: #f4b458;}
-.subscribe-button:focus {outline: 0;}
-.creadit a {
-    background:#F35D5C;
-    color:white;
-    margin-top:30px;
-    padding:20px;
-    font-size:15px;
-}
 /* ***************************************
 prizes
 *************************************** */
@@ -918,18 +847,54 @@ Free bets
 }
 
 /* IMG de la promo */
-.img-promo {
-    text-align: center;
-}
-
-.img-promo img{
-    width: 98%;
-    height: auto;
+.free-bets-promocion{
+    background: url('../assets/freeBets/background.png') no-repeat;
+    background-size: 566px 600px;
     border-radius: 5px;
+    border: none;
+    overflow: hidden;
+}
+.free-bets-promocion h2{
+    text-align: center;
+    color: rgb(255,0,0);
+    text-shadow: 2px 2px 1px rgba(0,0,0,1);
+    margin: 0px;
+    font-size: 50px;
+    font-weight: bold;
+    font-family: 'Archivo Black';
 }
 
-.img-promo-acostada{display: none;}
+/* Slider */
+.contenedor-slider{
+    width: 100%;
+    position: relative;
+    white-space: nowrap;
+    left: 0px;
+}
 
+.slider{
+    width: 100%;
+    position: relative;
+    white-space: normal;
+    display: inline-block;
+    margin-right: -4px;
+}
+.negro{color: #f13b3b;}
+
+.slider-content{ padding: 15px; }
+
+.slider-content p{
+    font-size: 27px;
+    margin: 1em 0px;
+    color: yellow;
+    font-weight: bold;
+    text-shadow: 1px 1px 1px rgba(0,0,0,1);
+}
+
+
+
+
+/*  */
 #reglas{
     margin: 0px auto;
     width: 200px;
@@ -1023,7 +988,7 @@ Free bets
 .contenedor-Bdatos .con-table{text-align: center;}
 .contenedor-player-bets{
     width: 100%;
-    text-align: center;
+    text-align: center;Nunito
     background-color: #001335;
     box-shadow: 1px 1px 5px 1px rgba(0, 0, 0,0.5);
     margin-bottom: 10px;
