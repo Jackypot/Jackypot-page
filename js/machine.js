@@ -269,7 +269,7 @@ function datos_girar_maquina(ev){
 var maquina_girando = false;
 function playGiro(a, b, c, profit, classe){
     //Comprueba el estado de la maquina
-    if (maquina_girando == false) {
+    if (maquina_girando === false) {
         //Cambiamos su estado
         maquina_girando = true;
 
@@ -460,7 +460,7 @@ function playGiro(a, b, c, profit, classe){
         setTimeout(function(){
 
             //Triples
-            if( a == b && b == c){
+            if( a === b && b === c){
                 s.clear();
                 function unoX(){x.animate({opacity : 0},1000, dosX);}
                 function dosX (){x.animate({opacity : 1},1000, unoX);}
@@ -478,7 +478,7 @@ function playGiro(a, b, c, profit, classe){
                 unoZ();
             }
             // Doble derecha
-            else if(b == c && a !== b){
+            else if(b === c && a !== b){
                 s.clear();
                 x = s.image("assets/game/slot/"+a+".svg", posX, (10+translado), size, size);
 
@@ -493,7 +493,7 @@ function playGiro(a, b, c, profit, classe){
                 unoZ();
             }
             // Doble izquierda
-            else if (a == b && b !== c){
+            else if (a === b && b !== c){
                 s.clear();
                 function unoX(){x.animate({opacity : 0},1000, dosX);}
                 function dosX (){x.animate({opacity : 1},1000, unoX);}
@@ -512,12 +512,12 @@ function playGiro(a, b, c, profit, classe){
             profit_maquina = document.getElementById("bet-machine");
             clase_actual = profit_maquina.classList;
 
-            if (classe == 'rojo'){
+            if (classe === 'rojo'){
                 profit_maquina.classList.remove(clase_actual);
                 profit_maquina.classList.add(classe);
                 profit_maquina.innerHTML = profit;
             }
-        	else if (classe == 'verde'){
+        	else if (classe === 'verde'){
                 profit_maquina.classList.remove(clase_actual);
                 profit_maquina.classList.add("flash");
                 profit_maquina.innerHTML = "YOU WIN !!";
