@@ -26,7 +26,7 @@ class Slider{
 	}
 
 	start(){
-		this.interval = window.setInterval(this.move, 3000);
+		this.interval = window.setInterval(this.move, 6000);
 	}
 
 	restart(){
