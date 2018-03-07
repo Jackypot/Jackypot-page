@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <title>Landing Page</title>
+
+  <!-- CSS  -->
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link href="css/materialize.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+  <link href="css/style.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+</head>
+
+<body>
+    <div class="container">
+        <!-- Navegacion y contenedor del logo -->
+        <nav>
+            <div class="nav-wrapper">
+                <a href="#" class="brand-logo"><img src="logo.png" alt="Logo"></a>
+                <ul id="nav-mobile" class="right hide-on-med-and-down">
+                    <li><a href="#">PLAY</a></li>
+                    <li><a href="#">FAQS</a></li>
+                    <li><a href="#">FREE BETS</a></li>
+                    <li><a href="#">CONTRACT</a></li>
+                    <li><a href="#">TERM</a></li>
+                    <li><a href="#">CONTACT</a></li>
+                </ul>
+            </div>
+        </nav>
+        <!-- Header o titulo principal -->
+        <div class="section">
+            <div class="row titulo-principal">
+                <div class="s12 m12 l12 xl12">
+                    <h1 class="header center text-lighten-2">LAUNCH OFFER: 2,000 FREE BETS!</h1>
+                    <h5 class="header white-text">At jackypot.io we are giving away free bets! to all the users that have lost when playing, Jackypot.io will return the lost amount of ETH in free bets with value of 0.01 of ETH, so that you can recover and have another chance to win.
+                </div>
+            </div>
+            <!-- Intrucciones -->
+            <div class="row contenido-instrucciones">
+                <div class="s12 m12 l12 xl12 white-text">
+                    <h4>Instructions</h4>
+                    <p>The steps to claim your free bets are simple, you only have to publish in this thread only, the url with your public ETH address where you made the transaction of the lost game</p>
+                    <h5 >Rules:</h5>
+                    <ul class="white-text">
+                        <li>1. Only those who have lost will be given their free bets.</li>
+                        <li>2. The url of the transaction made in the promotion thread must be published.</li>
+                        <li>3. The minimum bet of this promotion is .01 ETH, up to a maximum bet of 1 ETH.</li>
+                    </ul>
+                </div>
+            </div>
+            <!-- Chat -->
+            <div class="contenedor-chat">
+                <div id="disqus_thread"></div>
+                <script>
+                var disqus_config = function () {
+                    this.page.url = "http://Jackypot.io";  // Replace PAGE_URL with your page's canonical URL variable
+                    this.page.identifier = "jackypot"; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+                };
+
+                (function() { // DON'T EDIT BELOW THIS LINE
+                var d = document, s = d.createElement('script');
+                s.src = 'https://jackypot.disqus.com/embed.js';
+                s.setAttribute('data-timestamp', +new Date());
+                (d.head || d.body).appendChild(s);
+            })();
+            </script>
+                <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+            </div>
+        </div>
+        <div class="footer__copyright">
+            <div class="contenedor-footer">
+                <p>Copyright &copy; jackypot.io</p>
+                <p>All rights reserved.</p>
+            </div>
+        </div>
+    </div>
+    <!--  Scripts-->
+    <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+    <script src="js/materialize.js"></script>
+    <script src="js/init.js"></script>
+</body>
+</html>
