@@ -1,5 +1,4 @@
 window.addEventListener("resize", function(){
-
     vw = window.innerWidth;
     otro();
 });
