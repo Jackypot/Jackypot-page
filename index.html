@@ -216,9 +216,43 @@
                         <input id="tab-two" type="checkbox" name="tabs">
                         <label for="tab-two">FREE BETS</label>
                         <div class="tab-content">
-                            <img src="assets/freeBets/promo-2.png" alt="" class="img-promo-acostada">
+                            <div class="contenedor-promocion">
+                                <h2>YOU LOST?</h2>
+                                <h2>YOU WIN!</h2>
+                                <!-- Slider -->
+                                <div class="contenedor-slider-m">
+                                    <div class="slider-m">
+                                        <div class="slider-content-m">
+                                            <span></span>
+                                            <p><span class="negro">1.</span> Only those who have lost will receive their free bets</p>
+                                            <p><span class="negro">2.</span> The minimum bet of this promotion is .01 ETH, up to a maximum bet of 1 ETH.</p>
+                                            <p><span class="negro">3.</span> The url of the transaction made, must be published in the thread of the promotion.</p>
+                                        </div>
+                                    </div>
+                                    <div class="slider-m">
+                                        <div class="slider-content-m">
+                                            <p><span class="negro">4.</span> The public address that is in the url is to which the free bets are sent.</p>
+                                            <p><span class="negro">5.</span> Free bets with a value of 0.01 will be awarded until the amount lost is reached.</p>
+                                            <p><span class="negro">6.</span> Each bet is awarded within 4 hours of your last free bet.</p>
+                                        </div>
+                                    </div>
+                                    <div class="slider-m">
+                                        <div class="slider-content-m">
+                                            <p><span class="negro">7.</span> No other free bet can be awarded until you play the previously one.</p>
+                                            <p><span class="negro">8.</span> To collect the free bets, you must make the transaction at 0 ETH in our contract.</p>
+                                            <p><span class="negro">9.</span> Promotion valid until awarding 2000 free throws or until March 31, 2018.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- Controles slider -->
+                                <div class="contenedor-controles-m">
+                                    <div class="controls-m">
+                                        <ul></ul>
+                                    </div>
+                                </div>
+                            </div>
                             <div class="contenedor-btn-reglas">
-                                <p onclick="openModal(this.id)" id="reglas">Read promotion rules</p>
+                                <p id="reglas">GO POST</p>
                             </div>
                                 <!-- Contenedor de los datos -->
                             <div class="contenedor-Bdatos">
@@ -403,10 +437,40 @@
                             </ul>
                         </div>
                     </div>
-                    <!-- Contactanos -->
+                    <!-- Tranparencia -->
                     <div class="tab">
                         <input id="tab-seven" type="checkbox" name="tabs">
-                        <label for="tab-seven">CONTACT US</label>
+                        <label for="tab-seven">TRANSPARENCY</label>
+                        <div class="tab-content">
+                            <h2>Transparency</h2>
+                            <div class="contenedor-transparencia">
+                                <p>Below is explained in detail, the process that is carried out in Jackypot.io</p>
+                                <img src="assets/footer/diagrama.png" alt="Image" class="img-fluid">
+                                <p>Users Contract Oraclize Smart Jackypot</p>
+                                <ol>
+                                    <li>Users deposit the bet amount of Ethereum from their portfolio.</li>
+                                    <li>Jackypot has Blockchain technology using an intelligent contract that runs transparently and securely.</li>
+                                    <li>Our Oraclize provider who specializes in transparency connects with Random.org who are responsible for generating the random numbers.</li>
+                                    <li>Ramdom.org sends the random numbers that were generated to Oraclize.</li>
+                                    <li>Oraclize sends the data to the intelligent contract.</li>
+                                    <li>The contract interprets the results, calculates the prizes and directs them to the winners.</li>
+                                    <li>The results are reflected in jackypot.</li>
+                                </ol>
+                                <p>Our game is based on the Blockchain, so each shipment is unique and encrypted. (Encrypted SHA3 method), which is equivalent to a set of infinite combinations between numbers, letters and signs, which makes it a secure method for your information since it prevents hacking of any kind and that is why Jackypot gives you the security of that will not be deciphered.</p>
+                                <p>Our policy is one of total transparency, since we have the high technology of the Blockchain that is connected to thousands of computers multiplying security, therefore no one else can alter or hack, this is confirmed by Ethereum.org; so the transaction and delivery of your prize are guaranteed in "Jackypot.io".</p>
+                                <p>This gives the Blockchain 100% security and is the reason why 176,727,709 million movements or transactions have been made since it was created; until the day this document was written.</p>
+                                <p>Different online games of chance offer high probabilities of winning a minimum of what is wagered, or offer misleading information as to the chances of the player having a profit. You can then verify this information in the following notes:</p>
+                                <p class="trunk"><a href="http://www.foxnews.com/story/2005/08/29/10-things-your-casino-wont-tell.html" target="_blank">http://www.foxnews.com/story/2005/08/29/10-things-your-casino-wont-tell.html</a></p>
+                                <p class="trunk"><a href="http://www.dailymail.co.uk/news/article-2555025/Who-Lions-Share-Las-Vegas-slot-machine-hit-jackpot-20-years-attracts-generations-gamblers-eager-win-2-3-MILLION-prize.html" target="_blank">http://www.dailymail.co.uk/news/article-2555025/Who-Lions-Share-Las-Vegas-slot-machine-hit-jackpot-20-years-attracts-generations-gamblers-eager-win-2-3-MILLION-prize.html</a></p>
+                                <p class="trunk"><a href="http://triblive.com/aande/gambling/5509017-74/casino-player-percent" target="_blank">http://triblive.com/aande/gambling/5509017-74/casino-player-percent</a></p>
+                                <p>That is why Jackypot is revolutionizing with the high technology of Blokchain applied in Ethereum, providing the best standards in security and speed, as well as having the possibility of winning up to 55.55% more, against what was determined in other sites of bets</p>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Contactanos -->
+                    <div class="tab">
+                        <input id="tab-eight" type="checkbox" name="tabs">
+                        <label for="tab-eight">CONTACT US</label>
                         <div class="tab-content">
                             <h2>Contact Us</h2>
                             <input type="text" name="" value="" placeholder="Name" class="show-input" id="name-m">
@@ -446,6 +510,8 @@
                 </div>
             </div>
         </div>
+        <!-- Seccion de Sonido del juego -->
+    	<div id="contenedor-sonido" class="sonido-juego"> </div>
         <!-- Preguntas frecuentes -->
         <div class="faqs" id="faqs-window">
             <h2>Frequent questions</h2>
@@ -591,7 +657,9 @@
                             <ul></ul>
                         </div>
                     </div>
-                    <button type="button" name="button" class="btn-free-bet">Go post</button>
+                    <div class="contenedor-btn-freeBets">
+                        <button type="button" name="button" class="btn-free-bet">Go post</button>
+                    </div>
                 </div>
                 <div class="free-bets-datos" id="contenedor-free-bets">
                     <!-- Contenedor de los datos -->
@@ -866,5 +934,6 @@
     <script type="text/javascript" src="js/form.js"></script>
     <script type="text/javascript" src="js/machine.js"></script>
     <script type="text/javascript" src="js/slider.js"></script>
+    <script type="text/javascript" src="js/slider-m.js"></script>
 </body>
 </html>

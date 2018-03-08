@@ -552,6 +552,12 @@ transparencia
     color: rgb(254,210,49);
     font-size: 29px;
 }
+.trunk{
+    width: 90%;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
 
 .container-transparencia{
     margin: 0px auto;
@@ -847,9 +853,9 @@ Free bets
 }
 
 /* IMG de la promo */
-.free-bets-promocion{
+.free-bets-promocion, .contenedor-promocion{
     background: url('../assets/freeBets/background.png') no-repeat;
-    background-size: 566px 600px;
+    background-size: cover;
     border-radius: 5px;
     border: none;
     overflow: hidden;
@@ -863,7 +869,7 @@ Free bets
     font-weight: bold;
     font-family: 'Archivo Black';
 }
-
+.contenedor-btn-freeBets{text-align: center;}
 .btn-free-bet{
     background: red;
     color: white;
@@ -874,17 +880,30 @@ Free bets
     font-size: 25px;
     font-weight: bold;
     box-shadow: 1px 1px 1px 1px rgb(0,0,0);
+    margin-bottom: 10px;
 }
 
 /* Slider */
-.contenedor-slider{
+.contenedor-promocion{
+    overflow: hidden;
+}
+
+.contenedor-promocion h2{
+    font-weight: bold;
+    color: red;
+    text-shadow: 1px 1px 1px rgb(0,0,0);
+    text-align: center;
+    font-family: 'Archivo Black'
+}
+
+.contenedor-slider, .contenedor-slider-m{
     width: 100%;
     position: relative;
     white-space: nowrap;
     left: 0px;
 }
 
-.slider{
+.slider, .slider-m{
     width: 100%;
     position: relative;
     white-space: normal;
@@ -895,20 +914,22 @@ Free bets
 
 .slider-content{ padding: 15px; }
 
-.slider-content p{
-    font-size: 27px;
+.slider-content p, .slider-content-m p{
     margin: 1em 0px;
     color: yellow;
     font-weight: bold;
     text-shadow: 1px 1px 1px rgba(0,0,0,1);
 }
 
-.contenedor-controles{
+.slider-content p{ font-size: 27px; }
+.slider-content-m p{font-size: 13px; }
+
+.contenedor-controles, .contenedor-controles-m{
     width: 100%;
     height: auto;
 }
-
-.controls ul{
+.contenedor-controles-m{margin-top: 10px;}
+.controls ul, .controls-m ul{
     padding: 0px;
     text-align: center;
     position: relative;
@@ -918,7 +939,7 @@ Free bets
     z-index: 50;
 }
 
-.controls li{
+.controls li, .controls-m li{
     list-style-type: none;
     background-color: rgb(242,131,146);
     width: 20px;
@@ -930,7 +951,7 @@ Free bets
     cursor: pointer;
 }
 
-.controls li.active{
+.controls li.active, .controls-m li.active{
     background-color: rgb(9,221,214);
 }
 
@@ -1129,3 +1150,15 @@ popovers
 }
 
 .popover__content p{font-size: 15px !important;}
+
+/* ***************************************
+Contenedor de sonido de juego
+*************************************** */
+.sonido-juego{
+  margin: 0px;
+  padding: 0px;
+  width: 100%;
+  height: 60px;
+  position: fixed;
+  z-index: -1;
+}

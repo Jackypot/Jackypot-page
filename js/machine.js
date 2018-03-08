@@ -272,6 +272,7 @@ function playGiro(a, b, c, profit, classe){
     if (maquina_girando === false) {
         //Cambiamos su estado
         maquina_girando = true;
+        removeSonido();
 
 	    // Variables pantallas de ordenador
         let x, y, z;
@@ -387,6 +388,7 @@ function playGiro(a, b, c, profit, classe){
         // Resultado uno
         setTimeout(function(){
             s.clear();
+            addSonido();
             x = s.image("assets/game/slot/"+a+".svg", posX, 10, size, size);
             x.animate({ transform: 'translate(0 '+translado+')' }, 250, mina.linear )
         }, 1600);
@@ -451,7 +453,6 @@ function playGiro(a, b, c, profit, classe){
             z.remove();
             z = s.image("assets/game/slot/"+c+".svg", posZ, 10, size, size);
             z.animate({ transform: 'translate(0 '+translado+')' }, 250, mina.linear )
-            maquina_girando = false;
         }, 2800);
 
 
@@ -528,12 +529,25 @@ function playGiro(a, b, c, profit, classe){
                     profit_maquina.innerHTML = profit;
                 }, 5500);
         	}
+
+
+            maquina_girando = false;
         }, 3300)
+
 
     }
 }
 
+// **********************************************************
+// FUNCION: Sonido de resultado
+// **********************************************************
+function addSonido(){
+    document.getElementById("contenedor-sonido").innerHTML = '<audio src="assets/audio/sonido1.mp3" autoplay></audio>';
+}
 
+function removeSonido(){
+    document.getElementById("contenedor-sonido").innerHTML = '';
+}
 // **********************************************************
 // Contrato o comportamiento modal
 // **********************************************************
