@@ -854,9 +854,9 @@ Free bets
 
 /* IMG de la promo */
 .free-bets-promocion, .contenedor-promocion{
-    background: url('../assets/freeBets/background.png') no-repeat;
-    background-size: cover;
+    background-color: rgb(65, 70, 95);
     border-radius: 5px;
+    box-shadow: 0px 2px 5px 0px rgba(0, 0, 0, 0.5);
     border: none;
     overflow: hidden;
 }

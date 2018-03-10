@@ -6,7 +6,7 @@ vw = window.innerWidth;
 window.addEventListener("resize", function(){ vw = window.innerWidth; });
 
 // **********************************************************
-// Creacion de datos a mostrar
+// Creacion de datos a DOMContentLoadedmostrar
 // **********************************************************
 var contador = 0;
 var intervalo_datos, intervalo_giros, respuesta, ethDls, pote, intervalo_valorPote;
@@ -21,12 +21,11 @@ function obtencion_datos_endpoint(){
         respuesta = resp.dataTable;
         //INTERVALO: Mostrar datos en seccion "BETS"
         intervalo_datos = setInterval(function(){manager(respuesta)}, 3000);
-
         //Numeros aleatorios con el cual representar el primer giro al inicio de la pagina
         let num = Math.floor((Math.random() * 9) + 1);
         //INIT FUNCION: Girar al entrar a la pag. con resultado de triples
         //Parametros Resultado, Resultado, Resultado, Profit, Clase
-        playGiro(num, num, num, false, false);
+        setTimeout(function(){playGiro(num, num, num, false, false)}, 500);
 
         //INIT FUNCION: Mostrar valor del pote
         mostrar_pote();
@@ -272,7 +271,6 @@ function playGiro(a, b, c, profit, classe){
     if (maquina_girando === false) {
         //Cambiamos su estado
         maquina_girando = true;
-        removeSonido();
 
 	    // Variables pantallas de ordenador
         let x, y, z;
@@ -542,11 +540,8 @@ function playGiro(a, b, c, profit, classe){
 // FUNCION: Sonido de resultado
 // **********************************************************
 function addSonido(){
-    document.getElementById("contenedor-sonido").innerHTML = '<audio src="assets/audio/sonido1.mp3" autoplay></audio>';
-}
-
-function removeSonido(){
-    document.getElementById("contenedor-sonido").innerHTML = '';
+    let a = document.getElementById("sonido_game");
+    a.play();
 }
 // **********************************************************
 // Contrato o comportamiento modal
