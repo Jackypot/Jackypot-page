@@ -559,6 +559,19 @@ transparencia
     text-overflow: ellipsis;
 }
 
+.representation-trans img{
+    width: 40px;
+    height: 40px;
+}
+
+.representation-trans{
+    border-radius: 5px;
+    border: none;
+    box-shadow: 1px 1px 1px 1px rgba(255, 255, 255, 0.5);
+    width: 300px;
+    text-align: center;
+}
+
 .container-transparencia{
     margin: 0px auto;
     color: white;

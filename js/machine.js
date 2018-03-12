@@ -8,8 +8,8 @@ window.addEventListener("resize", function(){ vw = window.innerWidth; });
 // **********************************************************
 // Creacion de datos a DOMContentLoadedmostrar
 // **********************************************************
-var contador = 0;
-var intervalo_datos, intervalo_giros, respuesta, ethDls, pote, intervalo_valorPote;
+var intervalo_datos, intervalo_giros, respuesta, ethDls, pote, intervalo_valorPote, respuesta_pote;
+var socket = io('https://jackynet.eu-4.evennode.com',{path: '/service1'});
 
 //FUNCION: Get respuesta de EndPoint
 function obtencion_datos_endpoint(){
@@ -19,8 +19,11 @@ function obtencion_datos_endpoint(){
 
         //Guardamos la respuesta
         respuesta = resp.dataTable;
+        respuesta_pote = respuesta[5];
+        respuesta.pop();
         //INTERVALO: Mostrar datos en seccion "BETS"
-        intervalo_datos = setInterval(function(){manager(respuesta)}, 3000);
+        temporal();
+        // intervalo_datos = setInterval(function(){manager(respuesta)}, 3000);
         //Numeros aleatorios con el cual representar el primer giro al inicio de la pagina
         let num = Math.floor((Math.random() * 9) + 1);
         //INIT FUNCION: Girar al entrar a la pag. con resultado de triples
@@ -39,6 +42,97 @@ function obtencion_datos_endpoint(){
 obtencion_datos_endpoint();
 
 // **********************************************************
+// FUNCION: Web Socket
+// **********************************************************
+
+// Recepcion de datos del socket
+socket.on('table', function(dato_actualizacion){agregar_nuevo_dato(dato_actualizacion)});
+
+function agregar_nuevo_dato(nuevo_dato){
+    if (!nuevo_dato) {
+        respuesta.unshift(nuevo_dato);
+        if (respuesta.length >=15) { respuesta.pop(); }
+        temporal();
+    }
+}
+
+
+
+
+var datos_existentes = false;
+function temporal (){
+    if (datos_existentes) {
+        document.getElementById("datos").innerHTML = "";
+    }true
+    for (var i = 0; i < respuesta.length; i++) {
+        let agregar = document.getElementById("datos");
+        let contenedor = document.createElement("div");
+        let contenedor_resultado = document.createElement("div");
+        let contenedor_address = document.createElement("div");
+        let address = document.createElement("div");
+        let game = document.createElement("div");
+        let bet = document.createElement("div");
+        let profit = document.createElement("div");
+        let blocki = document.createElement("div");
+
+        let value_profit = calcular_profit(respuesta[i].Resultado.charAt(0), respuesta[i].Resultado.charAt(2), respuesta[i].Resultado.charAt(4), respuesta[i].Valor)
+
+        let img = new Image();
+        img.src = blockies.toDataUrl(respuesta[i].Cliente);
+        address.innerHTML = respuesta[i].Cliente;
+
+        game.innerHTML = "Game: "+respuesta[i].Resultado;
+        bet.innerHTML = "Bet : "+(respuesta[i].Valor/ 1000000000000000000).toFixed(2);
+        profit.innerHTML= "Profit: "+value_profit[0];
+        profit.classList.add(value_profit[1]);
+        blocki.appendChild(img);
+
+        contenedor.classList.add("contenedor_datos");
+        contenedor.setAttribute('id', i);
+        contenedor.onclick = function(){datos_girar_maquina(this.id);}
+        contenedor_resultado.classList.add("contenedor_juego");
+        contenedor_address.classList.add("contenedor_address");
+        blocki.classList.add("blocki");
+        address.classList.add("address");
+
+        bet.classList.add("bet");
+
+        contenedor_resultado.appendChild(bet);
+        contenedor_resultado.appendChild(game);
+
+        contenedor_resultado.appendChild(profit);
+        contenedor_address.appendChild(blocki);
+        contenedor_address.appendChild(address);
+
+        contenedor.appendChild(contenedor_address);
+        contenedor.appendChild(contenedor_resultado);
+
+        agregar.appendChild(contenedor);
+
+    }
+    datos_existentes = true;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// **********************************************************
 // FUNCION: Mostrar valor del pote Ethereum/USD
 // **********************************************************
 //Checa el estado en la que se visualiza el valor del pote
@@ -50,7 +144,7 @@ var estado_pote = true;
 function mostrar_pote(){
     if (estado_pote) {
         //Guardamos el valor del pote obtenido de la respuesta
-        pote = respuesta[respuesta.length - 1].potValue;
+        pote = respuesta_pote.potValue;
         //Mostramos el valor del pote
         document.getElementById("pote").innerHTML = pote.toFixed(2) +" ETH";
         //Cambiamos el estado a false
@@ -106,8 +200,9 @@ function calcular_profit(a, b, c, bet){
 // **********************************************************
 // FUNCION: Mostrar datos de almacenados en respuesta [Seccion "BETS"]
 // **********************************************************
+var contador = 0;
 var manager = (datos) => {
-    if (contador < datos.length - 2) { contador ++ }
+    if (contador < datos.length - 1) { contador ++; }
     else { contador = 0; }
 
     //Dependiendo del vw, seleccionamos donde mostrar los datos

@@ -63,6 +63,7 @@
       <script type="text/javascript" src="js/blockies.js"></script>
       <script type="text/javascript" src="js/clipboard.js"></script>
       <script src='https://cdnjs.cloudflare.com/ajax/libs/animejs/2.2.0/anime.js'></script>
+      <script type="text/javascript" src="js/socket.io.js"></script>
 </head>
 <body>
     <div class="contenedor-global" id="contenedor-global">
@@ -798,6 +799,28 @@
             <div class="container-transparencia">
                 <p>Below is explained in detail, the process that is carried out in Jackypot.io</p>
                 <img src="assets/footer/diagrama.png" alt="Image" class="img-fluid">
+                <table class="representation-trans">
+                    <thead>
+                        <tr>
+                            <th class="borde-vertical">Symbols</th>
+                            <th>Representation</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td class="borde-vertical borde-horizontal"><img src="assets/game/slot/1.svg" alt="Cereza"></td>
+                            <td class="borde-horizontal"> = 1, 2 and 3</td>
+                        </tr>
+                        <tr>
+                            <td class="borde-vertical borde-horizontal"><img src="assets/game/slot/2.svg" alt="Cereza"></td>
+                            <td class="borde-horizontal"> = 4, 5 and 6</td>
+                        </tr>
+                        <tr>
+                            <td class="borde-vertical borde-horizontal"><img src="assets/game/slot/3.svg" alt="Cereza"></td>
+                            <td class="borde-horizontal"> = 7, 8 and 9</td>
+                        </tr>
+                    </tbody>
+                </table>
                 <p>Users Contract Oraclize Smart Jackypot</p>
                 <ol>
                     <li>Users deposit the bet amount of Ethereum from their portfolio.</li>
