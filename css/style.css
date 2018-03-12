@@ -359,6 +359,32 @@ Game
     box-shadow: 1px 1px 5px 1px rgba(0, 0, 0,0.5);
 }
 
+/* contenedores con metamask */
+#contenedor_address_machine{
+    text-align: center;
+}
+#contenedor_address_machine input{
+    width: 66%;
+    height: 26px;
+    border-radius: 5px;
+    border: none;
+    color: white;
+    background-color: black;
+    text-align: center;
+}
+
+#contenedor_apuesta_machine input{
+    width: 62%;
+    height: 26px;
+    border-radius: 5px;
+    border: none;
+    color: white;
+    background-color: black;
+    text-align: center;
+}
+
+
+
 .contenedor-address p{
     margin: 0px;
     white-space: nowrap;

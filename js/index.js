@@ -11,6 +11,9 @@ window.addEventListener('load', function() {
         // Use Mist/MetaMask's provider
         web3js = new Web3(web3.currentProvider);
         //modificar interfaz
+        document.getElementById("contenedor_address_machine").innerHTML = '<input type="text" name="address_game" value="" id="direccion_usuario">';
+        document.getElementById("contenedor_apuesta_machine").innerHTML = '<input type="number" name="bet_game" value="" id="apuesta_usuario">';
+        document.getElementById("contenedor_btn_machine").innerHTML = '<input type="image" src="assets/game/btn-play.png" id="btn_metamask">';
     }
     else {
         //Si no cuenta con Metamask se mantendra todo como lo anterior
