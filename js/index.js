@@ -13,6 +13,9 @@ window.addEventListener('load', function() {
         //modificar interfaz
     }
     else {
+        //Si no cuenta con Metamask se mantendra todo como lo anterior
+        document.getElementById("contenedor_address_machine").innerHTML = '<div class="contenedor-address"> <p class="remove" id="address-machine">Ethereum Wallet Address Of The Participant</p> </div>';
+        document.getElementById("contenedor_apuesta_machine").innerHTML = '<div class="contenedor-profit"> <p class="remove" id="bet-machine">Profit</p> </div>';
         document.getElementById("contenedor_btn_machine").innerHTML = '<input type="image" src="assets/game/btn-play.png" onclick="openModal(this.id)" id="how-play">';
     }
 
