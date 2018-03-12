@@ -461,6 +461,10 @@ Chat o tabla
 
 .contenedor_datos:hover{
     cursor: pointer;
+    background-color: #fdd432;
+    color: black;
+    font-weight: bold;
+
 }
 .contenedor_datos:active{background-color: rgb(159,0,167);}
 

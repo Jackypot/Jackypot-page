@@ -4,6 +4,46 @@ window.addEventListener("resize", function(){
 });
 otro();
 
+// INICIALIZAR: Si el usuario tien Metamask o no tiene
+window.addEventListener('load', function() {
+    //Verificamos si se tiene metamask
+    if (typeof web3 !== 'undefined') {
+        // Use Mist/MetaMask's provider
+        web3js = new Web3(web3.currentProvider);
+        //modificar interfaz
+    }
+    else {
+        document.getElementById("contenedor_btn_machine").innerHTML = '<input type="image" src="assets/game/btn-play.png" onclick="openModal(this.id)" id="how-play">';
+    }
+
+})
+
+
+
+var alerta = () =>{
+    web3.version.getNetwork((err, netId) => {
+        switch (netId) {
+            case "1":
+                console.log('This is mainnet');
+                break;
+            case "2":
+                console.log('This is the deprecated Morden test network.');
+                break;
+            case "3":
+                console.log('This is the ropsten test network.');
+                break;
+            case "4":
+                console.log('This is the Rinkeby test network.');
+                break;
+            case "42":
+                console.log('This is the Kovan test network.');
+                break;
+            default:
+                console.log('This is an unknown network.');
+        }
+    })
+}
+alerta();
 // **********************************************************
 // Comportamiento de ventanas
 // **********************************************************
