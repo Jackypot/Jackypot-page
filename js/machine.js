@@ -675,7 +675,18 @@ function openModal(e){
             estado_modal_how = false;
         }
         else {
-            datos_girar_maquina(0); reordenar(respuesta);
+            let NumRandom = Math.floor((Math.random() * respuesta.length) + 0);
+            let div_correspondiente;
+
+            if (vw < 481) {div_correspondiente = "datos-m";} //Ver. telefonos < 480px
+            else {div_correspondiente = "datos";}//Ver. tablet o superior > 481px
+
+            document.querySelectorAll("#"+div_correspondiente+" div.active_btn")
+    			.forEach(item => item.classList.remove("active_btn"));
+
+            document.getElementById(NumRandom).classList.add("active_btn");
+            datos_girar_maquina(NumRandom);
+            // reordenar(respuesta);
         }
     }
 }
