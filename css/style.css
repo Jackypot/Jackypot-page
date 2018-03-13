@@ -404,6 +404,11 @@ Game
 /* ***************************************
 Chat o tabla
 *************************************** */
+.chat{
+    overflow: auto;
+    height: 100%;
+}
+
 .tittle-chat{
     background-color: #f7f6e7;
     border-radius: 5px;
