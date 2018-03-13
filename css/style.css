@@ -401,6 +401,15 @@ Game
     -webkit-animation: parpadeo 3s 3;
             animation: parpadeo 3s 3;
 }
+.contenedor_video{text-align: center;}
+.btn_video{
+    background-color: #ffd200;
+    font-weight: bold;
+    border-radius: 5px;
+    border: none;
+    height: 29px;
+    width: 80%;
+}
 /* ***************************************
 Chat o tabla
 *************************************** */
@@ -671,7 +680,7 @@ Frecuents Questions
 /* ***************************************
 contrato
 *************************************** */
-.contrato, .how-play, .reglas{
+.contrato, .how-play, .reglas, .video{
     background-color: rgba(0,0,0,0.4);
     height: 100%;
     width: 100%;
