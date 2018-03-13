@@ -319,10 +319,12 @@ function datos_girar_maquina(ev){
     if (vw < 481) {div_correspondiente = "datos-m";} //Ver. telefonos < 480px
     else {div_correspondiente = "datos";}//Ver. tablet o superior > 481px
 
-    document.querySelectorAll("#"+div_correspondiente+" div.active_btn")
-    .forEach(item => item.classList.remove("active_btn"));
+    if (maquina_girando === false) {
+        document.querySelectorAll("#"+div_correspondiente+" div.active_btn")
+        .forEach(item => item.classList.remove("active_btn"));
 
-    document.getElementById(NumRandom).classList.add("active_btn");
+        document.getElementById(ev).classList.add("active_btn");
+    }
 
     a = respuesta[ev].Resultado.charAt(0);
     b = respuesta[ev].Resultado.charAt(2);
