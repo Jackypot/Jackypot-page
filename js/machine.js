@@ -637,6 +637,7 @@ function addSonido(){
 // **********************************************************
 var contract_window, modal;
 var estado_modal_how = true;
+var estadoNumBtnPlay = 0;
 function openModal(e){
     contract_window = document.getElementById(e+'-window');
     modal = document.getElementById(e+'-modal');
@@ -670,12 +671,10 @@ function openModal(e){
         }
         else {
             if (maquina_girando === false) {
-                let NumRandom = Math.floor((Math.random() * respuesta.length) + 0);
-                let div_correspondiente;
 
-                if (vw < 481) {div_correspondiente = "datos-m";} //Ver. telefonos < 480px
-                else {div_correspondiente = "datos";}//Ver. tablet o superior > 481px
-                datos_girar_maquina(NumRandom);
+                datos_girar_maquina(estadoNumBtnPlay);
+                if (estadoNumBtnPlay < respuesta.length - 1) estadoNumBtnPlay++;
+                else estadoNumBtnPlay = 0;
                 // reordenar(respuesta);
 
             }
