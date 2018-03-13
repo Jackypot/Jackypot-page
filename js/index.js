@@ -24,6 +24,18 @@ window.addEventListener('load', function() {
 
 })
 
+var abierto = false;
+function abrirVideo(){
+    if (!abierto) {
+        document.getElementById("contenedor_video_div").style.display = "block";
+        abierto = true;
+    }else {
+        document.getElementById("contenedor_video_div").style.display = "none";
+        abierto = false;
+    }
+}
+
+
 
 // var alerta = () =>{
 //     web3.version.getNetwork((err, netId) => {

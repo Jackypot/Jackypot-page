@@ -97,7 +97,7 @@ body {
 Grid Template
 *************************************** */
 .navigation {grid-area: nav;}
-.introduction, .content, .information{background-color: rgb(54, 66, 86); height: 78vh}
+.introduction, .content, .information{background-color: rgb(54, 66, 86); height: 80vh}
 .introduction {grid-area: intr; overflow: hidden;}
 .content {grid-area: conte;}
 .collapse {grid-area: collap; display: none;}
@@ -1225,4 +1225,16 @@ Contenedor de sonido de juego
   height: 60px;
   position: fixed;
   z-index: -1;
+}
+/* ***************************************
+Contenedor de dic con video
+*************************************** */
+.contenedor_video_div{
+    background-color: black;
+    width: 350px;
+    height: 200px;
+    position: absolute;
+    bottom: 15px;
+    right: 5px;
+    display: none;
 }
