@@ -24,16 +24,8 @@ window.addEventListener('load', function() {
 
 })
 
-var abierto = false;
-function abrirVideo(){
-    if (!abierto) {
-        document.getElementById("contenedor_video_div").style.display = "block";
-        abierto = true;
-    }else {
-        document.getElementById("contenedor_video_div").style.display = "none";
-        abierto = false;
-    }
-}
+function abrirVideo(){ document.getElementById("contenedor_video_div").style.display = "block"; }
+function cerrarVideo(){ document.getElementById("contenedor_video_div").style.display = "none"; }
 
 
 

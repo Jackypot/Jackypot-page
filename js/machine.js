@@ -115,23 +115,6 @@ function temporal (){
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 // **********************************************************
 // FUNCION: Mostrar valor del pote Ethereum/USD
 // **********************************************************
@@ -331,6 +314,15 @@ var estado_remover_clase = true;
 function datos_girar_maquina(ev){
     let a, b, c;
     let resultado, classe, valor_profit;
+    let div_correspondiente;
+
+    if (vw < 481) {div_correspondiente = "datos-m";} //Ver. telefonos < 480px
+    else {div_correspondiente = "datos";}//Ver. tablet o superior > 481px
+
+    document.querySelectorAll("#"+div_correspondiente+" div.active_btn")
+    .forEach(item => item.classList.remove("active_btn"));
+
+    document.getElementById(NumRandom).classList.add("active_btn");
 
     a = respuesta[ev].Resultado.charAt(0);
     b = respuesta[ev].Resultado.charAt(2);
@@ -675,18 +667,16 @@ function openModal(e){
             estado_modal_how = false;
         }
         else {
-            let NumRandom = Math.floor((Math.random() * respuesta.length) + 0);
-            let div_correspondiente;
+            if (maquina_girando === false) {
+                let NumRandom = Math.floor((Math.random() * respuesta.length) + 0);
+                let div_correspondiente;
 
-            if (vw < 481) {div_correspondiente = "datos-m";} //Ver. telefonos < 480px
-            else {div_correspondiente = "datos";}//Ver. tablet o superior > 481px
+                if (vw < 481) {div_correspondiente = "datos-m";} //Ver. telefonos < 480px
+                else {div_correspondiente = "datos";}//Ver. tablet o superior > 481px
+                datos_girar_maquina(NumRandom);
+                // reordenar(respuesta);
 
-            document.querySelectorAll("#"+div_correspondiente+" div.active_btn")
-    			.forEach(item => item.classList.remove("active_btn"));
-
-            document.getElementById(NumRandom).classList.add("active_btn");
-            datos_girar_maquina(NumRandom);
-            // reordenar(respuesta);
+            }
         }
     }
 }

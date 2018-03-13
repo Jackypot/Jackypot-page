@@ -435,7 +435,8 @@ Game
     border-radius: 5px;
     border: none;
     height: 29px;
-    width: 80%;
+    width: 200px;
+    cursor: pointer;
 }
 /* ***************************************
 Chat o tabla
@@ -1230,11 +1231,14 @@ Contenedor de sonido de juego
 Contenedor de dic con video
 *************************************** */
 .contenedor_video_div{
-    background-color: black;
     width: 350px;
-    height: 200px;
+    height: 250px;
     position: absolute;
-    bottom: 15px;
-    right: 5px;
+    bottom: 10px;
+    right: 10px;
     display: none;
+    text-align: end;
+}
+.contenedor_video_div img{
+    cursor: pointer;
 }
