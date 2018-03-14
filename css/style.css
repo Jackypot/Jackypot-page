@@ -428,7 +428,7 @@ Game
             animation: parpadeo 3s 3;
 }
 
-.contenedor_video{text-align: center;}
+
 .btn_video{
     background-color: #ffd200;
     font-weight: bold;
@@ -714,7 +714,7 @@ Frecuents Questions
 /* ***************************************
 contrato
 *************************************** */
-.contrato, .how-play, .reglas{
+.contrato, .how-play, .reglas, .video{
     background-color: rgba(0,0,0,0.4);
     height: 100%;
     width: 100%;
@@ -1230,15 +1230,10 @@ Contenedor de sonido de juego
 /* ***************************************
 Contenedor de dic con video
 *************************************** */
-.contenedor_video_div{
-    width: 350px;
-    height: 250px;
-    position: absolute;
-    bottom: 10px;
-    right: 10px;
-    display: none;
-    text-align: end;
+.contenedor_video{
+    text-align: center;
 }
-.contenedor_video_div img{
-    cursor: pointer;
+
+.contenedor_video_div{
+    height: 450px;
 }

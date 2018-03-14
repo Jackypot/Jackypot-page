@@ -133,6 +133,10 @@ Responsive
     .img-player img{width: 28px; height: 28px;}
     .contenedor-player-bets .adr-bet{width: 65%;}
     .adr-res, .total-bet p{margin:6px 3px!important;}
+    /* Video */
+    .contenedor_video_div{
+        height: auto;
+    }
 }
 @media only screen and (max-width: 480px) and (orientation: portrait){
     .img-fluid{width: auto}
@@ -242,7 +246,7 @@ Responsive
 }
 
 @media screen and (max-width: 768px) and (min-width: 481px){
-    .introduction, .content, .information{height: 450px;}
+    .introduction, .content, .information{height: 465px;}
     .faqs, .terms, .contact, .free-bets{height: 480px;}
     .wrapper {
         display: grid;
@@ -348,6 +352,14 @@ Responsive
 @media screen and (max-width: 768px) and (min-width: 481px) and (orientation: landscape){
     .introduction, .content,{height: auto;}
     .information {height: 430px;}
+    .contenedor_video_div{
+        height: 200px;
+    }
+}
+@media screen and (max-width: 768px) and (min-width: 481px) and (orientation: portrait){
+    .contenedor_video_div{
+        height: 450px;
+    }
 }
 
 @media screen and (max-width: 1024px) and (min-width: 769px){

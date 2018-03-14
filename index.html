@@ -168,7 +168,7 @@
                     </div>
                 </div>
                 <div class="contenedor_video">
-                    <button type="button" name="button" class="btn_video" onclick="abrirVideo()">Show Tutorial</button>
+                    <button type="button" name="button" class="btn_video" onclick="openModal(this.id)" id="video">Show Tutorial</button>
                 </div>
             </div>
             <!-- Chat -->
@@ -846,11 +846,7 @@
                 </div>
             </div>
         </div>
-        <!-- Transparencia -->
-        <div class="contenedor_video_div" id="contenedor_video_div">
-            <img src="assets/game/close.png" alt="" onclick="cerrarVideo()">
-            <iframe id="video" width="100%" height="200" src="https://www.youtube.com/embed/BJMqkJ5YT30" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
-        </div>
+
     </div>
     <!-- Modals -->
     <!-- Contrato Git -->
@@ -1005,7 +1001,23 @@
             </div>
         </div>
     </div>
-
+    <!-- Video -->
+    <div class="video" id="video-window">
+        <!-- Modal content -->
+        <div class="modal" id="video-modal">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <span class="close" id="video-close">&times;</span>
+                    <h2>TUTORIAL</h2>
+                </div>
+                <div class="modal-body">
+                    <div class="contenedor_video_div">
+                        <iframe width="100%" height="100%" src="https://www.youtube.com/embed/BJMqkJ5YT30" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
     <script type="text/javascript" src="js/index.js"></script>
     <script type="text/javascript" src="js/form.js"></script>
     <script type="text/javascript" src="js/machine.js"></script>
