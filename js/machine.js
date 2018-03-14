@@ -57,15 +57,17 @@ function agregar_nuevo_dato(nuevo_dato){
 }
 
 
-
-
 var datos_existentes = false;
 function temporal (){
+    let div_correspondiente;
+    if (vw < 481) {div_correspondiente = "datos-m";} //Ver. telefonos < 480px
+    else {div_correspondiente = "datos";}//Ver. tablet o superior > 481px
+
     if (datos_existentes) {
-        document.getElementById("datos").innerHTML = "";
+        document.getElementById(div_correspondiente).innerHTML = "";
     }true
     for (var i = 0; i < respuesta.length; i++) {
-        let agregar = document.getElementById("datos");
+        let agregar = document.getElementById(div_correspondiente);
         let contenedor = document.createElement("div");
         let contenedor_resultado = document.createElement("div");
         let contenedor_address = document.createElement("div");
