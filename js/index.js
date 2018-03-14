@@ -81,8 +81,8 @@ function ejecutar_metamask (){
     if (usuario) {
         if (apuesta >= 0.01 && apuesta <= 20) {
             web3.eth.sendTransaction({to: contrato, from: usuario, value: web3.toWei(apuesta.toString(), 'ether') },function (error, res) {
-                if(!error) window.alert('todo salio bien, (◕‿-)');
-                else window.alert('(┛◉Д◉)┛┻━┻  '+error);
+                if(!error) window.alert('your transaction was successful');
+                else window.alert('there was a problem, your transaction was stopped');
             });
         }else {
             alert("The bet field is invalid (Min: 0.01, Max: 20).")
