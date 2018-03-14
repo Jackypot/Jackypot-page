@@ -13,7 +13,7 @@ window.addEventListener('load', function() {
         web3js = new Web3(web3.currentProvider);
         //modificar interfaz
         document.getElementById("contenedor_address_machine").innerHTML = '<input type="text" name="address_game" value="" id="direccion_usuario" disabled>';
-        document.getElementById("contenedor_apuesta_machine").innerHTML = '<input type="number" name="bet_game" value="" id="apuesta_usuario">';
+        document.getElementById("contenedor_apuesta_machine").innerHTML = '<input type="number" name="bet_game" value="" id="apuesta_usuario" min="0.01" max="20" step="0.01" onkeypress="return validaNumericos(event)">';
         document.getElementById("contenedor_btn_machine").innerHTML = '<input type="image" src="assets/game/btn-play.png" id="btn_metamask" onclick="ejecutar_metamask()">';
 
         setTimeout(function(){ if (Boolean(usuario)) { actualizarInterfaz(); } }, 4000);
@@ -33,6 +33,13 @@ window.addEventListener('load', function() {
     }
 
 })
+
+
+function validaNumericos(event) {
+    if (event.charCode == 46) { return true; }
+    else if(event.charCode >= 48 && event.charCode <= 57){ return true; }
+    return false;
+}
 
 function abrirVideo(){ document.getElementById("contenedor_video_div").style.display = "block"; }
 function cerrarVideo(){ document.getElementById("contenedor_video_div").style.display = "none"; }
