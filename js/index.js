@@ -8,7 +8,7 @@ var intervaloUsuarios;
 window.addEventListener('load', function() {
     //Verificamos si se tiene metamask
     if (typeof web3 !== 'undefined') {
-        var usuario = web3.eth.accounts[0];
+
         // Use Mist/MetaMask's provider
         web3js = new Web3(web3.currentProvider);
         //modificar interfaz
@@ -37,8 +37,10 @@ window.addEventListener('load', function() {
 function abrirVideo(){ document.getElementById("contenedor_video_div").style.display = "block"; }
 function cerrarVideo(){ document.getElementById("contenedor_video_div").style.display = "none"; }
 
+if (typeof web3 !== 'undefined') {
+    var usuario = web3.eth.accounts[0];
 
-
+}
 // var alerta = () =>{
 //     web3.version.getNetwork((err, netId) => {
 //         switch (netId) {
