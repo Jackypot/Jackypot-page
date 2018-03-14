@@ -113,7 +113,11 @@
                                     Gwei required: 21.</p>
                             </div>
                         </div>
+<<<<<<< HEAD
                         <p>Wait for the result from 1 to 2 minutes, in <a title="Results" onclick="getfocus()" class="links">Last bet</a>.</p>
+=======
+                        <p>Wait for the result from 1 to 2 minutes, in <a title="Results" onclick="getfocus()" class="links">Last bet.</a>.</p>
+>>>>>>> a6b46cc48ef4d4b330d78c7af0c81fb2a70467dd
                         <p>3. Our prizes are:</p>
                         <div class="contenedor-premios">
                                 <img src="assets/how-to-play/premio1.png" alt="" class="img-fluid">
@@ -155,19 +159,25 @@
                         </div>
                     </div>
                     <!-- Form -->
-                    <div class="address-machine">
-                        <div class="contenedor-address">
-                            <p class="remove" id="address-machine">Ethereum Wallet Address Of The Participant</p>
-                        </div>
+                    <div class="address-machine" id="contenedor_address_machine">
+                        <!-- Aqui se escribe desde el JS -->
+
                     </div>
-                    <div class="bet">
-                        <div class="contenedor-profit">
-                            <p class="remove" id="bet-machine">Profit</p>
-                        </div>
+                    <div class="bet" id="contenedor_apuesta_machine">
+                        <!-- Aqui se escribe desde el JS -->
+
                     </div>
+<<<<<<< HEAD
                     <div class="btn-play">
                         <input type="image" src="assets/game/btn-play.png" onclick="openModal(this.id)" id="how-play">
+=======
+                    <div class="btn-play" id="contenedor_btn_machine">
+                        <!-- Aqui se escribe desde el JS -->
+>>>>>>> a6b46cc48ef4d4b330d78c7af0c81fb2a70467dd
                     </div>
+                </div>
+                <div class="contenedor_video">
+                    <button type="button" name="button" class="btn_video" onclick="abrirVideo()">Show Tutorial</button>
                 </div>
             </div>
             <!-- Chat -->
@@ -213,7 +223,7 @@
                                     <li><a href="https://www.myetherwallet.com/" title="MyEtherWallet" target="_blank"><img src="assets/how-to-play/01.png" alt="" class="img-fluid"></a></li>
                                     <li><a href="https://ethereum.org/" title="Mist Ethereum" target="_blank"><img src="assets/how-to-play/02.png" alt="" class="img-fluid"></a></li>
                                     <li><a href="https://metamask.io/" title="MetaMask" target="_blank"><img src="assets/how-to-play/03.png" alt="" class="img-fluid"></a></li>
-                                    <li><a href="https://jaxx.io/" title="Jaxx" target="_blank"><img src="assets/how-to-play/04.png" alt="" class="img-fluid"></a></li>
+                     <li><a href="https://jaxx.io/" title="Jaxx" target="_blank"><img src="assets/how-to-play/04.png" alt="" class="img-fluid"></a></li>
                                     <li><a href="https://www.exodus.io/" title="Exodus Wallet" target="_blank"><img src="assets/how-to-play/05.png" alt="" class="img-fluid"></a></li>
                                 </ul>
                             </div>
@@ -226,7 +236,7 @@
                                         Gwei required: 21.</p>
                                 </div>
                             </div>
-                            <p>Wait for the result from 1 to 2 minutes, in <a href="https://etherscan.io/address/0xfeac34425a3ba2fafbbeedb367ac5f4b4bb701d2" title="Etherscan.io" target="_blank" class="links">Etherscan.io</a> or in our bets.</p>
+                            <p>Wait for the result from 1 to 2 minutes, in results.</p>
                             <p>3. Our prizes are:</p>
                             <div class="contenedor-premios">
                                     <img src="assets/how-to-play/premio1.png" alt="" class="img-fluid">
@@ -550,6 +560,10 @@
                     </div>
                 </div>
             </div> -->
+<<<<<<< HEAD
+=======
+
+>>>>>>> a6b46cc48ef4d4b330d78c7af0c81fb2a70467dd
         </div>
         <!-- Seccion de Sonido del juego -->
     	<div id="contenedor-sonido" class="sonido-juego">
@@ -706,7 +720,11 @@
                 </div>
                 <div class="free-bets-datos" id="contenedor-free-bets">
                     <!-- Contenedor de los datos -->
+<<<<<<< HEAD
                     <h2 style="font-size: 60px; color: yellow; margin-top: 20px;">COMING SOON</h2>
+=======
+                    <h2 style="color: yellow; margin-top:50px; font-size: 60px;">Coming Soon</h2>
+>>>>>>> a6b46cc48ef4d4b330d78c7af0c81fb2a70467dd
                     <!-- <div class="contenedor-Bdatos">
                         <h2 class="">Check your free bets</h2>
                         <div class="search">
@@ -841,6 +859,10 @@
                 <p><a href="http://triblive.com/aande/gambling/5509017-74/casino-player-percent" target="_blank">http://triblive.com/aande/gambling/5509017-74/casino-player-percent</a></p>
                 <p>That is why Jackypot is revolutionizing with the high technology of Blokchain applied in Ethereum, providing the best standards in security and speed, as well as having the possibility of winning up to 55.55% more, against what was determined in other sites of bets</p>
             </div>
+        </div>
+        <div class="contenedor_video_div" id="contenedor_video_div">
+            <img src="assets/game/close.png" alt="" onclick="cerrarVideo()">
+            <iframe id="video" width="100%" height="200" src="https://www.youtube.com/embed/BJMqkJ5YT30" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
         </div>
     </div>
     <!-- Modals -->
@@ -996,6 +1018,7 @@
             </div>
         </div>
     </div>
+
     <script type="text/javascript" src="js/index.js"></script>
     <script type="text/javascript" src="js/form.js"></script>
     <script type="text/javascript" src="js/machine.js"></script>

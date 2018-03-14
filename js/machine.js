@@ -115,23 +115,6 @@ function temporal (){
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 // **********************************************************
 // FUNCION: Mostrar valor del pote Ethereum/USD
 // **********************************************************
@@ -331,6 +314,17 @@ var estado_remover_clase = true;
 function datos_girar_maquina(ev){
     let a, b, c;
     let resultado, classe, valor_profit;
+    let div_correspondiente;
+
+    if (vw < 481) {div_correspondiente = "datos-m";} //Ver. telefonos < 480px
+    else {div_correspondiente = "datos";}//Ver. tablet o superior > 481px
+
+    if (maquina_girando === false) {
+        document.querySelectorAll("#"+div_correspondiente+" div.active_btn")
+        .forEach(item => item.classList.remove("active_btn"));
+
+        document.getElementById(ev).classList.add("active_btn");
+    }
 
     a = respuesta[ev].Resultado.charAt(0);
     b = respuesta[ev].Resultado.charAt(2);
@@ -643,6 +637,7 @@ function addSonido(){
 // **********************************************************
 var contract_window, modal;
 var estado_modal_how = true;
+var estadoNumBtnPlay = 0;
 function openModal(e){
     contract_window = document.getElementById(e+'-window');
     modal = document.getElementById(e+'-modal');
@@ -675,7 +670,14 @@ function openModal(e){
             estado_modal_how = false;
         }
         else {
-            datos_girar_maquina(0); reordenar(respuesta);
+            if (maquina_girando === false) {
+
+                datos_girar_maquina(estadoNumBtnPlay);
+                if (estadoNumBtnPlay < respuesta.length - 1) estadoNumBtnPlay++;
+                else estadoNumBtnPlay = 0;
+                // reordenar(respuesta);
+
+            }
         }
     }
 }

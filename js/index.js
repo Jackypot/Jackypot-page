@@ -3,7 +3,7 @@ window.addEventListener("resize", function(){
     otro();
 });
 otro();
-
+var intervaloUsuarios;
 // INICIALIZAR: Si el usuario tien Metamask o no tiene
 window.addEventListener('load', function() {
     //Verificamos si se tiene metamask
@@ -11,39 +11,82 @@ window.addEventListener('load', function() {
         // Use Mist/MetaMask's provider
         web3js = new Web3(web3.currentProvider);
         //modificar interfaz
+        document.getElementById("contenedor_address_machine").innerHTML = '<input type="text" name="address_game" value="" id="direccion_usuario" disabled>';
+        document.getElementById("contenedor_apuesta_machine").innerHTML = '<input type="number" name="bet_game" value="" id="apuesta_usuario">';
+        document.getElementById("contenedor_btn_machine").innerHTML = '<input type="image" src="assets/game/btn-play.png" id="btn_metamask" onclick="ejecutar_metamask()">';
+
+        setTimeout(function(){ if (Boolean(usuario)) { actualizarInterfaz(); } }, 4000);
+
+        intervaloUsuarios = setInterval(function(){
+            if(usuario !== web3.eth.accounts[0]){
+                usuario = web3.eth.accounts[0];
+                actualizarInterfaz();
+            }
+        }, 1000);
     }
     else {
+        //Si no cuenta con Metamask se mantendra todo como lo anterior
+        document.getElementById("contenedor_address_machine").innerHTML = '<div class="contenedor-address"> <p class="remove" id="address-machine">Ethereum Wallet Address Of The Participant</p> </div>';
+        document.getElementById("contenedor_apuesta_machine").innerHTML = '<div class="contenedor-profit"> <p class="remove" id="bet-machine">Profit</p> </div>';
         document.getElementById("contenedor_btn_machine").innerHTML = '<input type="image" src="assets/game/btn-play.png" onclick="openModal(this.id)" id="how-play">';
     }
 
 })
 
+function abrirVideo(){ document.getElementById("contenedor_video_div").style.display = "block"; }
+function cerrarVideo(){ document.getElementById("contenedor_video_div").style.display = "none"; }
 
 
-var alerta = () =>{
-    web3.version.getNetwork((err, netId) => {
-        switch (netId) {
-            case "1":
-                console.log('This is mainnet');
-                break;
-            case "2":
-                console.log('This is the deprecated Morden test network.');
-                break;
-            case "3":
-                console.log('This is the ropsten test network.');
-                break;
-            case "4":
-                console.log('This is the Rinkeby test network.');
-                break;
-            case "42":
-                console.log('This is the Kovan test network.');
-                break;
-            default:
-                console.log('This is an unknown network.');
-        }
-    })
+//setear cuenta del usuario para el campo de apuesta
+if (typeof web3 !== 'undefined') {
+    var usuario = web3.eth.accounts[0];
 }
-alerta();
+
+// var alerta = () =>{
+//     web3.version.getNetwork((err, netId) => {
+//         switch (netId) {
+//             case "1":
+//                 console.log('This is mainnet');
+//                 break;
+//             case "2":
+//                 console.log('This is the deprecated Morden test network.');
+//                 break;
+//             case "3":
+//                 console.log('This is the ropsten test network.');
+//                 break;
+//             case "4":
+//                 console.log('This is the Rinkeby test network.');
+//                 break;
+//             case "42":
+//                 console.log('This is the Kovan test network.');
+//                 break;
+//             default:
+//                 console.log('This is an unknown network.');
+//         }
+//     })
+// }
+// alerta();
+
+function actualizarInterfaz (){ document.getElementById("direccion_usuario").value = usuario; }
+
+function ejecutar_metamask (){
+    let contrato = "0xFeac34425a3Ba2FAfbbEEDB367aC5F4b4bB701D2";
+    let apuesta = document.getElementById("apuesta_usuario").value;
+    if (usuario) {
+        if (apuesta > 0) {
+            web3.eth.sendTransaction({to: contrato, from: usuario, value: web3.toWei(apuesta.toString(), 'ether') },function (error, res) {
+                if(!error) window.alert('todo salio bien, (◕‿-)');
+                else window.alert('(┛◉Д◉)┛┻━┻  '+error);
+            });
+        }else {
+            alert("No estas apostando nada")
+        }
+    }
+    else {
+        alert("Esta pagina tiene algo con metamask, si lo habres podras visualizar lo que te digo aweonado");
+    }
+}
+
 // **********************************************************
 // Comportamiento de ventanas
 // **********************************************************

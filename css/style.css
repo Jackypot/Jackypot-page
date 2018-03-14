@@ -97,7 +97,7 @@ body {
 Grid Template
 *************************************** */
 .navigation {grid-area: nav;}
-.introduction, .content, .information{background-color: rgb(54, 66, 86); height: 78vh}
+.introduction, .content, .information{background-color: rgb(54, 66, 86); height: 80vh}
 .introduction {grid-area: intr; overflow: hidden;}
 .content {grid-area: conte;}
 .collapse {grid-area: collap; display: none;}
@@ -359,6 +359,32 @@ Game
     box-shadow: 1px 1px 5px 1px rgba(0, 0, 0,0.5);
 }
 
+/* contenedores con metamask */
+#contenedor_address_machine{
+    text-align: center;
+}
+#contenedor_address_machine input{
+    width: 66%;
+    height: 26px;
+    border-radius: 5px;
+    border: none;
+    color: white;
+    background-color: black;
+    text-align: center;
+}
+
+#contenedor_apuesta_machine input{
+    width: 62%;
+    height: 26px;
+    border-radius: 5px;
+    border: none;
+    color: white;
+    background-color: black;
+    text-align: center;
+}
+
+
+
 .contenedor-address p{
     margin: 0px;
     white-space: nowrap;
@@ -401,6 +427,17 @@ Game
     -webkit-animation: parpadeo 3s 3;
             animation: parpadeo 3s 3;
 }
+
+.contenedor_video{text-align: center;}
+.btn_video{
+    background-color: #ffd200;
+    font-weight: bold;
+    border-radius: 5px;
+    border: none;
+    height: 29px;
+    width: 200px;
+    cursor: pointer;
+}
 /* ***************************************
 Chat o tabla
 *************************************** */
@@ -437,6 +474,12 @@ Chat o tabla
 .activo{
     font-weight: bold;
     color: black !important;
+}
+
+.active_btn{
+    background-color: #fdd432 !important;
+    color: black;
+    font-weight: bold;
 }
 
 #datos{margin-top: 10px;}
@@ -1183,4 +1226,19 @@ Contenedor de sonido de juego
   height: 60px;
   position: fixed;
   z-index: -1;
+}
+/* ***************************************
+Contenedor de dic con video
+*************************************** */
+.contenedor_video_div{
+    width: 350px;
+    height: 250px;
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+    display: none;
+    text-align: end;
+}
+.contenedor_video_div img{
+    cursor: pointer;
 }

@@ -449,9 +449,9 @@ Responsive
 Responsive
 *************************************** */
 @media only screen and (min-width: 1200px) {
-    .introduction {grid-area: intr; height: 80vh}
-    .content {grid-area: conte; height: 80vh}
-    .information {grid-area: info; height: 80vh}
+    .introduction {grid-area: intr; height: 83vh}
+    .content {grid-area: conte; height: 83vh}
+    .information {grid-area: info; height: 83vh}
     .modal-content{width: 730px !important;}
 }
 @media only screen and (min-width: 769px) {
