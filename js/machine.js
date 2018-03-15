@@ -640,15 +640,20 @@ function addSonido(){
 var contract_window, modal;
 var estado_modal_how = true;
 var estadoNumBtnPlay = 0;
+var temp = "";
 function openModal(e){
     contract_window = document.getElementById(e+'-window');
     modal = document.getElementById(e+'-modal');
 
     // Get the button that opens the modal
     var btn = document.getElementById(e);
-
     // Get the <span> element that closes the modal
     var span = document.getElementById(e+'-close');
+    if (temp !== e && temp !== "") {
+        let a = document.getElementById(temp+'-window').style.display = "none";
+        let b = document.getElementById(temp+'-modal').style.display = "none";
+    }
+    temp = e;
 
     // When the user clicks on the button, open the modal
     if (e !== 'how-play') {
