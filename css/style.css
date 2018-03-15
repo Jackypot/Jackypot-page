@@ -18,7 +18,7 @@ body {
     height: auto;
 }
 
-#svg{
+#svg, #svg-juguete, #svg-juguete-m{
     position: relative;
     top: 145px;
     width: 100%;
@@ -303,14 +303,14 @@ Game
 
 .machine{margin: 0px auto;}
 
-.img-machine{
+.img-machine, .img-machine-juguete{
     background: url("../assets/game/machine.png");
     background-size: 350px 350px;
     height: 350px;
     width: 350px;
 }
 
-#pote{
+#pote, #pote-juguete, #pote-juguete-m{
     position: relative;
     top: -150px;
     left: 0px;
@@ -1239,4 +1239,92 @@ Contenedor de dic con video
 
 .contenedor_video_div{
     height: 450px;
+}
+
+/* ***************************************
+Contenedor de dic con video
+*************************************** */
+.maquina-juguete{grid-area: maquina-juguete;}
+.puntos-totales{grid-area: puntos-juguete;}
+.apuesta-juguete{grid-area: apuesta-juguete;}
+.btn-play-juguete{grid-area: btn-play-juguete;}
+.contenedor-maquina-juguete{
+    display: grid;
+    grid-gap: 20px;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-areas:
+    "maquina-juguete maquina-juguete"
+    "puntos-juguete puntos-juguete"
+    "apuesta-juguete btn-play-juguete";
+}
+
+.contenedor-maquina-juguete .img-machine-juguete{margin: 0px auto;}
+
+.apuesta-juguete, .btn-play-juguete, .puntos-totales{
+    text-align: center;
+}
+.apuesta-juguete input{
+    height: 30px;
+    border: none;
+    border-radius: 5px;
+    background-color: rgb(0, 0, 0);
+    color: white;
+    text-align: center;
+    box-shadow: 1px 1px 1px 1px rgba(0,0,0,0.5);
+}
+
+.btn-play-juguete input, .apuesta-juguete input{
+    width: 80px;
+}
+
+.panel-puntos{
+    width: max-content;
+    margin: 0px auto;
+    background-color: black;
+    border-radius: 5px;
+}
+
+.puntos-totales input{
+    width: 100px;
+    height: 30px;
+    border: none;
+    border-radius: 5px;
+    background-color: rgba(0,0,0,0);
+    color: white;
+    text-align: center;
+    font-weight: bold;
+    font-size: 1.5em;
+    text-shadow: 2px 1px 2px #ff0101;
+}
+.puntos-totales label, .apuesta-juguete label{
+    color: white;
+    font-weight: bold;
+}
+
+.puntos-totales label{
+    font-size: 1.5em;
+    margin: 5px 0px 5px 30px;
+    color: rgb(253, 207, 50);
+}
+
+
+@keyframes sombra {
+    from{box-shadow: 1px 1px 1px 1px rgba(255, 1, 1, 0.75);}
+    25%{box-shadow: 1px 1px 1px 1px rgba(255, 247, 1, 0.75);}
+    50%{box-shadow: 1px 1px 1px 1px rgba(75, 255, 1, 0.75);}
+    75%{box-shadow: 1px 1px 1px 1px rgba(1, 161, 255, 0.75);}
+    to{box-shadow: 1px 1px 1px 1px rgba(255, 1, 1, 0.75);}
+}
+
+.sombras-c {
+    animation: sombra 3s infinite;
+    transition: all 500ms;
+}
+.free-bets-datos h3, .contenedor-Bdatos h3{
+    font-family: 'Archivo Black';
+    font-size: 2.5em;
+    text-align: center;
+    margin-top: 0px;
+    color: #fbed34;
+    text-shadow: 2px 2px 1px rgba(0,0,0,1);
 }

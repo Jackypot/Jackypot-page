@@ -236,7 +236,7 @@
                                     <li><a href="https://www.myetherwallet.com/" title="MyEtherWallet" target="_blank"><img src="assets/how-to-play/01.png" alt="" class="img-fluid"></a></li>
                                     <li><a href="https://ethereum.org/" title="Mist" target="_blank"><img src="assets/how-to-play/02.png" alt="" class="img-fluid"></a></li>
                                     <li><a href="https://metamask.io/" title="MetaMask" target="_blank"><img src="assets/how-to-play/03.png" alt="" class="img-fluid"></a></li>
-                     <li><a href="https://jaxx.io/" title="Jaxx" target="_blank"><img src="assets/how-to-play/04.png" alt="" class="img-fluid"></a></li>
+                                    <li><a href="https://jaxx.io/" title="Jaxx" target="_blank"><img src="assets/how-to-play/04.png" alt="" class="img-fluid"></a></li>
                                     <li><a href="https://www.exodus.io/" title="Exodus" target="_blank"><img src="assets/how-to-play/05.png" alt="" class="img-fluid"></a></li>
                                 </ul>
                             </div>
@@ -320,7 +320,29 @@
                             </div>
                                 <!-- Contenedor de los datos -->
                             <div class="contenedor-Bdatos">
-                                <h2 class="">Check your free bets</h2>
+                                <h3>THERE ARE 1000 FREE BETS LEFT!</h3>
+                                <div class="contenedor-maquina-juguete">
+                                    <div class="maquina-juguete">
+                                        <div class="img-machine-juguete">
+                                            <svg id="svg-juguete-m"></svg>
+                                            <p id="pote-juguete-m">20000 POINTS</p>
+                                        </div>
+                                    </div>
+                                    <div class="puntos-totales">
+                                        <div class="panel-puntos sombras-c">
+                                            <label>Points: </label>
+                                            <input type="text" disabled value="1000" id="puntos-jugador-m">
+                                        </div>
+                                    </div>
+                                    <div class="apuesta-juguete">
+                                        <label>BET: </label>
+                                        <input type="number" required min="100" max="500" step="100" onkeypress="return validaNumericos(event)" placeholder="100" id="apuesta_puntos-m">
+                                    </div>
+                                    <div class="btn-play-juguete">
+                                        <input type="image" src="assets/game/btn-play.png" onclick="jugar_por_puntos()">
+                                    </div>
+                                </div>
+                                <!-- <h2 class="">Check your free bets</h2>
                                 <div class="search">
                                     <input type="text" name="addres-bets">
                                     <button type="button" id="btn-private">Personal</button>
@@ -336,7 +358,7 @@
                                 </div>
                                 <div class="con-table" id="con-table-m">
 
-                                </div>
+                                </div> -->
                             </div>
                         </div>
                     </div>
@@ -636,7 +658,7 @@
                     <tbody>
                         <tr>
                             <td class="borde-vertical borde-horizontal">Triple Figures</td>
-                            <td class="borde-vertical borde-horizontal">Suppose you bet 1ETH and fall Currency & Currency & Currency. With this combination, you win your bet of 1ETH x 3 = 3 ETH.</td>
+                <h2 style="color: yellow; margin-top:50px; font-size: 60px;"></h2>            <td class="borde-vertical borde-horizontal">Suppose you bet 1ETH and fall Currency & Currency & Currency. With this combination, you win your bet of 1ETH x 3 = 3 ETH.</td>
                             <td class="borde-vertical borde-horizontal">Get 300% of your bet</td>
                             <td class="borde-horizontal">
                                 <img src="assets/faqs/triple.png" alt="Triple coins">
@@ -730,7 +752,29 @@
                 </div>
                 <div class="free-bets-datos" id="contenedor-free-bets">
                     <!-- Contenedor de los datos -->
-                    <h2 style="color: yellow; margin-top:50px; font-size: 60px;">Coming Soon</h2>
+                    <h3>THERE ARE 1000 FREE BETS LEFT!</h3>
+                    <div class="contenedor-maquina-juguete">
+                        <div class="maquina-juguete">
+                            <div class="img-machine-juguete">
+                                <svg id="svg-juguete"></svg>
+                                <p id="pote-juguete">20000 POINTS</p>
+                            </div>
+                        </div>
+                        <div class="puntos-totales">
+                            <div class="panel-puntos sombras-c">
+                                <label>Points: </label>
+                                <input type="text" disabled value="1000" id="puntos-jugador">
+                            </div>
+                        </div>
+                        <div class="apuesta-juguete">
+                            <label>BET: </label>
+                            <input type="number" required min="100" max="500" step="100" onkeypress="return validaNumericos(event)" placeholder="100" id="apuesta_puntos">
+                        </div>
+                        <div class="btn-play-juguete">
+                            <input type="image" src="assets/game/btn-play.png" onclick="jugar_por_puntos()">
+                        </div>
+                    </div>
+
                     <!-- <div class="contenedor-Bdatos">
                         <h2 class="">Check your free bets</h2>
                         <div class="search">

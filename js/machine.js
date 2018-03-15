@@ -380,11 +380,13 @@ function playGiro(a, b, c, profit, classe){
         }
 
 	    // Para las diferentes pantallas
-	    if (vw <= 480){size = 50; posX = 15; posY = 79; posZ = 140; translado = 26;    }
-	    else if (vw > 480 && vw <= 768){size = 50; posX = 15; posY = 79; posZ = 140; translado = 26;}
-	    else if (vw > 768 && vw < 1023){size = 80; posX = 30; posY = 139; posZ = 250; translado = 50;}
-        else if (vw >= 1023 && vw <= 1024){size = 80; posX = 18; posY = 112; posZ = 205; translado = 40;}
-        else if (vw > 1024 && vw < 1176){posX = 29; posY = 138; posZ = 248; translado = 46;}
+        if (vw <= 480){size = 50; posX = 15; posY = 79; posZ = 140; translado = 26;}
+        if (profit !== true && classe !== true) {
+            if (vw > 480 && vw <= 768){size = 50; posX = 15; posY = 79; posZ = 140; translado = 26;}
+            else if (vw > 768 && vw < 1023){size = 80; posX = 30; posY = 139; posZ = 250; translado = 50;}
+            else if (vw >= 1023 && vw <= 1024){size = 80; posX = 18; posY = 112; posZ = 205; translado = 40;}
+            else if (vw > 1024 && vw < 1176){posX = 29; posY = 138; posZ = 248; translado = 46;}
+        }
 	    // Obtencion de numeros randoms para tener imagenes aleatorias
 	    // Representacion de los numeros y cambio de numeros del 1 - 9 ah 1 - 3
 
@@ -394,8 +396,16 @@ function playGiro(a, b, c, profit, classe){
 	    b = cambioNum[b];
 	    c = cambioNum[c];
 
+        let idSVG = "#svg";
+        if (profit === true && classe === true) {
+            if (vw <= 480){idSVG = "#svg-juguete-m";}
+            else { idSVG = "#svg-juguete"; }
+        }else if (profit !== true && classe !== true) {
+            idSVG = "#svg";
+        }
+
 	    // Declaramos el SVG
-	    var s = Snap("#svg");
+	    var s = Snap(idSVG);
 	    // Limpiamos el campo
 	    s.clear();
 
@@ -598,9 +608,11 @@ function playGiro(a, b, c, profit, classe){
                 z = s.image("assets/game/slot/"+c+".svg", posZ, (10+translado), size, size);
             }
 
-            let profit_maquina, clase_actual;
-            profit_maquina = document.getElementById("bet-machine");
-            clase_actual = profit_maquina.classList;
+            if (profit !== true && classe !== true) {
+                let profit_maquina, clase_actual;
+                profit_maquina = document.getElementById("bet-machine");
+                clase_actual = profit_maquina.classList;
+            }
 
             if (classe === 'rojo'){
                 profit_maquina.classList.remove(clase_actual);
@@ -619,6 +631,9 @@ function playGiro(a, b, c, profit, classe){
                 }, 5500);
         	}
 
+            if (profit === true && classe === true) {
+                gana_pierde_puntos(a, b, c);
+            }
 
             maquina_girando = false;
         }, 3300)
@@ -693,5 +708,68 @@ window.onclick = function(event) {
     if (event.target == contract_window) {
         modal.style.display = "none";
         contract_window.style.display = "none";
+    }
+}
+
+
+
+// **********************************************************
+// FUNCION: Jugar la maquina ficticia
+// **********************************************************
+//Parametros Resultado, Resultado, Resultado, Profit, Clase
+var apuesta_puntos = 0;
+var puntos_jugador = 1000;
+var pote_puntos = 20000;
+function jugar_por_puntos(){
+    let num1 = Math.floor((Math.random() * 9) + 1);
+    let num2 = Math.floor((Math.random() * 9) + 1);
+    let num3 = Math.floor((Math.random() * 9) + 1);
+
+    if (vw <= 480){apuesta_puntos = document.getElementById("apuesta_puntos-m").value;}
+    else { apuesta_puntos = document.getElementById("apuesta_puntos").value; }
+
+    if (puntos_jugador > 0 && apuesta_puntos){
+        playGiro(num1, num2, num3, true, true);
+    }
+    else {
+        alert("No ahi puntos o apuesta 0")
+    }
+}
+
+function gana_pierde_puntos(num1, num2, num3){
+    let temp, agregar_puntos, pote_juguete;
+
+    if (vw <= 480){
+        agregar_puntos = document.getElementById("puntos-jugador-m");
+        pote_juguete = document.getElementById("pote-juguete-m");
+    }
+    else{
+        agregar_puntos = document.getElementById("puntos-jugador");
+        pote_juguete = document.getElementById("pote-juguete");
+    }
+    if (num1 == num2 && num2 == num3) {
+        //premio
+         temp = apuesta_puntos * 3;
+         // puntos jugador + premio
+         puntos_jugador = puntos_jugador + temp;
+         agregar_puntos.value = puntos_jugador;
+         //restamos el premio del pote
+         pote_puntos = pote_puntos - temp;
+         pote_juguete.innerHTML = pote_puntos +" POINTS";
+    }
+    else if(num1 == num2 || num2 == num3){
+        temp = apuesta_puntos * 2;
+        puntos_jugador = puntos_jugador + temp;
+        agregar_puntos.value = puntos_jugador;
+        pote_puntos = pote_puntos - temp;
+        pote_juguete.innerHTML = pote_puntos +" POINTS";
+    }
+    else {
+        // Sumamos la apuesta al pote
+        pote_puntos = pote_puntos + parseInt(apuesta_puntos);
+        //restamos apuesta a los puntos del jugador
+        puntos_jugador = puntos_jugador - apuesta_puntos;
+        agregar_puntos.value = puntos_jugador;
+        pote_juguete.innerHTML = pote_puntos +" POINTS";
     }
 }
