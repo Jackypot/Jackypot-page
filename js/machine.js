@@ -608,9 +608,10 @@ function playGiro(a, b, c, profit, classe){
                 z = s.image("assets/game/slot/"+c+".svg", posZ, (10+translado), size, size);
             }
 
+            let profit_maquina, clase_actual;
+            profit_maquina = document.getElementById("bet-machine");
+            
             if (profit !== true && classe !== true) {
-                let profit_maquina, clase_actual;
-                profit_maquina = document.getElementById("bet-machine");
                 clase_actual = profit_maquina.classList;
             }
 
@@ -635,8 +636,8 @@ function playGiro(a, b, c, profit, classe){
                 gana_pierde_puntos(a, b, c);
             }
 
-            maquina_girando = false;
         }, 3300)
+        setTimeout(()=> maquina_girando = false, 3400);
 
 
     }
@@ -728,12 +729,8 @@ function jugar_por_puntos(){
     if (vw <= 480){apuesta_puntos = document.getElementById("apuesta_puntos-m").value;}
     else { apuesta_puntos = document.getElementById("apuesta_puntos").value; }
 
-    if (puntos_jugador > 0 && apuesta_puntos){
-        playGiro(num1, num2, num3, true, true);
-    }
-    else {
-        alert("No ahi puntos o apuesta 0")
-    }
+    if (puntos_jugador > 0 && apuesta_puntos <= 500){ playGiro(num1, num2, num3, true, true); }
+    else { alert("No ahi puntos o apuesta 0"); }
 }
 
 function gana_pierde_puntos(num1, num2, num3){

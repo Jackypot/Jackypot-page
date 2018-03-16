@@ -635,7 +635,7 @@ transparencia
 /* ***************************************
 Frecuents Questions
 *************************************** */
-.faqs, .terms, .contact, .free-bets, .transparencia{
+.faqs, .terms, .contact, .free-bets, .contrato-transp{
     display: none;
     position: absolute;
     top: 84px;
@@ -714,7 +714,18 @@ Frecuents Questions
 /* ***************************************
 contrato
 *************************************** */
-.contrato, .how-play, .reglas, .video{
+.contrato-transp{color: white;}
+.contrato-transp h2{
+    color: #fed232;
+    font-size: 29px;
+    text-align: center;
+}
+
+
+/* ***************************************
+Modal
+*************************************** */
+.how-play, .reglas, .video{
     background-color: rgba(0,0,0,0.4);
     height: 100%;
     width: 100%;
@@ -922,21 +933,30 @@ Free bets
 
 /* IMG de la promo */
 .free-bets-promocion, .contenedor-promocion{
-    background-color: rgb(65, 70, 95);
+    background-color: rgb(18,17,30);
     border-radius: 5px;
     box-shadow: 0px 2px 5px 0px rgba(0, 0, 0, 0.5);
     border: none;
     overflow: hidden;
+    border-width: 9px;
+    border-style: outset;
+    border-color: #32a0d1;
 }
 .free-bets-promocion h2{
-    text-align: center;
-    color: rgb(255,0,0);
-    text-shadow: 2px 2px 1px rgba(0,0,0,1);
-    margin: 0px;
-    font-size: 50px;
+    color: #feda33;
+    text-shadow: 2px 2px 1px rgb(29, 94, 125);
+    margin-top: 0px;
     font-weight: bold;
-    font-family: 'Archivo Black';
 }
+.free-bets-promocion h3{
+    color: white;
+    text-shadow: 2px 2px 1px #ff0000;
+    font-weight: bold;
+    text-align: center;
+    font-size: 40px;
+    margin: 0px;
+}
+
 .contenedor-btn-freeBets{text-align: center;}
 .btn-free-bet{
     background: red;
@@ -984,9 +1004,9 @@ Free bets
 
 .slider-content p, .slider-content-m p{
     margin: 1em 0px;
-    color: yellow;
+    color: #d6e6f3;
     font-weight: bold;
-    text-shadow: 1px 1px 1px rgba(0,0,0,1);
+    text-shadow: 1px 1px 1px rgb(48, 55, 255);
 }
 
 .slider-content p{ font-size: 27px; }
@@ -1009,7 +1029,7 @@ Free bets
 
 .controls li, .controls-m li{
     list-style-type: none;
-    background-color: rgb(242,131,146);
+    background-color: #243065;
     width: 20px;
     height: 20px;
     border-radius: 50%;
@@ -1020,7 +1040,7 @@ Free bets
 }
 
 .controls li.active, .controls-m li.active{
-    background-color: rgb(9,221,214);
+    background-color: #32a0d1;
 }
 
 
@@ -1047,9 +1067,12 @@ Free bets
 /* Seccion de los datos de los tiros */
 
 .free-bets-datos{
-    background-color: rgb(65, 70, 95);
+    background-color: #151515;
     border-radius: 5px;
     box-shadow: 0px 2px 5px 0px rgba(0, 0, 0, 0.5);
+    border-width: 10px;
+    border-style: dashed solid;
+    border-color: #920303;
 }
 .contenedor-free-bets h2{text-align: center;}
 
@@ -1297,14 +1320,14 @@ Contenedor de dic con video
     text-shadow: 2px 1px 2px #ff0101;
 }
 .puntos-totales label, .apuesta-juguete label{
-    color: white;
+    color: #cfe3e5;
     font-weight: bold;
 }
 
 .puntos-totales label{
     font-size: 1.5em;
     margin: 5px 0px 5px 30px;
-    color: rgb(253, 207, 50);
+    color: #cfe3e5;
 }
 
 
@@ -1320,11 +1343,16 @@ Contenedor de dic con video
     animation: sombra 3s infinite;
     transition: all 500ms;
 }
+
+.free-bets-datos h2{
+    margin-top: 0px;
+    color: #feda33;
+    text-shadow: 2px 2px 1px #1d4e54;
+}
 .free-bets-datos h3, .contenedor-Bdatos h3{
-    font-family: 'Archivo Black';
-    font-size: 2.5em;
+    font-size: 26px;
     text-align: center;
     margin-top: 0px;
-    color: #fbed34;
-    text-shadow: 2px 2px 1px rgba(0,0,0,1);
+    color: #cfe3e5;
+    text-shadow: 2px 2px 1px #1d4e54;
 }
