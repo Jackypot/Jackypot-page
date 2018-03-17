@@ -240,16 +240,21 @@ function envioRecursoPromocionMaquina (){
     let aux = document.getElementById("textAreaAddress");
 
     if (aux.value && aux.value.length === 42) {
-        let url = "http://192.168.1.75:8080/promoMaquina";
-        fetch(url, {method: 'post', headers: { 'Accept': 'application/json', 'Content-Type': 'application/json' },
-            body: JSON.stringify({
-                "address": aux.value,
-                "promocion": "tirodemo"
-            })
-        })
-        .then(function(response){if (!response.ok) {throw Error(response.statusText);} return response.json();})
-        .then(function(data) { alert('Send message'); aux.value = ""; })
-        .catch(function(error) { console.log('Parece que hubo un error: ' + error); });
+        alert("data saved, enjoy yuor games");
+
+        document.getElementById("contenedor-maquina-juguete").style.display = "grid";
+        document.getElementById("contenedor-ganador").style.display = "none";
+
+        // let url = "http://192.168.1.75:8080/promoMaquina";
+        // fetch(url, {method: 'post', headers: { 'Accept': 'application/json', 'Content-Type': 'application/json' },
+        //     body: JSON.stringify({
+        //         "address": aux.value,
+        //         "promocion": "tirodemo"
+        //     })
+        // })
+        // .then(function(response){if (!response.ok) {throw Error(response.statusText);} return response.json();})
+        // .then(function(data) { alert('Send message'); aux.value = ""; })
+        // .catch(function(error) { console.log('Parece que hubo un error: ' + error); });
     }
     else{
         alert("Parece que envias algo vacio o no esta completa tu direccion");
@@ -282,7 +287,7 @@ function envioRecursoPromocionMaquina (){
 //             img.src = blockies.toDataUrl("0xFeac34425a3Ba2FAfbbEEDB367aC5F4b4bB701D2");
 //
 //         /*Imprimir datos*/
-//         posicion.innerHTML = "#"+(i+1);
+//         posicion.innerHTML =http://192.168.1.75:8080/table "#"+(i+1);
 //         address_p.innerHTML = "0xFeac34425a3Ba2FAfbbEEDB367aC5F4b4bB701D2";
 //         bets_p.innerHTML = nu;
 //         nu = nu - 12;
