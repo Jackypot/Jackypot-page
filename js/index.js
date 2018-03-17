@@ -12,18 +12,21 @@ window.addEventListener('load', function() {
         // Use Mist/MetaMask's provider
         web3js = new Web3(web3.currentProvider);
         //modificar interfaz
-        document.getElementById("contenedor_address_machine").innerHTML = '<input type="text" name="address_game" value="" id="direccion_usuario" disabled>';
-        document.getElementById("contenedor_apuesta_machine").innerHTML = '<input type="number" name="bet_game" value="" id="apuesta_usuario" min="0.01" max="20" step="0.01" onkeypress="return validaNumericos(event)" placeholder="0.01">';
-        document.getElementById("contenedor_btn_machine").innerHTML = '<input type="image" src="assets/game/btn-play.png" id="btn_metamask" onclick="ejecutar_metamask()">';
+        // document.getElementById("contenedor_address_machine").innerHTML = '<input type="text" name="address_game" value="" id="direccion_usuario" disabled>';
+        // document.getElementById("contenedor_apuesta_machine").innerHTML = '<label>BET: </label><input type="number" name="bet_game" value="" id="apuesta_usuario" min="0.01" max="20" step="0.01" onkeypress="return validaNumericos(event)" placeholder="0.01">';
+        // document.getElementById("contenedor_btn_machine").innerHTML = '<input type="image" src="assets/game/btn-play.png" id="btn_metamask" onclick="ejecutar_metamask()">';
 
-        setTimeout(function(){ if (Boolean(usuario)) { actualizarInterfaz(); } }, 4000);
+        document.getElementById("contenedor_address_machine").innerHTML = '<div class="contenedor-address"> <p class="remove" id="address-machine">Ethereum Wallet Address Of The Participant</p> </div>';
+        document.getElementById("contenedor_apuesta_machine").innerHTML = '<div class="contenedor-profit"> <p class="remove" id="bet-machine">Profit</p> </div>';
+        document.getElementById("contenedor_btn_machine").innerHTML = '<input type="image" src="assets/game/btn-play.png" onclick="openModal(this.id)" id="how-play">';
+        // setTimeout(function(){ if (Boolean(usuario)) { actualizarInterfaz(); } }, 4000);
 
-        intervaloUsuarios = setInterval(function(){
-            if(usuario !== web3.eth.accounts[0]){
-                usuario = web3.eth.accounts[0];
-                actualizarInterfaz();
-            }
-        }, 1000);
+        // intervaloUsuarios = setInterval(function(){
+        //     if(usuario !== web3.eth.accounts[0]){
+        //         usuario = web3.eth.accounts[0];
+        //         actualizarInterfaz();
+        //     }
+        // }, 1000);
     }
     else {
         //Si no cuenta con Metamask se mantendra todo como lo anterior
@@ -223,8 +226,40 @@ var mostrar_premios_m = () => {
 // Funcion para free bets
 // **********************************************************
 
+function obtener_tiros_endpoint(){
+    var url = 'http://192.168.1.75:8080/contador';
+    fetch(url)
+    .then(function(response){if (!response.ok) {throw Error(response.statusText);} return response.json();})
+    .then(function(data) {document.getElementById("contador-tiros-entregados").innerHTML = (800 - data.results[0].tirosEntregados) + " FREE BETS";})
+    .catch(function(error){console.log('Parece que hubo un error: ' + error);});
+}
+obtener_tiros_endpoint();
 
-// 
+document.getElementById("enviarRecursoPromocion").addEventListener("click", envioRecursoPromocionMaquina);
+function envioRecursoPromocionMaquina (){
+    let aux = document.getElementById("textAreaAddress");
+
+    if (aux.value && aux.value.length === 42) {
+        let url = "http://192.168.1.75:8080/promoMaquina";
+        fetch(url, {method: 'post', headers: { 'Accept': 'application/json', 'Content-Type': 'application/json' },
+            body: JSON.stringify({
+                "address": aux.value,
+                "promocion": "tirodemo"
+            })
+        })
+        .then(function(response){if (!response.ok) {throw Error(response.statusText);} return response.json();})
+        .then(function(data) { alert('Send message'); aux.value = ""; })
+        .catch(function(error) { console.log('Parece que hubo un error: ' + error); });
+    }
+    else{
+        alert("Parece que envias algo vacio o no esta completa tu direccion");
+    }
+}
+
+
+
+
+
 // function mostrarJugadores(){
 //
 //     let div_correspondiente;
@@ -276,3 +311,37 @@ var mostrar_premios_m = () => {
 // }
 //
 // mostrarJugadores();
+
+// - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+// switch Btn - Animacion
+// - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+class Btn_Swich {
+
+    constructor() {
+        this.seleccion_de_informacion = this.seleccion_de_informacion.bind(this);
+        this.btnActive = null;
+        this.addEventClick();
+    }
+
+    addEventClick(){
+        document.querySelectorAll("#navegacion-nav li")
+        .forEach(item => {
+            item.addEventListener("click", this.seleccion_de_informacion)
+        });
+    }
+
+    seleccion_de_informacion(ev){
+        this.removeIndicador();
+        this.btnActive = ev.currentTarget;
+        this.btnActive.classList.add("active");
+    }
+
+    removeIndicador(){
+        document.querySelectorAll("#navegacion-nav li.active")
+			.forEach(item => item.classList.remove("active"));
+    }
+}
+
+(function(){
+	new Btn_Swich();
+})();

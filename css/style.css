@@ -170,6 +170,10 @@ Navigation
     text-overflow: ellipsis;
 }
 
+.nav li.active{
+    background-color: rgba(0, 0, 0, 0.3);
+}
+
 .nav li:hover{
     cursor: pointer;
     background-color: rgba(0, 0, 0, 0.3);
@@ -382,7 +386,9 @@ Game
     background-color: black;
     text-align: center;
 }
-
+#contenedor_apuesta_machine label{
+    font-weight: bold;
+}
 
 
 .contenedor-address p{
@@ -639,7 +645,7 @@ Frecuents Questions
     display: none;
     position: absolute;
     top: 84px;
-    height: 83vh;
+    height: 88vh;
     background-color: rgb(54, 66, 86);
     border-radius: 5px;
     overflow-x: auto;
@@ -910,13 +916,11 @@ prizes
 Ul imagenes
 *************************************** */
 
-ul.git {
-list-style-image: url('../assets/contract/git.png');
+ul.git { list-style-image: url('../assets/contract/git.png'); }
+ul.eth { list-style-image: url('../assets/contract/eth.png'); }
+ul.git a, ul.eth a{
+    color: white;
 }
-ul.eth {
-list-style-image: url('../assets/contract/eth.png');
-}
-
 /* ***************************************
 Free bets
 *************************************** */
@@ -1073,9 +1077,13 @@ Free bets
     border-width: 10px;
     border-style: dashed solid;
     border-color: #920303;
+    overflow: hidden;
 }
-.contenedor-free-bets h2{text-align: center;}
-
+.contenedor-free-bets h2{text-align: start;}
+.free-bets-datos .controls li, .controls-m li{
+    border-radius: 0px;
+    height: 4px;
+}
 .contenedor-promocion{
     border-radius: 5px;
     height: auto;
@@ -1270,7 +1278,7 @@ Contenedor de dic con video
 .maquina-juguete{grid-area: maquina-juguete;}
 .puntos-totales{grid-area: puntos-juguete;}
 .apuesta-juguete{grid-area: apuesta-juguete;}
-.btn-play-juguete{grid-area: btn-play-juguete;}
+.btn-play-juguete{grid-area: btn-play-juguete; margin-bottom: 30px;}
 .contenedor-maquina-juguete{
     display: grid;
     grid-gap: 20px;
@@ -1280,6 +1288,7 @@ Contenedor de dic con video
     "puntos-juguete puntos-juguete"
     "apuesta-juguete btn-play-juguete";
 }
+
 
 .contenedor-maquina-juguete .img-machine-juguete{margin: 0px auto;}
 
@@ -1344,15 +1353,72 @@ Contenedor de dic con video
     transition: all 500ms;
 }
 
+
 .free-bets-datos h2{
-    margin-top: 0px;
+    margin: 0px;
     color: #feda33;
     text-shadow: 2px 2px 1px #1d4e54;
+    text-align: start;
 }
 .free-bets-datos h3, .contenedor-Bdatos h3{
     font-size: 26px;
     text-align: center;
-    margin-top: 0px;
+    margin: 0px;
     color: #cfe3e5;
     text-shadow: 2px 2px 1px #1d4e54;
+}
+
+/* Ganador */
+.contenedor-ganador{
+    text-align: center;
+    display: none;
+}
+
+.contenedor-ganador h3{
+    margin-top: 30px;
+    color: #feec34;
+}
+
+.contenedor-ganador textarea{
+    border-radius: 5px;
+    font-size: 20px;
+    width: 94%;
+    text-align: center;
+    padding-top: 21px;
+    background: transparent;
+    border-width: medium;
+    border-style: none none solid none;
+    color: white;
+    outline: none;
+    border-color: coral;
+    margin-top: 50px;
+}
+
+.contenedor-ganador button{
+    background: red;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    height: 50px;
+    width: 150px;
+    font-size: 25px;
+    font-weight: bold;
+    box-shadow: 1px 1px 1px 1px rgb(0,0,0);
+    margin-bottom: 10px;
+    margin-top: 30px;
+    cursor: pointer;
+}
+
+.titulo-1{grid-area: titulo-1;}
+.titulo-2{grid-area: titulo-2;}
+.titulo-bets{
+    display: grid;
+    grid-gap: 20px;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-areas:
+    "titulo-1 titulo-2";
+}
+
+.titulo-2 h2{
+    text-align: end !important;
 }

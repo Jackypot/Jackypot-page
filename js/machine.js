@@ -14,12 +14,15 @@ var socket = io('https://jackynet.eu-4.evennode.com',{path: '/service1'});
 //FUNCION: Get respuesta de EndPoint
 function obtencion_datos_endpoint(){
     fetch('https://jackynet.eu-4.evennode.com/table')
+    // fetch('http://192.168.1.75:8080/table')
     .then(function(response){if (!response.ok) {throw Error(response.statusText);} return response.json();})
     .then(function(resp) {
 
         //Guardamos la respuesta
+        respuesta = resp;
         respuesta = resp.dataTable;
-        respuesta_pote = respuesta[5];
+        console.log(resp);
+        respuesta_pote = respuesta[respuesta.length-1].potValue;
         respuesta.pop();
         //INTERVALO: Mostrar datos en seccion "BETS"
         temporal();
@@ -65,7 +68,7 @@ function temporal (){
 
     if (datos_existentes) {
         document.getElementById(div_correspondiente).innerHTML = "";
-    }true
+    }
     for (var i = 0; i < respuesta.length; i++) {
         let agregar = document.getElementById(div_correspondiente);
         let contenedor = document.createElement("div");
@@ -129,7 +132,7 @@ var estado_pote = true;
 function mostrar_pote(){
     if (estado_pote) {
         //Guardamos el valor del pote obtenido de la respuesta
-        pote = respuesta_pote.potValue;
+        pote = respuesta_pote.potValue;;
         //Mostramos el valor del pote
         document.getElementById("pote").innerHTML = pote.toFixed(2) +" ETH";
         //Cambiamos el estado a false
@@ -610,7 +613,7 @@ function playGiro(a, b, c, profit, classe){
 
             let profit_maquina, clase_actual;
             profit_maquina = document.getElementById("bet-machine");
-            
+
             if (profit !== true && classe !== true) {
                 clase_actual = profit_maquina.classList;
             }
@@ -718,7 +721,7 @@ window.onclick = function(event) {
 // FUNCION: Jugar la maquina ficticia
 // **********************************************************
 //Parametros Resultado, Resultado, Resultado, Profit, Clase
-var apuesta_puntos = 0;
+var apuesta_usuario = 0;
 var puntos_jugador = 1000;
 var pote_puntos = 20000;
 function jugar_por_puntos(){
@@ -726,15 +729,34 @@ function jugar_por_puntos(){
     let num2 = Math.floor((Math.random() * 9) + 1);
     let num3 = Math.floor((Math.random() * 9) + 1);
 
-    if (vw <= 480){apuesta_puntos = document.getElementById("apuesta_puntos-m").value;}
-    else { apuesta_puntos = document.getElementById("apuesta_puntos").value; }
+    let quitar_puntos, apuesta;
 
-    if (puntos_jugador > 0 && apuesta_puntos <= 500){ playGiro(num1, num2, num3, true, true); }
-    else { alert("No ahi puntos o apuesta 0"); }
+    if (vw <= 480){
+        apuesta = document.getElementById("apuesta_puntos-m");
+        quitar_puntos = document.getElementById("puntos-jugador-m");
+    }
+    else {
+        apuesta = document.getElementById("apuesta_puntos");
+        quitar_puntos = document.getElementById("puntos-jugador");
+    }
+    apuesta_usuario = apuesta.value;
+
+    if (puntos_jugador > 0){
+        if (apuesta_usuario > 0 && apuesta_usuario <= 500 && ((apuesta_usuario*100)%2) == 0 && ((apuesta_usuario/100)%2) == 1 ) {
+            //Restamos la apuesta
+            puntos_jugador = puntos_jugador - apuesta_usuario;
+            quitar_puntos.value = puntos_jugador;
+            playGiro(num1, num2, num3, true, true);
+        }
+        else {
+            alert("You are entering a value of 0 or a value out of range. \n Las apuestas son de 100 en 100 ")
+        }
+     }
+    else { alert("You have run out of points to bet on."); }
 }
 
 function gana_pierde_puntos(num1, num2, num3){
-    let temp, agregar_puntos, pote_juguete;
+    let aux, agregar_puntos, pote_juguete;
 
     if (vw <= 480){
         agregar_puntos = document.getElementById("puntos-jugador-m");
@@ -744,29 +766,47 @@ function gana_pierde_puntos(num1, num2, num3){
         agregar_puntos = document.getElementById("puntos-jugador");
         pote_juguete = document.getElementById("pote-juguete");
     }
+
+
     if (num1 == num2 && num2 == num3) {
-        //premio
-         temp = apuesta_puntos * 3;
-         // puntos jugador + premio
-         puntos_jugador = puntos_jugador + temp;
-         agregar_puntos.value = puntos_jugador;
-         //restamos el premio del pote
-         pote_puntos = pote_puntos - temp;
-         pote_juguete.innerHTML = pote_puntos +" POINTS";
+        // Calculamos el premio
+        aux = apuesta_usuario * 3;
+
+        //Restamos los puntos perdidos al pote
+        pote_puntos = pote_puntos - parseInt(aux);
+        pote_juguete.innerHTML = pote_puntos + " POINTS";
+
+        // Agregamos la apuesta al premio
+        aux = parseInt(aux) + parseInt(apuesta_usuario);
+
+        //Sumamos los puntos ganados a los puntos del usuario
+        puntos_jugador = puntos_jugador + parseInt(aux);
+        agregar_puntos.value = puntos_jugador;
+
     }
     else if(num1 == num2 || num2 == num3){
-        temp = apuesta_puntos * 2;
-        puntos_jugador = puntos_jugador + temp;
+        // Calculamos el premio
+        aux = apuesta_usuario * 2;
+
+        //Restamos los puntos perdidos al pote
+        pote_puntos = pote_puntos - parseInt(aux);
+        pote_juguete.innerHTML = pote_puntos + " POINTS";
+
+        // Agregamos la apuesta al premio
+        aux = parseInt(aux) + parseInt(apuesta_usuario);
+
+        //Sumamos los puntos ganados a los puntos del usuario
+        puntos_jugador = puntos_jugador + parseInt(aux);
         agregar_puntos.value = puntos_jugador;
-        pote_puntos = pote_puntos - temp;
-        pote_juguete.innerHTML = pote_puntos +" POINTS";
     }
     else {
-        // Sumamos la apuesta al pote
-        pote_puntos = pote_puntos + parseInt(apuesta_puntos);
-        //restamos apuesta a los puntos del jugador
-        puntos_jugador = puntos_jugador - apuesta_puntos;
-        agregar_puntos.value = puntos_jugador;
-        pote_juguete.innerHTML = pote_puntos +" POINTS";
+        //Sumamos los puntos ganados al pote
+        pote_puntos = pote_puntos + parseInt(apuesta_usuario);
+        pote_juguete.innerHTML = pote_puntos + " POINTS";
+    }
+
+    if (puntos_jugador >= 20000) {
+        document.getElementById("contenedor-maquina-juguete").style.display = "none";
+        document.getElementById("contenedor-ganador").style.display = "block";
     }
 }
