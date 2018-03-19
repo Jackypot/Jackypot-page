@@ -432,24 +432,15 @@ Game
     -webkit-animation: parpadeo 3s 3;
             animation: parpadeo 3s 3;
 }
-<<<<<<< HEAD
-.contenedor_video{text-align: center;}
-=======
 
-
->>>>>>> pruebas
 .btn_video{
     background-color: #ffd200;
     font-weight: bold;
     border-radius: 5px;
     border: none;
     height: 29px;
-<<<<<<< HEAD
-    width: 80%;
-=======
     width: 200px;
     cursor: pointer;
->>>>>>> pruebas
 }
 /* ***************************************
 Chat o tabla
@@ -728,9 +719,6 @@ Frecuents Questions
 /* ***************************************
 contrato
 *************************************** */
-<<<<<<< HEAD
-.contrato, .how-play, .reglas, .video{
-=======
 .contrato-transp{color: white;}
 .contrato-transp h2{
     color: #fed232;
@@ -743,7 +731,6 @@ contrato
 Modal
 *************************************** */
 .how-play, .reglas, .video{
->>>>>>> pruebas
     background-color: rgba(0,0,0,0.4);
     height: 100%;
     width: 100%;
