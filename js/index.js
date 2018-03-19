@@ -225,20 +225,6 @@ var mostrar_premios_m = () => {
 // Funcion para free bets
 // **********************************************************
 
-function obtener_tiros_endpoint(){
-    var url = 'http://192.168.1.75:8080/contador';
-    fetch(url)
-    .then(function(response){if (!response.ok) {throw Error(response.statusText);} return response.json();})
-    .then(function(data) {document.getElementById("contador-tiros-entregados").innerHTML = (800 - data.results[0].tirosEntregados) + " FREE BETS";})
-    .catch(function(error){console.error('Parece que hubo un error: ' + error);});
-}
-obtener_tiros_endpoint();
-
-
-
-
-
-
 
 // function mostrarJugadores(){
 //

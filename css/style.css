@@ -10,7 +10,6 @@ body {
     height: 100%;
     margin: 0 auto;
     position: relative;
-    overflow-x: hidden;
 }
 
 .img-fluid{
@@ -649,8 +648,9 @@ Frecuents Questions
     background-color: rgb(54, 66, 86);
     border-radius: 5px;
     overflow-x: auto;
-    padding-left: 17px;
-    width: 100%;
+    padding: 17px;
+    margin-bottom: 10px;
+    width: 97%;
 }
 
 .container-faqs{color: white;}
@@ -1420,5 +1420,7 @@ Contenedor de dic con video
 }
 
 .titulo-2 h2{
-    text-align: end !important;
+    text-align: center !important;
+    background-color: #000;
+    border-radius: 5px;
 }

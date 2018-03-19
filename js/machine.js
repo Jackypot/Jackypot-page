@@ -9,20 +9,18 @@ window.addEventListener("resize", function(){ vw = window.innerWidth; });
 // Creacion de datos a DOMContentLoadedmostrar
 // **********************************************************
 var intervalo_datos, intervalo_giros, respuesta, ethDls, pote, intervalo_valorPote, respuesta_pote;
-var socket = io('https://jackynet.eu-4.evennode.com',{path: '/service1'});
+// var socket = io('https://jackynet.eu-4.evennode.com',{path: '/service1'});
 
 //FUNCION: Get respuesta de EndPoint
 function obtencion_datos_endpoint(){
     fetch('https://jackynet.eu-4.evennode.com/table')
-    // fetch('http://192.168.1.75:8080/table')
     .then(function(response){if (!response.ok) {throw Error(response.statusText);} return response.json();})
     .then(function(resp) {
 
         //Guardamos la respuesta
         respuesta = resp;
         respuesta = resp.dataTable;
-        respuesta_pote = respuesta[respuesta.length-1].potValue;
-        respuesta.pop();
+        respuesta_pote = respuesta[0].ValorPot;
         //INTERVALO: Mostrar datos en seccion "BETS"
         temporal();
         // intervalo_datos = setInterval(function(){manager(respuesta)}, 3000);
@@ -47,16 +45,16 @@ obtencion_datos_endpoint();
 // FUNCION: Web Socket
 // **********************************************************
 
-// Recepcion de datos del socket
-socket.on('table', function(dato_actualizacion){agregar_nuevo_dato(dato_actualizacion)});
-
-function agregar_nuevo_dato(nuevo_dato){
-    if (!nuevo_dato) {
-        respuesta.unshift(nuevo_dato);
-        if (respuesta.length >=15) { respuesta.pop(); }
-        temporal();
-    }
-}
+// // Recepcion de datos del socket
+// socket.on('table', function(dato_actualizacion){agregar_nuevo_dato(dato_actualizacion)});
+//
+// function agregar_nuevo_dato(nuevo_dato){
+//     if (!nuevo_dato) {
+//         respuesta.unshift(nuevo_dato);
+//         if (respuesta.length >=15) { respuesta.pop(); }
+//         temporal();
+//     }
+// }
 
 
 var datos_existentes = false;
@@ -743,7 +741,7 @@ function jugar_por_puntos(){
     if (!maquina_girando) {
 
         if (puntos_jugador > 0){
-            if (apuesta_usuario > 0 && apuesta_usuario <= 500 && ((apuesta_usuario*100)%2) == 0 && ((apuesta_usuario/100)%2) == 1 ) {
+            if (apuesta_usuario > 0 && apuesta_usuario <= 500 && ((apuesta_usuario*100)%2) == 0 && ((apuesta_usuario/100)%2) == 1 || ((apuesta_usuario/100)%2) == 0 ) {
                 //Restamos la apuesta
                 puntos_jugador = puntos_jugador - apuesta_usuario;
                 quitar_puntos.value = puntos_jugador;
@@ -813,13 +811,37 @@ function gana_pierde_puntos(num1, num2, num3){
     }
 }
 
+
+// **********************************************************
+// Funcion para free bets
+// **********************************************************
+(function(){
+    //Numeros aleatorios con el cual representar el primer giro al inicio de la pagina
+    let num = Math.floor((Math.random() * 9) + 1);
+    //INIT FUNCION: Girar al entrar a la pag. con resultado de triples
+    //Parametros Resultado, Resultado, Resultado, Profit, Clase
+    setTimeout(function(){playGiro(num, num, num, true, true)}, 5000);
+})();
+
+
+// FUNCION: Obtener el contador de numeros de tiros restantes
+function obtener_tiros_endpoint(){
+    var url = 'https://jackynet.eu-4.evennode.com/contador';
+    fetch(url)
+    .then(function(response){if (!response.ok) {throw Error(response.statusText);} return response.json();})
+    .then(function(data) {document.getElementById("contador-tiros-entregados").innerHTML = (816 - data.results[0].tirosEntregados) + " FREE BETS";})
+    .catch(function(error){console.error('Parece que hubo un error: ' + error);});
+}
+obtener_tiros_endpoint();
+
+
 document.getElementById("enviarRecursoPromocion").addEventListener("click", envioRecursoPromocionMaquina);
 function envioRecursoPromocionMaquina (){
     let aux = document.getElementById("textAreaAddress");
 
     if (aux.value && aux.value.length === 42) {
 
-        let url = "http://192.168.1.75:8080/promoMaquina";
+        let url = "https://jackynet.eu-4.evennode.com/promoMaquina";
         fetch(url, {method: 'post', headers: { 'Accept': 'application/json', 'Content-Type': 'application/json' },
             body: JSON.stringify({
                 "address": aux.value,
@@ -845,7 +867,7 @@ function envioRecursoPromocionMaquina (){
                 document.getElementById("puntos-jugador").value = puntos_jugador;
                 document.getElementById("apuesta_puntos").value = "";
             }
-
+            obtener_tiros_endpoint();
             document.getElementById("contenedor-maquina-juguete").style.display = "grid";
             document.getElementById("contenedor-ganador").style.display = "none";
         })
