@@ -21,7 +21,6 @@ function obtencion_datos_endpoint(){
         //Guardamos la respuesta
         respuesta = resp;
         respuesta = resp.dataTable;
-        console.log(resp);
         respuesta_pote = respuesta[respuesta.length-1].potValue;
         respuesta.pop();
         //INTERVALO: Mostrar datos en seccion "BETS"
@@ -38,7 +37,7 @@ function obtencion_datos_endpoint(){
         //INTERVALO: Mostrar el valor del pote Ethereum/USD
         intervalo_valorPote = setInterval(mostrar_pote, 300000);
     })
-    .catch(function(error) {console.log('Looks like there was a problem: \n', error);});
+    .catch(function(error) {console.error('Looks like there was a problem: \n', error);});
 }
 
 //INIT FUNCION: EndPoint
@@ -152,7 +151,7 @@ function obtener_valor_ethereum() {
 	fetch(url)
 	.then(function(response){if (!response.ok) {throw Error(response.statusText);} return response.json();})
 	.then(function(data) {ethDls = data.USD;})
-	.catch(function(error){console.log('Parece que hubo un error: ' + error);});
+	.catch(function(error){console.error('Parece que hubo un error: ' + error);});
 }
 
 //INIT FUNCION
@@ -741,18 +740,21 @@ function jugar_por_puntos(){
     }
     apuesta_usuario = apuesta.value;
 
-    if (puntos_jugador > 0){
-        if (apuesta_usuario > 0 && apuesta_usuario <= 500 && ((apuesta_usuario*100)%2) == 0 && ((apuesta_usuario/100)%2) == 1 ) {
-            //Restamos la apuesta
-            puntos_jugador = puntos_jugador - apuesta_usuario;
-            quitar_puntos.value = puntos_jugador;
-            playGiro(num1, num2, num3, true, true);
+    if (!maquina_girando) {
+
+        if (puntos_jugador > 0){
+            if (apuesta_usuario > 0 && apuesta_usuario <= 500 && ((apuesta_usuario*100)%2) == 0 && ((apuesta_usuario/100)%2) == 1 ) {
+                //Restamos la apuesta
+                puntos_jugador = puntos_jugador - apuesta_usuario;
+                quitar_puntos.value = puntos_jugador;
+                playGiro(num1, num2, num3, true, true);
+            }
+            else {
+                alert("You are entering a value of 0 or a value out of range. \n Las apuestas son de 100 en 100 ")
+            }
         }
-        else {
-            alert("You are entering a value of 0 or a value out of range. \n Las apuestas son de 100 en 100 ")
-        }
-     }
-    else { alert("You have run out of points to bet on."); }
+        else { alert("You have run out of points to bet on."); }
+    }
 }
 
 function gana_pierde_puntos(num1, num2, num3){
@@ -808,5 +810,48 @@ function gana_pierde_puntos(num1, num2, num3){
     if (puntos_jugador >= 20000) {
         document.getElementById("contenedor-maquina-juguete").style.display = "none";
         document.getElementById("contenedor-ganador").style.display = "block";
+    }
+}
+
+document.getElementById("enviarRecursoPromocion").addEventListener("click", envioRecursoPromocionMaquina);
+function envioRecursoPromocionMaquina (){
+    let aux = document.getElementById("textAreaAddress");
+
+    if (aux.value && aux.value.length === 42) {
+
+        let url = "http://192.168.1.75:8080/promoMaquina";
+        fetch(url, {method: 'post', headers: { 'Accept': 'application/json', 'Content-Type': 'application/json' },
+            body: JSON.stringify({
+                "address": aux.value,
+                "promocion": "tirodemo"
+            })
+        })
+        .then(function(response){if (!response.ok) {throw Error(response.statusText);} return response.json();})
+        .then(function(data) {
+            alert("Data saved, enjoy yuor games");
+            aux.value = "";
+
+            apuesta_usuario = 0;
+            puntos_jugador = 1000;
+            pote_puntos = 20000;
+
+            if (vw <= 480){
+                document.getElementById("pote-juguete-m").innerHTML = pote_puntos + ' POINTS';
+                document.getElementById("puntos-jugador-m").value = puntos_jugador;
+                document.getElementById("apuesta_puntos-m").value = "";
+            }
+            else{
+                document.getElementById("pote-juguete").innerHTML = pote_puntos + ' POINTS';
+                document.getElementById("puntos-jugador").value = puntos_jugador;
+                document.getElementById("apuesta_puntos").value = "";
+            }
+
+            document.getElementById("contenedor-maquina-juguete").style.display = "grid";
+            document.getElementById("contenedor-ganador").style.display = "none";
+        })
+        .catch(function(error) { console.error('Parece que hubo un error: ' + error); });
+    }
+    else{
+        alert("It seems that you send something empty or your address is not complete");
     }
 }

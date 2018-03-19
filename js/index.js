@@ -110,7 +110,6 @@ function show_window(window_activate) {
     main_window2.style.opacity = "0";
     main_window3.style.opacity = "0";
 
-    console.log(vw);
     if (vw > 480 && vw < 1023) {
             let r = document.getElementById("chat");
             r.style.display = "none";
@@ -231,35 +230,11 @@ function obtener_tiros_endpoint(){
     fetch(url)
     .then(function(response){if (!response.ok) {throw Error(response.statusText);} return response.json();})
     .then(function(data) {document.getElementById("contador-tiros-entregados").innerHTML = (800 - data.results[0].tirosEntregados) + " FREE BETS";})
-    .catch(function(error){console.log('Parece que hubo un error: ' + error);});
+    .catch(function(error){console.error('Parece que hubo un error: ' + error);});
 }
 obtener_tiros_endpoint();
 
-document.getElementById("enviarRecursoPromocion").addEventListener("click", envioRecursoPromocionMaquina);
-function envioRecursoPromocionMaquina (){
-    let aux = document.getElementById("textAreaAddress");
 
-    if (aux.value && aux.value.length === 42) {
-        alert("data saved, enjoy yuor games");
-
-        document.getElementById("contenedor-maquina-juguete").style.display = "grid";
-        document.getElementById("contenedor-ganador").style.display = "none";
-
-        // let url = "http://192.168.1.75:8080/promoMaquina";
-        // fetch(url, {method: 'post', headers: { 'Accept': 'application/json', 'Content-Type': 'application/json' },
-        //     body: JSON.stringify({
-        //         "address": aux.value,
-        //         "promocion": "tirodemo"
-        //     })
-        // })
-        // .then(function(response){if (!response.ok) {throw Error(response.statusText);} return response.json();})
-        // .then(function(data) { alert('Send message'); aux.value = ""; })
-        // .catch(function(error) { console.log('Parece que hubo un error: ' + error); });
-    }
-    else{
-        alert("Parece que envias algo vacio o no esta completa tu direccion");
-    }
-}
 
 
 

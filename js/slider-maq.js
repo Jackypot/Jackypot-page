@@ -79,6 +79,5 @@ class Slider_maq{
 }
 
 (function(){
-    console.log("aqui");
 	new Slider_maq(".free-bets-datos");
 })();
