@@ -10,7 +10,6 @@ body {
     height: 100%;
     margin: 0 auto;
     position: relative;
-    overflow-x: hidden;
 }
 
 .img-fluid{
@@ -18,7 +17,7 @@ body {
     height: auto;
 }
 
-#svg{
+#svg, #svg-juguete, #svg-juguete-m{
     position: relative;
     top: 145px;
     width: 100%;
@@ -97,7 +96,7 @@ body {
 Grid Template
 *************************************** */
 .navigation {grid-area: nav;}
-.introduction, .content, .information{background-color: rgb(54, 66, 86); height: 78vh}
+.introduction, .content, .information{background-color: rgb(54, 66, 86); height: 80vh}
 .introduction {grid-area: intr; overflow: hidden;}
 .content {grid-area: conte;}
 .collapse {grid-area: collap; display: none;}
@@ -168,6 +167,10 @@ Navigation
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
+}
+
+.nav li.active{
+    background-color: rgba(0, 0, 0, 0.3);
 }
 
 .nav li:hover{
@@ -303,14 +306,14 @@ Game
 
 .machine{margin: 0px auto;}
 
-.img-machine{
+.img-machine, .img-machine-juguete{
     background: url("../assets/game/machine.png");
     background-size: 350px 350px;
     height: 350px;
     width: 350px;
 }
 
-#pote{
+#pote, #pote-juguete, #pote-juguete-m{
     position: relative;
     top: -150px;
     left: 0px;
@@ -359,6 +362,34 @@ Game
     box-shadow: 1px 1px 5px 1px rgba(0, 0, 0,0.5);
 }
 
+/* contenedores con metamask */
+#contenedor_address_machine{
+    text-align: center;
+}
+#contenedor_address_machine input{
+    width: 66%;
+    height: 26px;
+    border-radius: 5px;
+    border: none;
+    color: white;
+    background-color: black;
+    text-align: center;
+}
+
+#contenedor_apuesta_machine input{
+    width: 62%;
+    height: 26px;
+    border-radius: 5px;
+    border: none;
+    color: white;
+    background-color: black;
+    text-align: center;
+}
+#contenedor_apuesta_machine label{
+    font-weight: bold;
+}
+
+
 .contenedor-address p{
     margin: 0px;
     white-space: nowrap;
@@ -401,14 +432,24 @@ Game
     -webkit-animation: parpadeo 3s 3;
             animation: parpadeo 3s 3;
 }
+<<<<<<< HEAD
 .contenedor_video{text-align: center;}
+=======
+
+
+>>>>>>> pruebas
 .btn_video{
     background-color: #ffd200;
     font-weight: bold;
     border-radius: 5px;
     border: none;
     height: 29px;
+<<<<<<< HEAD
     width: 80%;
+=======
+    width: 200px;
+    cursor: pointer;
+>>>>>>> pruebas
 }
 /* ***************************************
 Chat o tabla
@@ -446,6 +487,12 @@ Chat o tabla
 .activo{
     font-weight: bold;
     color: black !important;
+}
+
+.active_btn{
+    background-color: #fdd432 !important;
+    color: black;
+    font-weight: bold;
 }
 
 #datos{margin-top: 10px;}
@@ -601,16 +648,17 @@ transparencia
 /* ***************************************
 Frecuents Questions
 *************************************** */
-.faqs, .terms, .contact, .free-bets, .transparencia{
+.faqs, .terms, .contact, .free-bets, .contrato-transp{
     display: none;
     position: absolute;
     top: 84px;
-    height: 83vh;
+    height: 88vh;
     background-color: rgb(54, 66, 86);
     border-radius: 5px;
     overflow-x: auto;
-    padding-left: 17px;
-    width: 100%;
+    padding: 17px;
+    margin-bottom: 10px;
+    width: 97%;
 }
 
 .container-faqs{color: white;}
@@ -680,7 +728,22 @@ Frecuents Questions
 /* ***************************************
 contrato
 *************************************** */
+<<<<<<< HEAD
 .contrato, .how-play, .reglas, .video{
+=======
+.contrato-transp{color: white;}
+.contrato-transp h2{
+    color: #fed232;
+    font-size: 29px;
+    text-align: center;
+}
+
+
+/* ***************************************
+Modal
+*************************************** */
+.how-play, .reglas, .video{
+>>>>>>> pruebas
     background-color: rgba(0,0,0,0.4);
     height: 100%;
     width: 100%;
@@ -703,7 +766,7 @@ contrato
     position: relative;
     background-color: #364155;
     color: white;
-    margin: auto;
+    margin: 0px auto 15px auto;
     padding: 0;
     border: 1px solid #888;
     width: 70%;
@@ -853,6 +916,9 @@ prizes
     width: 80%;
     display: none;
 }
+.all-prizes .representation-trans{
+    width: 100%;
+}
 
 #how-play-modal .contenedor-premios img{width: 25%;}
 #how-play-modal .contenedor-premios{width: 100%; text-align: center;}
@@ -862,13 +928,11 @@ prizes
 Ul imagenes
 *************************************** */
 
-ul.git {
-list-style-image: url('../assets/contract/git.png');
+ul.git { list-style-image: url('../assets/contract/git.png'); }
+ul.eth { list-style-image: url('../assets/contract/eth.png'); }
+ul.git a, ul.eth a{
+    color: white;
 }
-ul.eth {
-list-style-image: url('../assets/contract/eth.png');
-}
-
 /* ***************************************
 Free bets
 *************************************** */
@@ -885,21 +949,30 @@ Free bets
 
 /* IMG de la promo */
 .free-bets-promocion, .contenedor-promocion{
-    background-color: rgb(65, 70, 95);
+    background-color: rgb(18,17,30);
     border-radius: 5px;
     box-shadow: 0px 2px 5px 0px rgba(0, 0, 0, 0.5);
     border: none;
     overflow: hidden;
+    border-width: 9px;
+    border-style: outset;
+    border-color: #32a0d1;
 }
 .free-bets-promocion h2{
-    text-align: center;
-    color: rgb(255,0,0);
-    text-shadow: 2px 2px 1px rgba(0,0,0,1);
-    margin: 0px;
-    font-size: 50px;
+    color: #feda33;
+    text-shadow: 2px 2px 1px rgb(29, 94, 125);
+    margin-top: 0px;
     font-weight: bold;
-    font-family: 'Archivo Black';
 }
+.free-bets-promocion h3{
+    color: white;
+    text-shadow: 2px 2px 1px #ff0000;
+    font-weight: bold;
+    text-align: center;
+    font-size: 40px;
+    margin: 0px;
+}
+
 .contenedor-btn-freeBets{text-align: center;}
 .btn-free-bet{
     background: red;
@@ -947,9 +1020,9 @@ Free bets
 
 .slider-content p, .slider-content-m p{
     margin: 1em 0px;
-    color: yellow;
+    color: #d6e6f3;
     font-weight: bold;
-    text-shadow: 1px 1px 1px rgba(0,0,0,1);
+    text-shadow: 1px 1px 1px rgb(48, 55, 255);
 }
 
 .slider-content p{ font-size: 27px; }
@@ -972,7 +1045,7 @@ Free bets
 
 .controls li, .controls-m li{
     list-style-type: none;
-    background-color: rgb(242,131,146);
+    background-color: #243065;
     width: 20px;
     height: 20px;
     border-radius: 50%;
@@ -983,7 +1056,7 @@ Free bets
 }
 
 .controls li.active, .controls-m li.active{
-    background-color: rgb(9,221,214);
+    background-color: #32a0d1;
 }
 
 
@@ -1010,12 +1083,19 @@ Free bets
 /* Seccion de los datos de los tiros */
 
 .free-bets-datos{
-    background-color: rgb(65, 70, 95);
+    background-color: #151515;
     border-radius: 5px;
     box-shadow: 0px 2px 5px 0px rgba(0, 0, 0, 0.5);
+    border-width: 10px;
+    border-style: dashed solid;
+    border-color: #920303;
+    overflow: hidden;
 }
-.contenedor-free-bets h2{text-align: center;}
-
+.contenedor-free-bets h2{text-align: start;}
+.free-bets-datos .controls li, .controls-m li{
+    border-radius: 0px;
+    height: 4px;
+}
 .contenedor-promocion{
     border-radius: 5px;
     height: auto;
@@ -1192,4 +1272,167 @@ Contenedor de sonido de juego
   height: 60px;
   position: fixed;
   z-index: -1;
+}
+/* ***************************************
+Contenedor de dic con video
+*************************************** */
+.contenedor_video{
+    text-align: center;
+}
+
+.contenedor_video_div{
+    height: 450px;
+}
+
+/* ***************************************
+Contenedor de dic con video
+*************************************** */
+.maquina-juguete{grid-area: maquina-juguete;}
+.puntos-totales{grid-area: puntos-juguete;}
+.apuesta-juguete{grid-area: apuesta-juguete;}
+.btn-play-juguete{grid-area: btn-play-juguete; margin-bottom: 30px;}
+.contenedor-maquina-juguete{
+    display: grid;
+    grid-gap: 20px;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-areas:
+    "maquina-juguete maquina-juguete"
+    "puntos-juguete puntos-juguete"
+    "apuesta-juguete btn-play-juguete";
+}
+
+
+.contenedor-maquina-juguete .img-machine-juguete{margin: 0px auto;}
+
+.apuesta-juguete, .btn-play-juguete, .puntos-totales{
+    text-align: center;
+}
+.apuesta-juguete input{
+    height: 30px;
+    border: none;
+    border-radius: 5px;
+    background-color: rgb(0, 0, 0);
+    color: white;
+    text-align: center;
+    box-shadow: 1px 1px 1px 1px rgba(0,0,0,0.5);
+}
+
+.btn-play-juguete input, .apuesta-juguete input{
+    width: 80px;
+}
+
+.panel-puntos{
+    width: max-content;
+    margin: 0px auto;
+    background-color: black;
+    border-radius: 5px;
+}
+
+.puntos-totales input{
+    width: 100px;
+    height: 30px;
+    border: none;
+    border-radius: 5px;
+    background-color: rgba(0,0,0,0);
+    color: white;
+    text-align: center;
+    font-weight: bold;
+    font-size: 1.5em;
+    text-shadow: 2px 1px 2px #ff0101;
+}
+.puntos-totales label, .apuesta-juguete label{
+    color: #cfe3e5;
+    font-weight: bold;
+}
+
+.puntos-totales label{
+    font-size: 1.5em;
+    margin: 5px 0px 5px 30px;
+    color: #cfe3e5;
+}
+
+
+@keyframes sombra {
+    from{box-shadow: 1px 1px 1px 1px rgba(255, 1, 1, 0.75);}
+    25%{box-shadow: 1px 1px 1px 1px rgba(255, 247, 1, 0.75);}
+    50%{box-shadow: 1px 1px 1px 1px rgba(75, 255, 1, 0.75);}
+    75%{box-shadow: 1px 1px 1px 1px rgba(1, 161, 255, 0.75);}
+    to{box-shadow: 1px 1px 1px 1px rgba(255, 1, 1, 0.75);}
+}
+
+.sombras-c {
+    animation: sombra 3s infinite;
+    transition: all 500ms;
+}
+
+
+.free-bets-datos h2{
+    margin: 0px;
+    color: #feda33;
+    text-shadow: 2px 2px 1px #1d4e54;
+    text-align: start;
+}
+.free-bets-datos h3, .contenedor-Bdatos h3{
+    font-size: 26px;
+    text-align: center;
+    margin: 0px;
+    color: #cfe3e5;
+    text-shadow: 2px 2px 1px #1d4e54;
+}
+
+/* Ganador */
+.contenedor-ganador{
+    text-align: center;
+    display: none;
+}
+
+.contenedor-ganador h3{
+    margin-top: 30px;
+    color: #feec34;
+}
+
+.contenedor-ganador textarea{
+    border-radius: 5px;
+    font-size: 20px;
+    width: 94%;
+    text-align: center;
+    padding-top: 21px;
+    background: transparent;
+    border-width: medium;
+    border-style: none none solid none;
+    color: white;
+    outline: none;
+    border-color: coral;
+    margin-top: 50px;
+}
+
+.contenedor-ganador button{
+    background: red;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    height: 50px;
+    width: 150px;
+    font-size: 25px;
+    font-weight: bold;
+    box-shadow: 1px 1px 1px 1px rgb(0,0,0);
+    margin-bottom: 10px;
+    margin-top: 30px;
+    cursor: pointer;
+}
+
+.titulo-1{grid-area: titulo-1;}
+.titulo-2{grid-area: titulo-2;}
+.titulo-bets{
+    display: grid;
+    grid-gap: 20px;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-areas:
+    "titulo-1 titulo-2";
+}
+
+.titulo-2 h2{
+    text-align: center !important;
+    background-color: #000;
+    border-radius: 5px;
 }

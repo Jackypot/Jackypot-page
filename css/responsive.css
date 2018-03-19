@@ -41,7 +41,7 @@ Responsive
         "bet btn-play";
     }
 
-    .img-machine{
+    .img-machine, .img-machine-juguete{
         background-size: 200px 200px;
         height: 200px;
         width: 200px;
@@ -51,7 +51,7 @@ Responsive
     .contenedor-profit{margin: 0px;}
     .btn-play{width: auto; margin: 0px;}
 
-    #svg{
+    #svg, #svg-juguete-m{
         top: 82px;
         height: 117px;
     }
@@ -96,7 +96,6 @@ Responsive
     .information{display: none !important;}
     #how-play-modal .contenedor-premios img{width: 49%;}
 
-
     /* ***************************************
     Footer
     *************************************** */
@@ -133,6 +132,31 @@ Responsive
     .img-player img{width: 28px; height: 28px;}
     .contenedor-player-bets .adr-bet{width: 65%;}
     .adr-res, .total-bet p{margin:6px 3px!important;}
+    /* Video */
+    .contenedor_video_div{
+        height: auto;
+    }
+    /* ***************************************
+    maquina juguete
+    *************************************** */
+    .puntos-totales label, .apuesta-juguete label{
+        position: initial !important;
+        background: transparent;
+        padding: 0px;
+        line-height: 2;
+        cursor: auto;
+        display: initial;
+    }
+
+    .contenedor-Bdatos h3{
+        font-size: 1.5em;
+        margin-top: 20px;
+    }
+
+    .puntos-totales input, .btn-play-juguete input, .apuesta-juguete input{
+        position: initial;
+        opacity: 1;
+    }
 }
 @media only screen and (max-width: 480px) and (orientation: portrait){
     .img-fluid{width: auto}
@@ -145,7 +169,7 @@ Responsive
     .modal{top:15px;}
     .modal-body{font-size: 13px;}
     .modal-content{width: 92%;}
-    #pote{
+    #pote, #pote-juguete-m{
         top: -94px;
         font-size: 1em;
     }
@@ -181,7 +205,7 @@ Responsive
     .tittle-game{height: 25px;}
     .tittle-game h3{padding: 0px;}
 
-    .img-machine{
+    .img-machine, .img-machine-juguete{
         background-size: 200px 200px;
         height: 200px;
         width: 200px;
@@ -189,7 +213,7 @@ Responsive
 
     .btn-play{width: auto;}
 
-    #svg{
+    #svg, #svg-juguete-m{
         top: 82px;
         height: 117px;
     }
@@ -242,7 +266,7 @@ Responsive
 }
 
 @media screen and (max-width: 768px) and (min-width: 481px){
-    .introduction, .content, .information{height: 450px;}
+    .introduction, .content, .information{height: 465px;}
     .faqs, .terms, .contact, .free-bets{height: 480px;}
     .wrapper {
         display: grid;
@@ -348,6 +372,14 @@ Responsive
 @media screen and (max-width: 768px) and (min-width: 481px) and (orientation: landscape){
     .introduction, .content,{height: auto;}
     .information {height: 430px;}
+    .contenedor_video_div{
+        height: 200px;
+    }
+}
+@media screen and (max-width: 768px) and (min-width: 481px) and (orientation: portrait){
+    .contenedor_video_div{
+        height: 450px;
+    }
 }
 
 @media screen and (max-width: 1024px) and (min-width: 769px){
@@ -449,9 +481,9 @@ Responsive
 Responsive
 *************************************** */
 @media only screen and (min-width: 1200px) {
-    .introduction {grid-area: intr; height: 80vh}
-    .content {grid-area: conte; height: 80vh}
-    .information {grid-area: info; height: 80vh}
+    .introduction {grid-area: intr; height: 83vh}
+    .content {grid-area: conte; height: 83vh}
+    .information {grid-area: info; height: 83vh}
     .modal-content{width: 730px !important;}
 }
 @media only screen and (min-width: 769px) {

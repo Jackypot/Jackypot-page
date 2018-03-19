@@ -31,14 +31,13 @@ function enviar_form (name, email, comment) {
         })
         .then(function(response){if (!response.ok) {throw Error(response.statusText);} return response.json();})
         .then(function(data) {
-            console.log(data);
             alert('Send message');
             document.getElementById("name").value = "";
             document.getElementById("email").value = "";
             document.getElementById("comment").value = "";
         })
         .catch(function(error) {
-            console.log('Parece que hubo un error: ' + error);
+            console.error('Parece que hubo un error: ' + error);
         });
     }else {
         alert('This field is empty');

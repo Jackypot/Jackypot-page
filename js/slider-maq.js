@@ -1,4 +1,4 @@
-class IndexForSiblings{
+class IndexForSiblings_maq{
 	static get(el){
 		let children = el.parentNode.children;
 
@@ -10,7 +10,7 @@ class IndexForSiblings{
 }
 
 
-class Slider{
+class Slider_maq{
 	constructor(selector){
 		this.move = this.move.bind(this);
 		this.moveByButton = this.moveByButton.bind(this);
@@ -42,7 +42,7 @@ class Slider{
 	}
 
 	moveByButton(ev){
-		let index = IndexForSiblings.get(ev.currentTarget);
+		let index = IndexForSiblings_maq.get(ev.currentTarget);
 		this.contador = index;
 		this.moveTo(index);
 		this.restart();
@@ -79,5 +79,5 @@ class Slider{
 }
 
 (function(){
-	new Slider(".free-bets-promocion");
+	new Slider_maq(".free-bets-datos");
 })();
