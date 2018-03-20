@@ -725,7 +725,9 @@ contrato
     font-size: 29px;
     text-align: center;
 }
-
+.contrato-transp a{
+    color: white;
+}
 
 /* ***************************************
 Modal
@@ -917,9 +919,7 @@ Ul imagenes
 
 ul.git { list-style-image: url('../assets/contract/git.png'); }
 ul.eth { list-style-image: url('../assets/contract/eth.png'); }
-ul.git a, ul.eth a{
-    color: white;
-}
+
 /* ***************************************
 Free bets
 *************************************** */

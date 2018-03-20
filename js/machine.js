@@ -9,7 +9,7 @@ window.addEventListener("resize", function(){ vw = window.innerWidth; });
 // Creacion de datos a DOMContentLoadedmostrar
 // **********************************************************
 var intervalo_datos, intervalo_giros, respuesta, ethDls, pote, intervalo_valorPote, respuesta_pote;
-// var socket = io('https://jackynet.eu-4.evennode.com',{path: '/service1'});
+var socket = io('https://jackynet.eu-4.evennode.com',{path: '/service1'});
 
 //FUNCION: Get respuesta de EndPoint
 function obtencion_datos_endpoint(){
@@ -18,8 +18,7 @@ function obtencion_datos_endpoint(){
     .then(function(resp) {
 
         //Guardamos la respuesta
-        respuesta = resp;
-        respuesta = resp.dataTable;
+        respuesta = resp.resultado;
         respuesta_pote = respuesta[0].ValorPot;
         //INTERVALO: Mostrar datos en seccion "BETS"
         temporal();
@@ -45,16 +44,20 @@ obtencion_datos_endpoint();
 // FUNCION: Web Socket
 // **********************************************************
 
-// // Recepcion de datos del socket
-// socket.on('table', function(dato_actualizacion){agregar_nuevo_dato(dato_actualizacion)});
-//
-// function agregar_nuevo_dato(nuevo_dato){
-//     if (!nuevo_dato) {
-//         respuesta.unshift(nuevo_dato);
-//         if (respuesta.length >=15) { respuesta.pop(); }
-//         temporal();
-//     }
-// }
+// Recepcion de datos del socket
+socket.on('table', function(dato_actualizacion){agregar_nuevo_dato(dato_actualizacion)});
+
+function agregar_nuevo_dato(nuevo_dato){
+    if (nuevo_dato) {
+        for(var item in nuevo_dato){
+            if (nuevo_dato[item].idVentas > respuesta[item].idVentas) {
+                respuesta.unshift(nuevo_dato[item]);
+                temporal();
+            }
+        }
+        if (respuesta.length > 15) respuesta.pop();
+    }
+}
 
 
 var datos_existentes = false;
@@ -129,7 +132,7 @@ var estado_pote = true;
 function mostrar_pote(){
     if (estado_pote) {
         //Guardamos el valor del pote obtenido de la respuesta
-        pote = respuesta_pote.potValue;;
+        pote = (respuesta_pote / 1000000000000000000);
         //Mostramos el valor del pote
         document.getElementById("pote").innerHTML = pote.toFixed(2) +" ETH";
         //Cambiamos el estado a false
@@ -149,7 +152,7 @@ function obtener_valor_ethereum() {
 	fetch(url)
 	.then(function(response){if (!response.ok) {throw Error(response.statusText);} return response.json();})
 	.then(function(data) {ethDls = data.USD;})
-	.catch(function(error){console.error('Parece que hubo un error: ' + error);});
+	.catch(function(error){console.error('The truth is about to explode!... Oh ... and there is also an error: ' + error);});
 }
 
 //INIT FUNCION
@@ -820,7 +823,7 @@ function gana_pierde_puntos(num1, num2, num3){
     let num = Math.floor((Math.random() * 9) + 1);
     //INIT FUNCION: Girar al entrar a la pag. con resultado de triples
     //Parametros Resultado, Resultado, Resultado, Profit, Clase
-    setTimeout(function(){playGiro(num, num, num, true, true)}, 5000);
+    setTimeout(function(){playGiro(num, num, num, true, true)}, 7000);
 })();
 
 
