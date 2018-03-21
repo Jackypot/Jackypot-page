@@ -739,19 +739,19 @@ function jugar_por_puntos(){
         apuesta = document.getElementById("apuesta_puntos");
         quitar_puntos = document.getElementById("puntos-jugador");
     }
-    apuesta_usuario = apuesta.value;
+    apuesta_usuario = parseInt(apuesta.value);
 
     if (!maquina_girando) {
 
         if (puntos_jugador > 0){
-            if (apuesta_usuario > 0 && apuesta_usuario <= 500 && ((apuesta_usuario*100)%2) == 0 && ((apuesta_usuario/100)%2) == 1 || ((apuesta_usuario/100)%2) == 0 ) {
+            if (apuesta_usuario === 100 || apuesta_usuario === 200 || apuesta_usuario === 300 || apuesta_usuario === 400 || apuesta_usuario === 500 ) {
                 //Restamos la apuesta
                 puntos_jugador = puntos_jugador - apuesta_usuario;
                 quitar_puntos.value = puntos_jugador;
                 playGiro(num1, num2, num3, true, true);
             }
             else {
-                alert("You are entering a value of 0 or a value out of range. \n Las apuestas son de 100 en 100 ")
+                alert("You are entering a value of 0 or a value out of range. \n The bets are 100 in 100")
             }
         }
         else { alert("You have run out of points to bet on."); }

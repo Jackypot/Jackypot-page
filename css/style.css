@@ -209,6 +209,12 @@ How to play
     padding: 10px 0px;
 }
 
+.text-small{
+    font-size: 13px !important;
+    text-align: center;
+    margin: 0px;
+    font-weight: bold;
+}
 .container-introduction ol{padding-left: 24px;}
 .container-introduction ol p{margin: 12px 0px;}
 .container-introduction p {font-size: 18px;}
@@ -217,7 +223,6 @@ How to play
     text-decoration: none;
     padding: 0px;
 }
-
 .wallets li{
     display: inline-block;
     height: 44px;
