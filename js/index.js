@@ -4,38 +4,38 @@ window.addEventListener("resize", function(){
 });
 otro();
 var intervaloUsuarios;
-// INICIALIZAR: Si el usuario tien Metamask o no tiene
-window.addEventListener('load', function() {
-    //Verificamos si se tiene metamask
-    if (typeof web3 !== 'undefined') {
+// // INICIALIZAR: Si el usuario tien Metamask o no tiene
+// window.addEventListener('load', function() {
+//     //Verificamos si se tiene metamask
+//     if (typeof web3 !== 'undefined') {
 
-        // Use Mist/MetaMask's provider
-        web3js = new Web3(web3.currentProvider);
-        //modificar interfaz
-        // document.getElementById("contenedor_address_machine").innerHTML = '<input type="text" name="address_game" value="" id="direccion_usuario" disabled>';
-        // document.getElementById("contenedor_apuesta_machine").innerHTML = '<label>BET: </label><input type="number" name="bet_game" value="" id="apuesta_usuario" min="0.01" max="20" step="0.01" onkeypress="return validaNumericos(event)" placeholder="0.01">';
-        // document.getElementById("contenedor_btn_machine").innerHTML = '<input type="image" src="assets/game/btn-play.png" id="btn_metamask" onclick="ejecutar_metamask()">';
+//         // Use Mist/MetaMask's provider
+//         web3js = new Web3(web3.currentProvider);
+//         //modificar interfaz
+//         // document.getElementById("contenedor_address_machine").innerHTML = '<input type="text" name="address_game" value="" id="direccion_usuario" disabled>';
+//         // document.getElementById("contenedor_apuesta_machine").innerHTML = '<label>BET: </label><input type="number" name="bet_game" value="" id="apuesta_usuario" min="0.01" max="20" step="0.01" onkeypress="return validaNumericos(event)" placeholder="0.01">';
+//         // document.getElementById("contenedor_btn_machine").innerHTML = '<input type="image" src="assets/game/btn-play.png" id="btn_metamask" onclick="ejecutar_metamask()">';
 
-        document.getElementById("contenedor_address_machine").innerHTML = '<div class="contenedor-address"> <p class="remove" id="address-machine">Ethereum Wallet Address Of The Participant</p> </div>';
-        document.getElementById("contenedor_apuesta_machine").innerHTML = '<div class="contenedor-profit"> <p class="remove" id="bet-machine">Profit</p> </div>';
-        document.getElementById("contenedor_btn_machine").innerHTML = '<input type="image" src="assets/game/btn-play.png" onclick="openModal(this.id)" id="how-play">';
-        // setTimeout(function(){ if (Boolean(usuario)) { actualizarInterfaz(); } }, 4000);
+//         document.getElementById("contenedor_address_machine").innerHTML = '<div class="contenedor-address"> <p class="remove" id="address-machine">Ethereum Wallet Address Of The Participant</p> </div>';
+//         document.getElementById("contenedor_apuesta_machine").innerHTML = '<div class="contenedor-profit"> <p class="remove" id="bet-machine">Profit</p> </div>';
+//         document.getElementById("contenedor_btn_machine").innerHTML = '<input type="image" src="assets/game/btn-play.png" onclick="openModal(this.id)" id="how-play">';
+//         // setTimeout(function(){ if (Boolean(usuario)) { actualizarInterfaz(); } }, 4000);
 
-        // intervaloUsuarios = setInterval(function(){
-        //     if(usuario !== web3.eth.accounts[0]){
-        //         usuario = web3.eth.accounts[0];
-        //         actualizarInterfaz();
-        //     }
-        // }, 1000);
-    }
-    else {
-        //Si no cuenta con Metamask se mantendra todo como lo anterior
-        document.getElementById("contenedor_address_machine").innerHTML = '<div class="contenedor-address"> <p class="remove" id="address-machine">Ethereum Wallet Address Of The Participant</p> </div>';
-        document.getElementById("contenedor_apuesta_machine").innerHTML = '<div class="contenedor-profit"> <p class="remove" id="bet-machine">Profit</p> </div>';
-        document.getElementById("contenedor_btn_machine").innerHTML = '<input type="image" src="assets/game/btn-play.png" onclick="openModal(this.id)" id="how-play">';
-    }
+//         // intervaloUsuarios = setInterval(function(){
+//         //     if(usuario !== web3.eth.accounts[0]){
+//         //         usuario = web3.eth.accounts[0];
+//         //         actualizarInterfaz();
+//         //     }
+//         // }, 1000);
+//     }
+//     else {
+//         //Si no cuenta con Metamask se mantendra todo como lo anterior
+//         document.getElementById("contenedor_address_machine").innerHTML = '<div class="contenedor-address"> <p class="remove" id="address-machine">Ethereum Wallet Address Of The Participant</p> </div>';
+//         document.getElementById("contenedor_apuesta_machine").innerHTML = '<div class="contenedor-profit"> <p class="remove" id="bet-machine">Profit</p> </div>';
+//         document.getElementById("contenedor_btn_machine").innerHTML = '<input type="image" src="assets/game/btn-play.png" onclick="openModal(this.id)" id="how-play">';
+//     }
 
-})
+// })
 
 
 function validaNumericos(event) {
