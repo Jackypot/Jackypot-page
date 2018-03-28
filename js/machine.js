@@ -654,7 +654,7 @@ function addSonido(){
     a.play();
 }
 // **********************************************************
-// Contrato o comportamiento modal
+// Comportamiento modal
 // **********************************************************
 var contract_window, modal;
 var estado_modal_how = true;
@@ -722,8 +722,10 @@ window.onclick = function(event) {
 // **********************************************************
 //Parametros Resultado, Resultado, Resultado, Profit, Clase
 var apuesta_usuario = 0;
-var puntos_jugador = 1000;
+var puntos_jugador = 9000;
 var pote_puntos = 20000;
+var respuestaCompartirFB = "text"
+var realizoPublicacion = false;
 function jugar_por_puntos(){
     let num1 = Math.floor((Math.random() * 9) + 1);
     let num2 = Math.floor((Math.random() * 9) + 1);
@@ -746,9 +748,13 @@ function jugar_por_puntos(){
         if (puntos_jugador > 0){
             if (apuesta_usuario === 100 || apuesta_usuario === 200 || apuesta_usuario === 300 || apuesta_usuario === 400 || apuesta_usuario === 500 ) {
                 //Restamos la apuesta
+                if (typeof respuestaCompartirFB === "string"){
                 puntos_jugador = puntos_jugador - apuesta_usuario;
                 quitar_puntos.value = puntos_jugador;
-                playGiro(num1, num2, num3, true, true);
+                playGiro(num1, num2, num3, true, true);}
+                else{
+                    openModal("compartir");
+                }
             }
             else {
                 alert("You are entering a value of 0 or a value out of range. \n The bets are 100 in 100")
@@ -808,12 +814,45 @@ function gana_pierde_puntos(num1, num2, num3){
         pote_juguete.innerHTML = pote_puntos + " POINTS";
     }
 
-    if (puntos_jugador >= 20000) {
+    if(realizoPublicacion !== true && puntos_jugador >= 10000){
+        openModal("compartir");
+        respuestaCompartirFB = false;
+    }
+    else if (puntos_jugador >= 20000) {
         document.getElementById("contenedor-maquina-juguete").style.display = "none";
         document.getElementById("contenedor-ganador").style.display = "block";
     }
 }
 
+document.getElementById('share-jackypot').addEventListener('click', compartirPublicacion, false);
+function compartirPublicacion() {
+
+    FB.getLoginStatus(function(response) {
+        if (response.status === "connected") { FB.logout() }
+        else{
+            FB.login(function(res){
+                console.log(res);
+                
+                FB.ui({
+                    method: 'share',
+                    href: 'https://jackypot.io',
+                    display: 'popup',
+                }, function(response){
+                    console.log(response.post_id);
+                    
+                    if (response && typeof response.post_id === 'string') {
+                        document.getElementById('impresion').innerHTML = response;
+                        respuestaCompartirFB = "text";
+                        realizoPublicacion = true;
+                        console.log(response.post_id);
+                    } else {
+                        alert('Post was not published.');
+                    }
+                });
+            },{scope: 'publish_actions'})
+        }
+    });
+}
 
 // **********************************************************
 // Funcion para free bets
