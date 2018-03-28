@@ -1032,7 +1032,7 @@ Free bets
     bottom: 1em;
     margin: 0px;
     width: 100%;
-    z-index: 50;
+    z-index: 0;
 }
 
 .controls li, .controls-m li{
@@ -1439,4 +1439,22 @@ Contenedor de dic con video
     text-align: center !important;
     background-color: #000;
     border-radius: 5px;
+}
+
+#compartir-modal{
+    text-align: center;
+}
+
+#compartir-modal button{
+    background-color: #4267b2;
+    border-bottom: 1px solid #29487d;
+    color: #fff;
+    font-weight: bold;
+    font-size: 16px;
+    border-radius: 2px;
+    border: none;
+    height: 30px;
+    width: 100px;
+    cursor: pointer;
+    margin-bottom: 20px;
 }

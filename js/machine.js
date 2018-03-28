@@ -814,7 +814,7 @@ function gana_pierde_puntos(num1, num2, num3){
         pote_juguete.innerHTML = pote_puntos + " POINTS";
     }
 
-    if(realizoPublicacion !== true && puntos_jugador >= 10000){
+    if(realizoPublicacion !== true && puntos_jugador >= 5000){
         openModal("compartir");
         respuestaCompartirFB = false;
     }
@@ -824,35 +824,75 @@ function gana_pierde_puntos(num1, num2, num3){
     }
 }
 
-document.getElementById('share-jackypot').addEventListener('click', compartirPublicacion, false);
-function compartirPublicacion() {
+// document.getElementById('share-jackypot').addEventListener('click', compartirPublicacion, false);
+// function compartirPublicacion() {
+
+//     FB.getLoginStatus(function(response) {
+//         if (response.status === "connected") { FB.logout() }
+//         else{
+//             FB.login(function(res){
+//                 console.log(res);
+                
+//                 FB.ui({
+//                     method: 'share',
+//                     href: 'https://jackypot.io',
+//                     display: 'popup',
+//                 }, function(response){
+//                     console.log(response.post_id);
+                    
+//                     if (response && typeof response.post_id === 'string') {
+
+//                         respuestaCompartirFB = "text";
+//                         realizoPublicacion = true;
+//                         console.log(response.post_id);
+//                     } else {
+//                         alert('Post was not published.');
+//                     }
+//                 });
+//             },{scope: 'publish_actions'})
+//         }
+//     });
+// }
+
+
+document.getElementById('share-jackypot').addEventListener('click', function() {
 
     FB.getLoginStatus(function(response) {
-        if (response.status === "connected") { FB.logout() }
-        else{
-            FB.login(function(res){
-                console.log(res);
-                
-                FB.ui({
-                    method: 'share',
-                    href: 'https://jackypot.io',
-                    display: 'popup',
-                }, function(response){
-                    console.log(response.post_id);
-                    
-                    if (response && typeof response.post_id === 'string') {
-                        document.getElementById('impresion').innerHTML = response;
+      
+      if (response.status === "connected")
+      {
+          FB.logout()
+      }
+      else{
+          FB.login(function(res){
+              console.log(res);
+              
+              FB.ui({
+                method: 'share',
+                href: 'https://jackypot.io',
+                display: 'popup',
+              }, function(response){
+                  console.log(response);
+                   
+                  if (response && typeof response.post_id === 'string') {
+
                         respuestaCompartirFB = "text";
                         realizoPublicacion = true;
                         console.log(response.post_id);
                     } else {
-                        alert('Post was not published.');
+                        console.log('Post was not published.');
                     }
-                });
-            },{scope: 'publish_actions'})
-        }
-    });
-}
+              });
+          },{scope: 'publish_actions'})
+      }
+      
+      
+      
+  });
+
+
+
+},false);
 
 // **********************************************************
 // Funcion para free bets
