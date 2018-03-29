@@ -1395,6 +1395,26 @@ Contenedor de dic con video
     color: #feec34;
 }
 
+.contenedor-ganador p{
+    margin-top: 10px;
+    color: #feec34;
+    font-size: 1.1em;
+    font-weight: bold;
+}
+
+.contenedor-ganador .address-game{
+    background-color: #922514;
+    color: #c9dcdf !important;
+}
+
+.contenedor-ganador .img-fluid{
+    width: 65%;
+}
+
+.contenedor-ganador .contenedor-premios{
+    margin: 0px auto;
+}
+
 .contenedor-ganador textarea{
     border-radius: 5px;
     font-size: 20px;
@@ -1411,7 +1431,6 @@ Contenedor de dic con video
 }
 
 .contenedor-ganador button{
-    background: red;
     color: white;
     border: none;
     border-radius: 5px;
@@ -1423,6 +1442,13 @@ Contenedor de dic con video
     margin-bottom: 10px;
     margin-top: 30px;
     cursor: pointer;
+}
+.contenedor-ganador #enviarRecursoPromocion{
+    background-color: red;
+}
+.contenedor-ganador #share-jackypot{
+    background-color: #4267b2;
+    border-bottom: 1px solid #29487d;
 }
 
 .titulo-1{grid-area: titulo-1;}
