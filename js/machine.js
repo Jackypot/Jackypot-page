@@ -636,7 +636,9 @@ function playGiro(a, b, c, profit, classe){
         	}
 
             if (profit === true && classe === true) {
-                gana_pierde_puntos(a, b, c);
+                if (apuesta_usuario > 0){
+                    gana_pierde_puntos(a, b, c);
+                }
             }
 
         }, 3300)
@@ -869,6 +871,14 @@ document.getElementById('share-jackypot').addEventListener('click', function() {
 // **********************************************************
 // Funcion para free bets
 // **********************************************************
+
+setTimeout(function(){
+    let num1 = Math.floor((Math.random() * 9) + 1);
+    let num2 = Math.floor((Math.random() * 9) + 1);
+    let num3 = Math.floor((Math.random() * 9) + 1);
+
+    playGiro(num1, num2, num3, true, true);
+}, 8000);
 
 // FUNCION: Obtener el contador de numeros de tiros restantes
 function obtener_tiros_endpoint(){
