@@ -817,14 +817,7 @@ function gana_pierde_puntos(num1, num2, num3){
 }
 
 document.getElementById('share-jackypot').addEventListener('click', function() {
-
-    document.getElementById("contenedor-ganador").innerHTML = 
-                        '<h3>Congratulations you just won a free bet! Please send your address to get the prize.</h3>'+
-                        '<textarea name="name" rows="2" cols="auto" maxlength="42" spellcheck="false" placeholder="Paste your public address here." id="textAreaAddress"></textarea>' +
-                        '<button type="button" name="button" id="enviarRecursoPromocion">SEND</button>';
-    
-    document.getElementById("enviarRecursoPromocion").addEventListener("click", envioRecursoPromocionMaquina);
-
+  
     FB.getLoginStatus(function(response) {
       
       if (response.status === "connected")
@@ -840,14 +833,23 @@ document.getElementById('share-jackypot').addEventListener('click', function() {
                 href: 'https://jackypot.io',
                 display: 'popup',
               }, function(response){
-                  console.log(response);
+                    console.log(typeof response);
+                    document.getElementById("contenedor-ganador").innerHTML = 
+                        '<h3>Congratulations you just won a free bet! Please send your address to get the prize.</h3>'+
+                        '<textarea name="name" rows="2" cols="auto" maxlength="42" spellcheck="false" placeholder="Paste your public address here." id="textAreaAddress"></textarea>' +
+                        '<button type="button" name="button" id="enviarRecursoPromocion">SEND</button>';
+
+                    document.getElementById("enviarRecursoPromocion").addEventListener("click", envioRecursoPromocionMaquina);
                    
-                  if (response && typeof response.post_id === 'string') {
+                //   if (response && typeof response.post_id === 'string') {
+                    if (typeof response === 'object') {
 
                         document.getElementById("contenedor-ganador").innerHTML = 
                         '<h3>Congratulations you just won a free bet! Please send your address to get the prize.</h3>'+
                         '<textarea name="name" rows="2" cols="auto" maxlength="42" spellcheck="false" placeholder="Paste your public address here." id="textAreaAddress"></textarea>' +
                         '<button type="button" name="button" id="enviarRecursoPromocion">SEND</button>';
+
+                        document.getElementById("enviarRecursoPromocion").addEventListener("click", envioRecursoPromocionMaquina);
                         
                     } else {
                         console.log('Post was not published.');
@@ -867,21 +869,13 @@ document.getElementById('share-jackypot').addEventListener('click', function() {
 // **********************************************************
 // Funcion para free bets
 // **********************************************************
-// (function(){
-//     //Numeros aleatorios con el cual representar el primer giro al inicio de la pagina
-//     let num = Math.floor((Math.random() * 9) + 1);
-//     //INIT FUNCION: Girar al entrar a la pag. con resultado de triples
-//     //Parametros Resultado, Resultado, Resultado, Profit, Clase
-//     setTimeout(function(){playGiro(num, num, num, true, true)}, 7000);
-// })();
-
 
 // FUNCION: Obtener el contador de numeros de tiros restantes
 function obtener_tiros_endpoint(){
     var url = 'https://jackynet.eu-4.evennode.com/contador';
     fetch(url)
     .then(function(response){if (!response.ok) {throw Error(response.statusText);} return response.json();})
-    .then(function(data) {document.getElementById("contador-tiros-entregados").innerHTML = (816 - data.results[0].tirosEntregados) + " FREE BETS";})
+    .then(function(data) {document.getElementById("contador-tiros-entregados").innerHTML = (804 - data.results[0].tirosEntregados) + " FREE BETS";})
     .catch(function(error){console.error('Parece que hubo un error: ' + error);});
 }
 obtener_tiros_endpoint();
@@ -913,23 +907,6 @@ function envioRecursoPromocionMaquina (){
                             'Gwei required: 21.</p>'+
                     '</div>'+
                 '</div>'+
-                '<p>Step 2: Wait for the result from 1 to 2 minutes, in LAST BET</p>';
-        })
-        .catch(function(error) { console.error('Parece que hubo un error: ' + error); });
-    }
-    else{
-        document.getElementById("contenedor-ganador").innerHTML = 
-                '<p>Free bet 0.01 approved - Jackpot has approved 0.01 for you.</p>'+
-                '<p>To validate your free bet, please follow the following instructions:</p>'+
-                '<p>Step 1: Send 0.00 ether to the address:</p>'+
-                '<div class="popover__wrapper">'+
-                    '<p class="address-game" id="address-game" data-clipboard-text="0xFeac34425a3Ba2FAfbbEEDB367aC5F4b4bB701D2">0 x F e a c 3 4 4 2 5 a 3 B a 2 F A f b b E E D B 3 6 7 a C 5 F 4 b 4 b B 7 0 1 D 2</p>'+
-                    '<div class="push popover__content">'+
-                        '<p>Data required for transactions: <br>'+
-                            'Gas required: 300,000. <br>'+
-                            'Gwei required: 21.</p>'+
-                    '</div>'+
-                '</div>'+
                 '<p>Step 2: Wait for the result from 1 to 2 minutes, in LAST BET</p>'+
                 '<p>Our prizes are:</p>'+
                 '<div class="contenedor-premios">'+
@@ -938,5 +915,10 @@ function envioRecursoPromocionMaquina (){
                         '<img src="assets/how-to-play/premio3.png" alt="" class="img-fluid">'+
                         '<img src="assets/how-to-play/premio4.png" alt="" class="img-fluid">'+
                 '</div>';
+        })
+        .catch(function(error) { console.error('Parece que hubo un error: ' + error); });
+    }
+    else{
+        alert("It seems that the field is empty or your address is not complete.");
     }
 }

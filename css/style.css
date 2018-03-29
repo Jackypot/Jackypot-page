@@ -648,7 +648,7 @@ Frecuents Questions
     display: none;
     position: absolute;
     top: 84px;
-    height: 88vh;
+    height: 82vh;
     background-color: rgb(54, 66, 86);
     border-radius: 5px;
     overflow-x: auto;
@@ -1086,7 +1086,7 @@ Free bets
 .contenedor-free-bets h2{text-align: start;}
 .free-bets-datos .controls li, .controls-m li{
     border-radius: 0px;
-    height: 4px;
+    height: 8px;
 }
 .contenedor-promocion{
     border-radius: 5px;
