@@ -159,7 +159,11 @@ Responsive
     }
 }
 @media only screen and (max-width: 480px) and (orientation: portrait){
+    /* Navegacion */
+    .container-navigation{display: block;}
+    .logo{text-align: center;}
     .img-fluid{width: auto}
+    
     .contenedor-transparencia .img-fluid{width: 100%;}
     .contenedor-prizes{width: 100%; height: auto;}
     .contenedor-prizes .img-fluid{width: 100% !important;}

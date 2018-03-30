@@ -79,5 +79,5 @@ class Slider_m{
 }
 
 (function(){
-	new Slider_m(".contenedor-promocion");
+	new Slider_m(".free-bets-promocion-m");
 })();

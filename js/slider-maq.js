@@ -79,5 +79,8 @@ class Slider_maq{
 }
 
 (function(){
-	new Slider_maq(".free-bets-datos");
+	let vw = window.innerWidth;
+	console.log(vw);
+	
+	vw <= 480 ? new Slider_maq(".free-bets-datos-m") : new Slider_maq(".free-bets-datos");
 })();

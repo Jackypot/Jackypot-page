@@ -865,7 +865,7 @@ contacto
   resize:vertical;
 }
 
-.contactanos form input[type="submit"] {
+.contactanos form input[type="button"] {
   width: 100%;
   background:#bd4848;
   border-radius:5px;
@@ -879,9 +879,8 @@ contacto
   margin-top:-4px;
   font-weight:700;
 }
-.contactanos form input[type="submit"]:hover { background:#c00; }
+.contactanos form input[type="button"]:hover { background:#c00; }
 .contactanos h2{color: #fed232}
-
 .informacion-adicional{
     box-shadow: 1px 1px 5px 1px rgba(255, 255, 255, .3);
     border-radius: 5px;
@@ -889,10 +888,13 @@ contacto
     height: auto;
 }
 .informacion-adicional h2{color: #fed232;}
+.tab-content .informacion-adicional h2{color: #000000;}
 .informacion-adicional p,.informacion-adicional a{
     font-size: 20px;
     text-align: center;
     color: #fff;
+    text-decoration: none;
+    font-weight: bold;
 }
 
 .informacion-adicional table{margin: 0px auto;}
@@ -940,7 +942,7 @@ Free bets
 }
 
 /* IMG de la promo */
-.free-bets-promocion, .contenedor-promocion{
+.free-bets-promocion, .free-bets-promocion-m{
     background-color: rgb(18,17,30);
     border-radius: 5px;
     box-shadow: 0px 2px 5px 0px rgba(0, 0, 0, 0.5);
@@ -950,18 +952,22 @@ Free bets
     border-style: outset;
     border-color: #32a0d1;
 }
-.free-bets-promocion h2{
+.free-bets-promocion h2, .free-bets-promocion-m{
     color: #feda33;
     text-shadow: 2px 2px 1px rgb(29, 94, 125);
     margin-top: 0px;
     font-weight: bold;
+
 }
-.free-bets-promocion h3{
+
+.free-bets-promocion h3{font-size: 40px;}
+.free-bets-promocion-m h3{font-size: 30px;}
+
+.free-bets-promocion h3, .free-bets-promocion-m h3{
     color: white;
     text-shadow: 2px 2px 1px #ff0000;
     font-weight: bold;
     text-align: center;
-    font-size: 40px;
     margin: 0px;
 }
 
@@ -1051,30 +1057,9 @@ Free bets
     background-color: #32a0d1;
 }
 
-
-/*  */
-#reglas{
-    margin: 0px auto;
-    width: 200px;
-    height: 25px;
-    background-color: rgb(254, 210, 50);
-    color: black;
-    padding-top: 5px;
-    border-radius: 5px;
-    box-shadow: 0px 3px 0px 3px rgb(255, 175, 0);
-    -webkit-user-select: none;
-       -moz-user-select: none;
-        -ms-user-select: none;
-            user-select: none;
-    transition: all 100ms;
-}
-
-#reglas:hover{cursor: pointer;}
-#reglas:active{box-shadow: 0px 2px 0px 1px rgb(255, 175, 0);}
-
 /* Seccion de los datos de los tiros */
 
-.free-bets-datos{
+.free-bets-datos, .free-bets-datos-m{
     background-color: #151515;
     border-radius: 5px;
     box-shadow: 0px 2px 5px 0px rgba(0, 0, 0, 0.5);
@@ -1084,7 +1069,7 @@ Free bets
     overflow: hidden;
 }
 .contenedor-free-bets h2{text-align: start;}
-.free-bets-datos .controls li, .controls-m li{
+.free-bets-datos .controls li, .free-bets-datos-m .controls li{
     border-radius: 0px;
     height: 8px;
 }
@@ -1370,14 +1355,16 @@ Contenedor de dic con video
     transition: all 500ms;
 }
 
-.free-bets-datos h2{
+.free-bets-datos h2, .free-bets-datos-m h2{
     margin: 0px;
     color: #feda33;
     text-shadow: 2px 2px 1px #1d4e54;
     text-align: start;
 }
-.free-bets-datos h3, .contenedor-Bdatos h3{
-    font-size: 26px;
+.free-bets-datos h3{font-size: 26px;}
+.free-bets-datos-m h3{font-size: 18px;}
+
+.free-bets-datos h3, .free-bets-datos-m h3{
     text-align: center;
     margin: 0px;
     color: #cfe3e5;
@@ -1443,14 +1430,17 @@ Contenedor de dic con video
     margin-top: 30px;
     cursor: pointer;
 }
-.contenedor-ganador #enviarRecursoPromocion{
+#enviarRecursoPromocion{
     background-color: red;
 }
-.contenedor-ganador #share-jackypot{
+#share-jackypot, #share-jackypot-m{
     background-color: #4267b2;
     border-bottom: 1px solid #29487d;
 }
-
+#contador-tiros-entregados-m{
+    font-size: 18px;
+    margin-top: 10px;
+}
 .titulo-1{grid-area: titulo-1;}
 .titulo-2{grid-area: titulo-2;}
 .titulo-bets{

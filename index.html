@@ -1,588 +1,825 @@
 <!DOCTYPE html>
-<html lang="en" >
+<html lang="en">
+
 <head>
-      <meta charset="UTF-8">
-      <meta name="viewport" content="width=device-width, initial-scale=1.0">
-      <meta name="author" content="Jackypot.io">
-      <meta name="robots" content="index, follow"/>
-      <meta name="distribution" content="global"/>
-      <meta http-equiv="X-UA-Compatible" content="IE=edge">
-      <meta name="Description" content="It is a slot game that uses the technology of Ethereum using an smart contract, which offers a betting service in a random and safe way. Ethereum Casino, Ethereum Gambling, Ethereum Gameplay, Ethereum Games.">
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <meta name="author" content="Jackypot.io">
+   <meta name="robots" content="index, follow" />
+   <meta name="distribution" content="global" />
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="Description" content="It is a slot game that uses the technology of Ethereum using an smart contract, which offers a betting service in a random and safe way. Ethereum Casino, Ethereum Gambling, Ethereum Gameplay, Ethereum Games.">
 
 
-      <meta property="og:url"                content="https://jackypot.io/" />
-      <meta property="og:type"               content="website" />
-      <meta property="og:title"              content="jackypot.io - Ethereum Casino, Ethereum Gambling, Ethereum Gameplay, Ethereum Games." />
-      <meta property="og:description"        content="It is a slot game that uses the technology of Ethereum using an smart contract, which offers a betting service in a random and safe way. Ethereum Casino, Ethereum Gambling, Ethereum Gameplay, Ethereum Games." />
-      <meta property="og:updated_time"       content="1520355280" />
-      <meta property="og:image"   content="https://jackypot.io/assets/game/machine.png" />
+   <meta property="og:url" content="https://jackypot.io/" />
+   <meta property="og:type" content="website" />
+   <meta property="og:title" content="jackypot.io - Ethereum Casino, Ethereum Gambling, Ethereum Gameplay, Ethereum Games."
+   />
+   <meta property="og:description" content="It is a slot game that uses the technology of Ethereum using an smart contract, which offers a betting service in a random and safe way. Ethereum Casino, Ethereum Gambling, Ethereum Gameplay, Ethereum Games."
+   />
+   <meta property="og:updated_time" content="1520355280" />
+   <meta property="og:image" content="https://jackypot.io/assets/game/machine.png" />
 
-      <title>jackypot.io - Ethereum Casino, Ethereum Gambling, Ethereum Gameplay, Ethereum Games.</title>
+   <title>jackypot.io - Ethereum Casino, Ethereum Gambling, Ethereum Gameplay, Ethereum Games.</title>
 
-      <!-- Global site tag (gtag.js) - Google Analytics -->
-      <script async src="https://www.googletagmanager.com/gtag/js?id=UA-109935038-1"></script>
-      <script>
-       window.dataLayer = window.dataLayer || [];
-       function gtag(){dataLayer.push(arguments);}
-       gtag('js', new Date());
+   <!-- Global site tag (gtag.js) - Google Analytics -->
+   <script async src="https://www.googletagmanager.com/gtag/js?id=UA-109935038-1"></script>
+   <script>
+      window.dataLayer = window.dataLayer || [];
 
-       gtag('config', 'UA-109935038-1');
-      </script>
+      function gtag() {
+         dataLayer.push(arguments);
+      }
+      gtag('js', new Date());
 
-      <!-- Yandex.Metrika counter -->
-        <script type="text/javascript" >
-          (function (d, w, c) {
-              (w[c] = w[c] || []).push(function() {
-                  try {
-                      w.yaCounter47341086 = new Ya.Metrika2({
-                          id:47341086,
-                          clickmap:true,
-                          trackLinks:true,
-                          accurateTrackBounce:true,
-                          webvisor:true
-                      });
-                  } catch(e) { }
-              });
+      gtag('config', 'UA-109935038-1');
+   </script>
 
-              var n = d.getElementsByTagName("script")[0],
-                  s = d.createElement("script"),
-                  f = function () { n.parentNode.insertBefore(s, n); };
-              s.type = "text/javascript";
-              s.async = true;
-              s.src = "https://mc.yandex.ru/metrika/tag.js";
+   <!-- Yandex.Metrika counter -->
+   <script type="text/javascript">
+      (function (d, w, c) {
+         (w[c] = w[c] || []).push(function () {
+            try {
+               w.yaCounter47341086 = new Ya.Metrika2({
+                  id: 47341086,
+                  clickmap: true,
+                  trackLinks: true,
+                  accurateTrackBounce: true,
+                  webvisor: true
+               });
+            } catch (e) {}
+         });
 
-              if (w.opera == "[object Opera]") {
-                  d.addEventListener("DOMContentLoaded", f, false);
-              } else { f(); }
-          })(document, window, "yandex_metrika_callbacks2");
-        </script>
-        <!-- /Yandex.Metrika counter -->
+         var n = d.getElementsByTagName("script")[0],
+            s = d.createElement("script"),
+            f = function () {
+               n.parentNode.insertBefore(s, n);
+            };
+         s.type = "text/javascript";
+         s.async = true;
+         s.src = "https://mc.yandex.ru/metrika/tag.js";
 
-      <!-- Icon -->
-      <link rel="icon" type="image/ico" href="favicon.ico" sizes="16x16" />
+         if (w.opera == "[object Opera]") {
+            d.addEventListener("DOMContentLoaded", f, false);
+         } else {
+            f();
+         }
+      })(document, window, "yandex_metrika_callbacks2");
+   </script>
+   <!-- /Yandex.Metrika counter -->
 
-      <!-- Styles -->
-      <link rel="stylesheet" href="css/grid.css">
-      <link rel="stylesheet" href="css/style.css">
-      <link rel="stylesheet" href="css/collapse.css">
-      <link rel="stylesheet" href="css/responsive.css">
+   <!-- Icon -->
+   <link rel="icon" type="image/ico" href="favicon.ico" sizes="16x16" />
 
-      <!-- Script -->
-      <div id="fb-root"></div>
-      <script type="text/javascript" src="js/sdk-facebook.js"></script>
-      <script type="text/javascript" src="js/snap.svg.js"></script>
-      <script type="text/javascript" src="js/blockies.js"></script>
-      <script type="text/javascript" src="js/clipboard.js"></script>
-      <script src='https://cdnjs.cloudflare.com/ajax/libs/animejs/2.2.0/anime.js'></script>
-      <script type="text/javascript" src="js/socket.io.js"></script>
+   <!-- Styles -->
+   <link rel="stylesheet" href="css/grid.css">
+   <link rel="stylesheet" href="css/style.css">
+   <link rel="stylesheet" href="css/collapse.css">
+   <link rel="stylesheet" href="css/responsive.css">
+
+   <!-- Script -->
+   <div id="fb-root"></div>
+   <script type="text/javascript" src="js/sdk-facebook.js"></script>
+   <script type="text/javascript" src="js/snap.svg.js"></script>
+   <script type="text/javascript" src="js/blockies.js"></script>
+   <script type="text/javascript" src="js/clipboard.js"></script>
+   <script src='https://cdnjs.cloudflare.com/ajax/libs/animejs/2.2.0/anime.js'></script>
+   <script type="text/javascript" src="js/socket.io.js"></script>
 </head>
+
 <body>
-    <div class="contenedor-global" id="contenedor-global">
-        <!-- Wrapper principal -->
-        <div class="wrapper" id="wrapper">
-            <!-- Navegacion -->
-            <div class="box navigation" id="nav">
-                <div class="container-navigation">
-                    <div class="logo">
-                        <img src="assets/nav/logo.png" alt="Logo JP" class="img-fluid">
-                    </div>
-                    <div class="nav" id="navegacion-nav">
+   <div class="contenedor-global" id="contenedor-global">
+      <!-- Wrapper principal -->
+      <div class="wrapper" id="wrapper">
+         <!-- Navegacion -->
+         <div class="box navigation" id="nav">
+            <div class="container-navigation">
+               <div class="logo">
+                  <img src="assets/nav/logo.png" alt="Logo JP" class="img-fluid">
+               </div>
+               <div class="nav" id="navegacion-nav">
+                  <ul>
+                     <li onclick="closed_window()" id="play">PLAY</li>
+                     <li onclick="show_window(this.id)" id="faqs">FAQS</li>
+                     <li onclick="show_window(this.id)" id="free-bets">FREE BETS
+                        <span class="span-nav">HOT</span>
+                     </li>
+                     <li onclick="show_window(this.id)" id="contrato">CONTRACT</li>
+                     <li onclick="show_window(this.id)" id="terms">TERMS</li>
+                     <li onclick="show_window(this.id)" id="contact">CONTACT</li>
+                  </ul>
+               </div>
+            </div>
+         </div>
+         <!-- How to play -->
+         <div class="box introduction luces-largas" id="intr">
+            <div class="container-introduction">
+               <div class="tittle-how-to-play">
+                  <h3>HOW TO PLAY</h3>
+               </div>
+               <div class="cuerpo-how-to-play">
+                  <p>1. Open some of these wallets.</p>
+                  <div class="wallets">
+                     <ul>
+                        <li>
+                           <a href="https://www.myetherwallet.com/" title="MyEtherWallet" target="_blank">
+                              <img src="assets/how-to-play/01.png" alt="" class="img-fluid">
+                           </a>
+                        </li>
+                        <li>
+                           <a href="https://ethereum.org/" title="Mist" target="_blank">
+                              <img src="assets/how-to-play/02.png" alt="" class="img-fluid">
+                           </a>
+                        </li>
+                        <li>
+                           <a href="https://metamask.io/" title="MetaMask" target="_blank">
+                              <img src="assets/how-to-play/03.png" alt="" class="img-fluid">
+                           </a>
+                        </li>
+                        <li>
+                           <a href="https://jaxx.io/" title="Jaxx" target="_blank">
+                              <img src="assets/how-to-play/04.png" alt="" class="img-fluid">
+                           </a>
+                        </li>
+                        <li>
+                           <a href="https://www.exodus.io/" title="Exodus" target="_blank">
+                              <img src="assets/how-to-play/05.png" alt="" class="img-fluid">
+                           </a>
+                        </li>
+                     </ul>
+                  </div>
+                  <p style="margin-bottom: 0px;">2. Send the amount of ETH you want to bet on this address:</p>
+                  <p class="text-small">(Bet min 0.01 ETH - Bet max: 20 ETH)</p>
+                  <div class="popover__wrapper">
+                     <p class="address-game" id="address-game" data-clipboard-text="0xFeac34425a3Ba2FAfbbEEDB367aC5F4b4bB701D2">0 x F e a c 3 4 4 2 5 a 3 B a 2 F A f b b E E D B 3 6 7 a C 5 F 4 b 4 b B 7 0 1 D 2</p>
+                     <div class="push popover__content">
+                        <p>Data required for transactions:
+                           <br> Gas required: 300,000.
+                           <br> Gwei required: 21.</p>
+                     </div>
+                  </div>
+                  <p>Wait for the result from 1 to 2 minutes, in
+                     <a title="Results" onclick="getfocus()" class="links">LAST BET</a>.</p>
+                  <p>3. Our prizes are:</p>
+                  <div class="contenedor-premios">
+                     <img src="assets/how-to-play/premio1.png" alt="" class="img-fluid">
+                     <img src="assets/how-to-play/premio2.png" alt="" class="img-fluid">
+                     <img src="assets/how-to-play/premio3.png" alt="" class="img-fluid">
+                     <img src="assets/how-to-play/premio4.png" alt="" class="img-fluid">
+                  </div>
+                  <div class="all-prizes" id="all-prizes">
+                     <img src="assets/how-to-play/4.png" alt="" class="img-fluid">
+                     <img src="assets/how-to-play/6.png" alt="" class="img-fluid">
+                     <img src="assets/how-to-play/11.png" alt="" class="img-fluid">
+                     <img src="assets/how-to-play/8.png" alt="" class="img-fluid">
+                     <img src="assets/how-to-play/9.png" alt="" class="img-fluid">
+                     <img src="assets/how-to-play/7.png" alt="" class="img-fluid">
+                     <img src="assets/how-to-play/15.png" alt="" class="img-fluid">
+                     <img src="assets/how-to-play/12.png" alt="" class="img-fluid">
+                     <img src="assets/how-to-play/13.png" alt="" class="img-fluid">
+                     <img src="assets/how-to-play/10.png" alt="" class="img-fluid">
+                     <img src="assets/how-to-play/14.png" alt="" class="img-fluid">
+                     <table class="representation-trans">
+                        <thead>
+                           <tr>
+                              <th class="borde-vertical">Symbols</th>
+                              <th>Representation</th>
+                           </tr>
+                        </thead>
+                        <tbody>
+                           <tr>
+                              <td class="borde-vertical borde-horizontal">
+                                 <img src="assets/game/slot/1.svg" alt="Cereza">
+                              </td>
+                              <td class="borde-horizontal"> = 1, 2, 3</td>
+                           </tr>
+                           <tr>
+                              <td class="borde-vertical borde-horizontal">
+                                 <img src="assets/game/slot/2.svg" alt="Cereza">
+                              </td>
+                              <td class="borde-horizontal"> = 4, 5, 6</td>
+                           </tr>
+                           <tr>
+                              <td class="borde-vertical borde-horizontal">
+                                 <img src="assets/game/slot/3.svg" alt="Cereza">
+                              </td>
+                              <td class="borde-horizontal"> = 7, 8, 9</td>
+                           </tr>
+                        </tbody>
+                     </table>
+                  </div>
+                  <button class="btn-prizes" onclick="mostrar_premios()">SHOW MORE PRIZES</button>
+                  <p>4. The prize will be sent automatically in your wallet.</p>
+                  <p>5. Good luck!</p>
+               </div>
+            </div>
+         </div>
+         <!-- Game or Machine -->
+         <div class="box content" id="conte">
+            <!-- Titulo -->
+            <div class="tittle-game">
+               <h3>JACKPOT GAME</h3>
+            </div>
+            <div class="container-game">
+               <div class="machine">
+                  <!-- Machine -->
+                  <div class="img-machine">
+                     <svg id="svg"></svg>
+                     <p id="pote">Loading...</p>
+                  </div>
+               </div>
+               <!-- Form -->
+               <div class="address-machine" id="contenedor_address_machine">
+                  <!-- Aqui se escribe desde el JS -->
+                  <div class="contenedor-address">
+                     <p class="remove" id="address-machine">Ethereum Wallet Address Of The Participant</p>
+                  </div>
+               </div>
+               <div class="bet" id="contenedor_apuesta_machine">
+                  <!-- Aqui se escribe desde el JS -->
+                  <div class="contenedor-profit">
+                     <p class="remove" id="bet-machine">Profit</p>
+                  </div>
+               </div>
+               <div class="btn-play" id="contenedor_btn_machine">
+                  <!-- Aqui se escribe desde el JS -->
+                  <input type="image" src="assets/game/btn-play.png" onclick="openModal(this.id)" id="how-play">
+               </div>
+            </div>
+            <div class="contenedor_video">
+               <button type="button" name="button" class="btn_video sombras-c-g" onclick="openModal(this.id)" id="video">Show Tutorial</button>
+            </div>
+         </div>
+         <!-- Chat -->
+         <div class="box information" id="chat">
+            <div class="tittle-chat" onclick="change_focus()">
+               <h3>
+                  <span id="tittle-chat-span">CHAT </span>/
+                  <span id="tittle-table-span" class="activo"> LAST BET</span>
+               </h3>
+            </div>
+            <div id="datos">
+
+            </div>
+            <div class="chat" id="chat-con">
+               <div id="disqus_thread"></div>
+               <script>
+                  setTimeout(function () {
+                     var disqus_config = function () {
+                        this.page.url = "http://Jackypot.io"; // Replace PAGE_URL with your page's canonical URL variable
+                        this.page.identifier = "jackypot"; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+                     };
+
+                     (function () { // DON'T EDIT BELOW THIS LINE
+                        var d = document,
+                           s = d.createElement('script');
+                        s.src = 'https://jackypot.disqus.com/embed.js';
+                        s.setAttribute('data-timestamp', +new Date());
+                        (d.head || d.body).appendChild(s);
+                     })();
+
+                  }, 8000);
+               </script>
+               <noscript>Please enable JavaScript to view the
+                  <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a>
+               </noscript>
+            </div>
+         </div>
+         <!-- Collapse only movil version -->
+         <div class="box collapse">
+            <div class="half">
+               <!-- How to play movil -->
+               <div class="tab">
+                  <input id="tab-one" type="checkbox" name="tabs">
+                  <label for="tab-one">HOW TO PLAY</label>
+                  <div class="tab-content cuerpo-how-to-play">
+                     <p>1. Open some of these wallets.</p>
+                     <div class="wallets">
                         <ul>
-                            <li onclick="closed_window()" id="play">PLAY</li>
-                            <li onclick="show_window(this.id)" id="faqs">FAQS</li>
-                            <li onclick="show_window(this.id)" id="free-bets">FREE BETS <span class="span-nav">HOT</span></li>
-                            <li onclick="show_window(this.id)" id="contrato">CONTRACT</li>
-                            <li onclick="show_window(this.id)" id="terms">TERMS</li>
-                            <li onclick="show_window(this.id)" id="contact">CONTACT</li>
+                           <li>
+                              <a href="https://www.myetherwallet.com/" title="MyEtherWallet" target="_blank">
+                                 <img src="assets/how-to-play/01.png" alt="" class="img-fluid">
+                              </a>
+                           </li>
+                           <li>
+                              <a href="https://ethereum.org/" title="Mist" target="_blank">
+                                 <img src="assets/how-to-play/02.png" alt="" class="img-fluid">
+                              </a>
+                           </li>
+                           <li>
+                              <a href="https://metamask.io/" title="MetaMask" target="_blank">
+                                 <img src="assets/how-to-play/03.png" alt="" class="img-fluid">
+                              </a>
+                           </li>
+                           <li>
+                              <a href="https://jaxx.io/" title="Jaxx" target="_blank">
+                                 <img src="assets/how-to-play/04.png" alt="" class="img-fluid">
+                              </a>
+                           </li>
+                           <li>
+                              <a href="https://www.exodus.io/" title="Exodus" target="_blank">
+                                 <img src="assets/how-to-play/05.png" alt="" class="img-fluid">
+                              </a>
+                           </li>
                         </ul>
-                    </div>
-                </div>
-            </div>
-            <!-- How to play -->
-            <div class="box introduction luces-largas" id="intr">
-                <div class="container-introduction">
-                    <div class="tittle-how-to-play">
-                        <h3>HOW TO PLAY</h3>
-                    </div>
-                    <div class="cuerpo-how-to-play">
-                        <p>1. Open some of these wallets.</p>
+                     </div>
+                     <p>2. Send the amount of ETH you want to bet on this address:</p>
+                     <p style="margin-bottom: 0px;">Bet min 0.01 ETH -Bet max: 20 ETH</p>
+                     <div class="popover__wrapper">
+                        <p class="address-game" id="address-game" data-clipboard-text="0xFeac34425a3Ba2FAfbbEEDB367aC5F4b4bB701D2">0 x F e a c 3 4 4 2 5 a 3 B a 2 F A f b b E E D B 3 6 7 a C 5 F 4 b 4 b B 7 0 1 D 2</p>
+                        <div class="push popover__content">
+                           <p>Data required for transactions:
+                              <br> Gas required: 300,000.
+                              <br> Gwei required: 21.</p>
+                        </div>
+                     </div>
+                     <p>Wait for the result from 1 to 2 minutes, in LAST BET.</p>
+                     <p>3. Our prizes are:</p>
+                     <div class="contenedor-premios">
+                        <img src="assets/how-to-play/premio1.png" alt="" class="img-fluid">
+                        <img src="assets/how-to-play/premio2.png" alt="" class="img-fluid">
+                        <img src="assets/how-to-play/premio3.png" alt="" class="img-fluid">
+                        <img src="assets/how-to-play/premio4.png" alt="" class="img-fluid">
+                     </div>
+                     <div class="all-prizes" id="all-prizes-m">
+                        <img src="assets/how-to-play/4.png" alt="" class="img-fluid">
+                        <img src="assets/how-to-play/6.png" alt="" class="img-fluid">
+                        <img src="assets/how-to-play/11.png" alt="" class="img-fluid">
+                        <img src="assets/how-to-play/8.png" alt="" class="img-fluid">
+                        <img src="assets/how-to-play/9.png" alt="" class="img-fluid">
+                        <img src="assets/how-to-play/7.png" alt="" class="img-fluid">
+                        <img src="assets/how-to-play/15.png" alt="" class="img-fluid">
+                        <img src="assets/how-to-play/12.png" alt="" class="img-fluid">
+                        <img src="assets/how-to-play/13.png" alt="" class="img-fluid">
+                        <img src="assets/how-to-play/10.png" alt="" class="img-fluid">
+                        <img src="assets/how-to-play/14.png" alt="" class="img-fluid">
+                     </div>
+                     <button class="btn-prizes" onclick="mostrar_premios_m()">SHOW MORE PRIZES</button>
+                     <p>4. The prize will be sent automatically in your wallet.</p>
+                     <p>5. Good luck!</p>
+                  </div>
+               </div>
+               <!-- Free bets -->
+               <div class="tab">
+                  <input id="tab-two" type="checkbox" name="tabs">
+                  <label for="tab-two">FREE BETS</label>
+                  <div class="tab-content">
+                     <!-- Promocion 1 -->
+                     <div class="free-bets-promocion-m">
+                        <!-- Contenedor de la promocion -->
+                        <h2>Promotion 1</h2>
+                        <h3>You lost ?... You Win!</h3>
+                        <!-- Slider -->
+                        <div class="contenedor-slider-m">
+                           <div class="slider-m">
+                              <div class="slider-content-m">
+                                 <span></span>
+                                 <p>
+                                    <span class="negro">1.</span> Only those who have lost will receive their free bets</p>
+                                 <p>
+                                    <span class="negro">2.</span> The minimum bet of this promotion is .01 ETH, up to a maximum bet of 1 ETH.</p>
+                                 <p>
+                                    <span class="negro">3.</span> The url of the transaction made, must be published in the thread of the promotion.</p>
+                              </div>
+                           </div>
+                           <div class="slider-m">
+                              <div class="slider-content-m">
+                                 <p>
+                                    <span class="negro">4.</span> The public address that is in the url is to which the free bets are sent.</p>
+                                 <p>
+                                    <span class="negro">5.</span> Free bets with a value of 0.01 will be awarded until the amount lost is reached.</p>
+                                 <p>
+                                    <span class="negro">6.</span> Each bet is awarded within 4 hours of your last free bet.</p>
+                              </div>
+                           </div>
+                           <div class="slider-m">
+                              <div class="slider-content-m">
+                                 <p>
+                                    <span class="negro">7.</span> No other free bet can be awarded until you play the previously one.</p>
+                                 <p>
+                                    <span class="negro">8.</span> To collect the free bets, you must make the transaction at 0 ETH in our contract.</p>
+                                 <p>
+                                    <span class="negro">9.</span> Promotion valid until awarding 2000 free throws or until March 31, 2018.</p>
+                              </div>
+                           </div>
+                        </div>
+                        <!-- Controles slider -->
+                        <div class="contenedor-controles-m">
+                           <div class="controls-m">
+                              <ul></ul>
+                           </div>
+                        </div>
+                        <!-- Btn ir al post -->
+                        <div class="contenedor-btn-freeBets">
+                           <button type="button" name="button" class="btn-free-bet">Go post</button>
+                        </div>
+                     </div>
+                     <!-- Promocion 2 -->
+                     <div class="free-bets-datos-m" id="contenedor-free-bets">
+                        <!-- Contenedor de los datos -->
+                        <div class="titulo-bets">
+                           <div class="titulo-1">
+                              <h2>Promotion 2</h2>
+                           </div>
+                           <div class="titulo-2">
+                              <h2 id="contador-tiros-entregados-m" class="sombras-c">Loading...</h2>
+                           </div>
+                        </div>
+                        <div class="contenedor-slider">
+                           <div class="slider">
+                              <div class="slider-content">
+                                 <h3>Click PLAY and receive a free bet with a value of 0.01 ETH.</h3>
+                              </div>
+                           </div>
+                           <div class="slider">
+                              <div class="slider-content">
+                                 <h3>To receive the free bet, you have to send your public address.</h3>
+                              </div>
+                           </div>
+                           <div class="slider">
+                              <div class="slider-content">
+                                 <h3>Place free bets by sending 0 ETH to our contract.</h3>
+                              </div>
+                           </div>
+                           <div class="slider">
+                              <div class="slider-content">
+                                 <h3>You can only receive a free bet every 24 hours.</h3>
+                              </div>
+                           </div>
+                           <div class="slider">
+                              <div class="slider-content">
+                                 <h3>This promotion is only valid until you have delivered 1000 bets or until March 31.</h3>
+                              </div>
+                           </div>
+                        </div>
+                        <div class="contenedor-controles">
+                           <div class="controls">
+                              <ul></ul>
+                           </div>
+                        </div>
+                        <div class="contenedor-maquina-juguete" id="contenedor-maquina-juguete-m">
+                           <div class="maquina-juguete">
+                              <div class="img-machine-juguete">
+                                 <svg id="svg-juguete-m"></svg>
+                                 <p id="pote-juguete-m">20000 POINTS</p>
+                              </div>
+                           </div>
+                           <div class="puntos-totales">
+                              <div class="panel-puntos sombras-c">
+                                 <label>Points: </label>
+                                 <input type="text" disabled value="1000" id="puntos-jugador-m">
+                              </div>
+                           </div>
+                           <div class="apuesta-juguete">
+                              <label>BET: </label>
+                              <input type="number" required min="100" max="500" step="100" onkeypress="return validaNumericos(event)" value="100"
+                                 id="apuesta_puntos-m">
+                           </div>
+                           <div class="btn-play-juguete">
+                              <input type="image" src="assets/game/btn-play.png" onclick="jugar_por_puntos()">
+                           </div>
+                        </div>
+                        <div class="contenedor-ganador" id="contenedor-ganador-m">
+                           <h3 style="margin-top: 50px; color: #30c730">Congratulations, You've Won 1 Free Bet with Value at 0.01 Ethereum</h3>
+                           <h3>Share with your friends to get a free bet!</h3>
+                           <button id="share-jackypot-m">
+                              <img src="assets/footer/facebook-logo.png" alt="Facebook"> Share</button>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+               <!-- BETS -->
+               <div class="tab">
+                  <input id="tab-three" type="checkbox" name="tabs">
+                  <label for="tab-three">LAST BET</label>
+                  <div class="tab-content">
+                     <div id="datos-m">
+
+                     </div>
+                  </div>
+               </div>
+               <!-- FAQS -->
+               <div class="tab">
+                  <input id="tab-four" type="checkbox" name="tabs">
+                  <label for="tab-four">FAQS</label>
+                  <!-- Contenido -->
+                  <div class="tab-content">
+                     <h2>Frequent questions</h2>
+                     <div class="container-faqs">
+                        <h4>What is Jackypot?</h4>
+                        <p>It is a slots game with an accumulated prize that uses the technology of the Blockchain of Ethereum.
+                           It is conformed by the following characteristics:</p>
+                        <ol>
+                           <li>It is the only one that uses ETHER cryptocurrency.</li>
+                           <li>Automated payments.</li>
+                           <li>Use an intelligent contract to perform each of its operations.</li>
+                           <li>Each shooting probability is transparent and reliable.</li>
+                           <li>The only requirement you need is an electronic portfolio of ETHEREUM.</li>
+                        </ol>
+                        <h4>Is it safe to play Jackypot?</h4>
+                        <p>Our game is based on Blockchain Technology, so each shipment is unique and encrypted. (Encrypted
+                           SHA3 method), which is equivalent to a set of infinite combinations between numbers, letters and
+                           signs, which makes it a secure method for your information since it prevents hacking of any kind
+                           and that is why Jackypot gives you the security of that will not be deciphered.</p>
+                        <h4>How to play Jackypot?</h4>
+                        <ol>
+                           <li>Go to your ETH portfolio</li>
+                           <li>You will deposit to the following address:
+                              <p class="address-game" id="address-game" data-clipboard-text="0xFeac34425a3Ba2FAfbbEEDB367aC5F4b4bB701D2">0 x F e a c 3 4 4 2 5 a 3 B a 2 F A f b b E E D B 3 6 7 a C 5 F 4 b 4 b B 7 0 1 D 2</p>
+                           </li>
+                           <li>The amount between 0.01 Ether up to 20 Ether what you want to play.</li>
+                           <li>Complete your transaction and Done</li>
+                        </ol>
+                        <h4>What wallets are used?</h4>
                         <div class="wallets">
-                            <ul>
-                                <li><a href="https://www.myetherwallet.com/" title="MyEtherWallet" target="_blank"><img src="assets/how-to-play/01.png" alt="" class="img-fluid"></a></li>
-                                <li><a href="https://ethereum.org/" title="Mist" target="_blank"><img src="assets/how-to-play/02.png" alt="" class="img-fluid"></a></li>
-                                <li><a href="https://metamask.io/" title="MetaMask" target="_blank"><img src="assets/how-to-play/03.png" alt="" class="img-fluid"></a></li>
-                                <li><a href="https://jaxx.io/" title="Jaxx" target="_blank"><img src="assets/how-to-play/04.png" alt="" class="img-fluid"></a></li>
-                                <li><a href="https://www.exodus.io/" title="Exodus" target="_blank"><img src="assets/how-to-play/05.png" alt="" class="img-fluid"></a></li>
-                            </ul>
+                           <ul>
+                              <li>
+                                 <img src="assets/how-to-play/01.png" alt="" class="img-fluid" title="MyEtherWallet">
+                              </li>
+                              <li>
+                                 <img src="assets/how-to-play/02.png" alt="" class="img-fluid" title="Mist">
+                              </li>
+                              <li>
+                                 <img src="assets/how-to-play/03.png" alt="" class="img-fluid" title="MetaMask">
+                              </li>
+                              <li>
+                                 <img src="assets/how-to-play/04.png" alt="" class="img-fluid" title="Jaxx">
+                              </li>
+                              <li>
+                                 <img src="assets/how-to-play/05.png" alt="" class="img-fluid" title="Exodus">
+                              </li>
+                           </ul>
                         </div>
-                        <p style="margin-bottom: 0px;">2. Send the amount of ETH you want to bet on this address:</p>
-                        <p class="text-small">(Bet min 0.01 ETH - Bet max: 20 ETH)</p>
-                        <div class="popover__wrapper">
-                            <p class="address-game" id="address-game" data-clipboard-text="0xFeac34425a3Ba2FAfbbEEDB367aC5F4b4bB701D2">0 x F e a c 3 4 4 2 5 a 3 B a 2 F A f b b E E D B 3 6 7 a C 5 F 4 b 4 b B 7 0 1 D 2</p>
-                            <div class="push popover__content">
-                                <p>Data required for transactions: <br>
-                                    Gas required: 300,000. <br>
-                                    Gwei required: 21.</p>
-                            </div>
-                        </div>
-                        <p>Wait for the result from 1 to 2 minutes, in <a title="Results" onclick="getfocus()" class="links">LAST BET</a>.</p>
-                        <p>3. Our prizes are:</p>
-                        <div class="contenedor-premios">
-                                <img src="assets/how-to-play/premio1.png" alt="" class="img-fluid">
-                                <img src="assets/how-to-play/premio2.png" alt="" class="img-fluid">
-                                <img src="assets/how-to-play/premio3.png" alt="" class="img-fluid">
-                                <img src="assets/how-to-play/premio4.png" alt="" class="img-fluid">
-                        </div>
-                        <div class="all-prizes" id="all-prizes">
-                            <img src="assets/how-to-play/4.png" alt="" class="img-fluid">
-                            <img src="assets/how-to-play/6.png" alt="" class="img-fluid">
-                            <img src="assets/how-to-play/11.png" alt="" class="img-fluid">
-                            <img src="assets/how-to-play/8.png" alt="" class="img-fluid">
-                            <img src="assets/how-to-play/9.png" alt="" class="img-fluid">
-                            <img src="assets/how-to-play/7.png" alt="" class="img-fluid">
-                            <img src="assets/how-to-play/15.png" alt="" class="img-fluid">
-                            <img src="assets/how-to-play/12.png" alt="" class="img-fluid">
-                            <img src="assets/how-to-play/13.png" alt="" class="img-fluid">
-                            <img src="assets/how-to-play/10.png" alt="" class="img-fluid">
-                            <img src="assets/how-to-play/14.png" alt="" class="img-fluid">
-                            <table class="representation-trans">
-                                <thead>
-                                    <tr>
-                                        <th class="borde-vertical">Symbols</th>
-                                        <th>Representation</th>
-                                    </tr>
-                                </thead>
-                                <tbody>
-                                    <tr>
-                                        <td class="borde-vertical borde-horizontal"><img src="assets/game/slot/1.svg" alt="Cereza"></td>
-                                        <td class="borde-horizontal"> = 1, 2, 3</td>
-                                    </tr>
-                                    <tr>
-                                        <td class="borde-vertical borde-horizontal"><img src="assets/game/slot/2.svg" alt="Cereza"></td>
-                                        <td class="borde-horizontal"> = 4, 5, 6</td>
-                                    </tr>
-                                    <tr>
-                                        <td class="borde-vertical borde-horizontal"><img src="assets/game/slot/3.svg" alt="Cereza"></td>
-                                        <td class="borde-horizontal"> = 7, 8, 9</td>
-                                    </tr>
-                                </tbody>
-                            </table>
-                        </div>
-                        <button class="btn-prizes" onclick="mostrar_premios()">SHOW MORE PRIZES</button>
-                        <p>4. The prize will be sent automatically in your wallet.</p>
-                        <p>5. Good luck!</p>
+                        <p>* all portfolios that accept betting games.</p>
+                        <h4>What is the minimum and maximum bet?</h4>
+                        <p>The bet minina in Jackypot is 0.01 Eth, up to 20 ETH as Maximum.</p>
+                        <h4>How are the prizes in Jackypot?</h4>
+                        <table class="table">
+                           <thead>
+                              <tr>
+                                 <th class="borde-vertical">Ways to Win</th>
+                                 <th class="borde-vertical">Examples</th>
+                                 <th class="borde-vertical">That is to say</th>
+                                 <th>Figures</th>
+                              </tr>
+                           </thead>
+                           <tbody>
+                              <tr>
+                                 <td class="borde-vertical borde-horizontal">Triple Figures</td>
+                                 <td class="borde-vertical borde-horizontal">Suppose you bet 1ETH and fall Currency & Currency & Currency. With this combination, you
+                                    win your bet of 1ETH x 3 = 3 ETH.</td>
+                                 <td class="borde-vertical borde-horizontal">Get 300% of your bet</td>
+                                 <td class="borde-horizontal">
+                                    <img src="assets/faqs/triple.png" alt="Triple coins">
+                                 </td>
+                              </tr>
+                              <tr>
+                                 <td class="borde-vertical borde-horizontal">Doubles Figures</td>
+                                 <td class="borde-vertical borde-horizontal">Suppose you bet 1ETH and fall Cherry & Cherry & Seven. With this combination, you win your
+                                    bet of 1 ETH x1.1 = 1.1 ETH.</td>
+                                 <td class="borde-vertical borde-horizontal">Get 110% of your bet.</td>
+                                 <td class="borde-horizontal">
+                                    <img src="assets/faqs/dobles.png" alt="Double cherrys">
+                                 </td>
+                              </tr>
+                           </tbody>
+                        </table>
+                        <p>* Prize payments are automated</p>
+                        <h4>How many chances do I have to win in Jackypot?</h4>
+                        <p>You have the possibility to win up to 55.55% in prizes, contrary to what is determined in other betting
+                           sites.
+                        </p>
+                        <h4>Does Jackypot intervene in the results of the games?</h4>
+                        <p>Our game always gives a random result through the request we make to Oraclize, a company specializing
+                           in the transfer of: information, security and those who act as a data provider, which they request
+                           from Random.org, which is a service of generation of random information and thus these results
+                           are generated.</p>
+                        <p>That is, we do not intervene with the results of each game.</p>
+                        <h4>Is only Ethereum Cryptocurrency used?</h4>
+                        <p>At the moment Jackypot only uses the Ethereum coin.</p>
+                        <h4>Do you have Tutorials about Jackypot?</h4>
+                        <a href="https://www.youtube.com/watch?v=C3q54d83qq4&feature=youtu.be" target="_blank">
+                           <button type="button" name="button" class="tutorial">Go Tutorial</button>
+                        </a>
+                        <h4>News about Jackypot:</h4>
+                        <a href="https://bitcoiner.today/es/jackypot-el-primer-jackpot-del-mundo-con-la-techologia-de-blockchain/" target="_blank">
+                           <button type="button" name="button" class="bitcoiner-today">BitcoinToday</button>
+                        </a>
+                        <a href="https://cryptocurrencyhub.io/jackypot-the-first-jackpot-on-the-world-with-the-blockchain-s-technology-90bc7efcf04e"
+                           target="_blank">
+                           <button type="button" name="button" class="medium">Medium</button>
+                        </a>
+                        <a href="https://steemit.com/blockchain/@jaimeeaton/jackypot-the-first-jackpot-on-the-world-with-the-blockchain-s-technology"
+                           target="_blank">
+                           <button type="button" name="button" class="steemit">Steemit</button>
+                        </a>
+                        <h2>General questions:</h2>
+                        <h4>What is the smart contract?</h4>
+                        <p>This is a program code that allows you to automatically perform certain functions when certain conditions
+                           occur. To implement smart contracts, a decentralized environment that completely excludes the
+                           human factor is required. To use the transfer of value in an intelligent contract, it requires
+                           a cryptocurrency.</p>
+                        <h4>What is Blockchain?</h4>
+                        <p>Blockchain is a distributed database that does not have storage devices connected to a shared server.
+                           This database stores a constantly growing list of ordered records, called blocks. Each block contains
+                           a timestamp and a link to the previous block.</p>
+                        <h4>What is the process used in Jackypot?</h4>
+                        <ol>
+                           <li>Users deposit the bet amount of Ethereum from their portfolio.</li>
+                           <li>Jackypot has Blockchain technology using an intelligent contract that runs transparently and securely.</li>
+                           <li>Our Oraclize provider who specializes in transparency connects with Random.org who are responsible
+                              for generating the random numbers.</li>
+                           <li>Ramdom.org sends the random numbers that were generated to Oraclize.</li>
+                           <li>Oraclize sends the data to the intelligent contract.</li>
+                           <li>The contract interprets the results, calculates the prizes and directs them to the winners.</li>
+                           <li>The results are reflected in Jackypot</li>
+                        </ol>
+                     </div>
+                  </div>
+               </div>
+               <!-- Contrato -->
+               <div class="tab">
+                  <input id="tab-five" type="checkbox" name="tabs">
+                  <label for="tab-five">CONTRACT</label>
+                  <div class="tab-content">
+                     <p>Our games are totally and completely open-source and free to use, enter to
+                        <a href="https://github.com/Jackypot/Jackypot-slot">GitHub</a>. All data are public and can be viewed at
+                        <a href="https://etherscan.io/address/0xfeac34425a3ba2fafbbeedb367ac5f4b4bb701d2#code">www.etherscan.io</a>
+                     </p>
+                     <div class="img-git">
+                        <img src="assets/contract/github.png" alt="GitHub">
+                     </div>
+                  </div>
+               </div>
+               <!-- Terminos -->
+               <div class="tab">
+                  <input id="tab-six" type="checkbox" name="tabs">
+                  <label for="tab-six">TERMS</label>
+                  <div class="tab-content">
+                     <h2>Terms and Conditions</h2>
+                     <ul>
+                        <li>By using our services, you accept and confirm that you have read the Terms and Conditions, which
+                           take effect thereafter.
+                        </li>
+                        <li>You declare that you are of legal age in the country or region you are in.</li>
+                        <li>If you live in a country or place where Internet gambling is not legal, please leave jackypot.io
+                           or we will not be responsible for the consequences that this brings.</li>
+                        <li>At jackypot.io we want the information on our page to be understandable and we are committed to legality,
+                           so we are not responsible for any misunderstandings and it is the user's responsibility to use
+                           said information.</li>
+                        <li>
+                           <p>We are working every day of the year to make it possible for jackypot.io to work without problems,
+                              but we are NOT responsible for:</p>
+                           <ol>
+                              <li>Any problem or technical failure.</li>
+                              <li>Theft of accounts by third parties.</li>
+                              <li>Losses of cash or tokens.</li>
+                              <li>Misuse of our platform.</li>
+                              <li>Problems with your wallets.</li>
+                              <li>And everything that is beyond our control.</li>
+                           </ol>
+                        </li>
+                        <li>You are aware that by using our services and playing you may lose ETHER, and only you are fully responsible
+                           for any loss.</li>
+                        <li>You understand that it takes a few minutes for the process to play.</li>
+                        <li>We do not take charge of the delay in which the information is reflected in the system between the
+                           Blockchain, Etherscan, Oraclize and Random networks.</li>
+                        <li>You understand that we do not handle the Ethers that enter the pot or the results of the shots.</li>
+                        <li>You will not use software or allow other people to use your account for crimes against the law and
+                           / or generate damages to third parties, including the company.</li>
+                        <li>Jackypot.io has the right not to distribute the funds obtained if any activity mentioned above is
+                           detected that is altering the functioning of our services.</li>
+                        <li>You are informed that gambling causes addiction, operate at your own risk.</li>
+                        <li>You agree that you agree to make Ether transactions and that your address will appear in our open
+                           source.
+                        </li>
+                        <li>We have the right to modify the minimum and maximum amount of bets to play.</li>
+                        <li>We will NOT disclose the information we collect.</li>
+                        <li>Our terms and conditions may be modified at any time as the company jackypot.io considers or requires,
+                           and it is your own responsibility to read such changes.</li>
+                     </ul>
+                  </div>
+               </div>
+               <!-- Tranparencia -->
+               <div class="tab">
+                  <input id="tab-seven" type="checkbox" name="tabs">
+                  <label for="tab-seven">TRANSPARENCY</label>
+                  <div class="tab-content">
+                     <h2>Transparency</h2>
+                     <div class="contenedor-transparencia">
+                        <p>Below is explained in detail, the process that is carried out in Jackypot.io</p>
+                        <img src="assets/footer/diagrama.png" alt="Image" class="img-fluid">
+                        <p>Users Contract Oraclize Smart Jackypot</p>
+                        <ol>
+                           <li>Users deposit the bet amount of Ethereum from their portfolio.</li>
+                           <li>Jackypot has Blockchain technology using an intelligent contract that runs transparently and securely.</li>
+                           <li>Our Oraclize provider who specializes in transparency connects with Random.org who are responsible
+                              for generating the random numbers.</li>
+                           <li>Ramdom.org sends the random numbers that were generated to Oraclize.</li>
+                           <li>Oraclize sends the data to the intelligent contract.</li>
+                           <li>The contract interprets the results, calculates the prizes and directs them to the winners.</li>
+                           <li>The results are reflected in jackypot.</li>
+                        </ol>
+                        <p>Our game is based on the Blockchain, so each shipment is unique and encrypted. (Encrypted SHA3 method),
+                           which is equivalent to a set of infinite combinations between numbers, letters and signs, which
+                           makes it a secure method for your information since it prevents hacking of any kind and that is
+                           why Jackypot gives you the security of that will not be deciphered.</p>
+                        <p>Our policy is one of total transparency, since we have the high technology of the Blockchain that
+                           is connected to thousands of computers multiplying security, therefore no one else can alter or
+                           hack, this is confirmed by Ethereum.org; so the transaction and delivery of your prize are guaranteed
+                           in "Jackypot.io".</p>
+                        <p>This gives the Blockchain 100% security and is the reason why 176,727,709 million movements or transactions
+                           have been made since it was created; until the day this document was written.</p>
+                        <p>Different online games of chance offer high probabilities of winning a minimum of what is wagered,
+                           or offer misleading information as to the chances of the player having a profit. You can then
+                           verify this information in the following notes:</p>
+                        <p class="trunk">
+                           <a href="http://www.foxnews.com/story/2005/08/29/10-things-your-casino-wont-tell.html" target="_blank">http://www.foxnews.com/story/2005/08/29/10-things-your-casino-wont-tell.html</a>
+                        </p>
+                        <p class="trunk">
+                           <a href="http://www.dailymail.co.uk/news/article-2555025/Who-Lions-Share-Las-Vegas-slot-machine-hit-jackpot-20-years-attracts-generations-gamblers-eager-win-2-3-MILLION-prize.html"
+                              target="_blank">http://www.dailymail.co.uk/news/article-2555025/Who-Lions-Share-Las-Vegas-slot-machine-hit-jackpot-20-years-attracts-generations-gamblers-eager-win-2-3-MILLION-prize.html</a>
+                        </p>
+                        <p class="trunk">
+                           <a href="http://triblive.com/aande/gambling/5509017-74/casino-player-percent" target="_blank">http://triblive.com/aande/gambling/5509017-74/casino-player-percent</a>
+                        </p>
+                        <p>That is why Jackypot is revolutionizing with the high technology of Blokchain applied in Ethereum,
+                           providing the best standards in security and speed, as well as having the possibility of winning
+                           up to 55.55% more, against what was determined in other sites of bets</p>
+                     </div>
+                  </div>
+               </div>
+               <!-- Contactanos -->
+               <div class="tab">
+                  <input id="tab-eight" type="checkbox" name="tabs">
+                  <label for="tab-eight">CONTACT US</label>
+                  <div class="tab-content">
+                     <h2>Contact Us</h2>
+                     <input type="text" name="" value="" placeholder="Name" class="show-input" id="name-m">
+                     <input type="text" name="" value="" placeholder="Email" class="show-input" id="email-m">
+                     <textarea name="name" class="show-textarea" id="comment-m"></textarea>
+                     <button type="button" name="button" class="btn-send-movil" onclick="datos_contactanos_m()">Send</button>
+                     <div class="informacion-adicional">
+                       <h2>If you have any questions or wish to get in touch with us directly enter:</h2>
+                       <table>
+                          <tr>
+                             <td>
+                                <img src="assets/footer/email.png" alt="">
+                             </td>
+                             <td>
+                                <p>Email:
+                                   <a href="mailto:contact@jackypot.io">contact@jackypot.io</a>
+                                </p>
+                             </td>
+                          </tr>
+                          <tr>
+                             <td>
+                                <img src="assets/footer/twitter.png" alt="">
+                             </td>
+                             <td>
+                                <p>Twitter:
+                                   <a href="https://twitter.com/JackypotEth" target="_blank" title="Twitter">@JackypotETH</a>
+                                </p>
+                             </td>
+                          </tr>
+                          <tr>
+                             <td>
+                                <img src="assets/footer/facebook.png" alt="">
+                             </td>
+                             <td>
+                                <p>Facebook:
+                                   <a href="https://www.facebook.com/jackypotofficial/" target="_blank" title="Facebook">Jackypotoficial</a>
+                                </p>
+                             </td>
+                          </tr>
+                          <tr>
+                             <td>
+                                <img src="assets/footer/reddit.png" alt="">
+                             </td>
+                             <td>
+                                <p>Reddit:
+                                   <a href="https://www.reddit.com/user/Jackypot-official/" target="_blank" title="Reddit">Jackypot-official</a>
+                                </p>
+                             </td>
+                          </tr>
+                          <tr>
+                             <td>
+                                <img src="assets/footer/youtube.png" alt="">
+                             </td>
+                             <td>
+                                <p>Youtube:
+                                   <a href="https://www.youtube.com/channel/UCgCKLBUzJ7Su14SgBio6dsA" target="_blank" title="Youtube">Jackypot.io</a>
+                                </p>
+                             </td>
+                          </tr>
+                       </table>
                     </div>
-                </div>
+                  </div>
+               </div>
             </div>
-            <!-- Game or Machine -->
-            <div class="box content" id="conte">
-                <!-- Titulo -->
-                <div class="tittle-game">
-                    <h3>JACKPOT GAME</h3>
-                </div>
-                <div class="container-game">
-                    <div class="machine">
-                        <!-- Machine -->
-                        <div class="img-machine">
-                            <svg id="svg"></svg>
-                            <p id="pote">Loading...</p>
-                        </div>
-                    </div>
-                    <!-- Form -->
-                    <div class="address-machine" id="contenedor_address_machine">
-                        <!-- Aqui se escribe desde el JS -->
-                        <div class="contenedor-address"> <p class="remove" id="address-machine">Ethereum Wallet Address Of The Participant</p> </div>
-                    </div>
-                    <div class="bet" id="contenedor_apuesta_machine">
-                        <!-- Aqui se escribe desde el JS -->
-                        <div class="contenedor-profit"> <p class="remove" id="bet-machine">Profit</p> </div>
-                    </div>
-                    <div class="btn-play" id="contenedor_btn_machine">
-                        <!-- Aqui se escribe desde el JS -->
-                        <input type="image" src="assets/game/btn-play.png" onclick="openModal(this.id)" id="how-play">
-                    </div>
-                </div>
-                <div class="contenedor_video">
-                    <button type="button" name="button" class="btn_video sombras-c-g" onclick="openModal(this.id)" id="video">Show Tutorial</button>
-                </div>
-            </div>
-            <!-- Chat -->
-            <div class="box information" id="chat">
-                <div class="tittle-chat" onclick="change_focus()">
-                    <h3><span id="tittle-chat-span">CHAT </span>/<span id="tittle-table-span" class="activo"> LAST BET</span></h3>
-                </div>
-                <div id="datos">
-
-                </div>
-                <div class="chat" id="chat-con">
-                    <div id="disqus_thread"></div>
-                        <script>
-                            setTimeout(function(){
-                                var disqus_config = function () {
-                                    this.page.url = "http://Jackypot.io";  // Replace PAGE_URL with your page's canonical URL variable
-                                    this.page.identifier = "jackypot"; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
-                                };
-
-                                (function() { // DON'T EDIT BELOW THIS LINE
-                                    var d = document, s = d.createElement('script');
-                                    s.src = 'https://jackypot.disqus.com/embed.js';
-                                    s.setAttribute('data-timestamp', +new Date());
-                                    (d.head || d.body).appendChild(s);
-                                })();
-
-                            }, 8000);
-                        </script>
-                        <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
-                </div>
-            </div>
-            <!-- Collapse only movil version -->
-            <div class="box collapse">
-                <div class="half">
-                    <!-- How to play movil -->
-                    <div class="tab">
-                        <input id="tab-one" type="checkbox" name="tabs">
-                        <label for="tab-one">HOW TO PLAY</label>
-                        <div class="tab-content cuerpo-how-to-play">
-                            <p>1. Open some of these wallets.</p>
-                            <div class="wallets">
-                                <ul>
-                                    <li><a href="https://www.myetherwallet.com/" title="MyEtherWallet" target="_blank"><img src="assets/how-to-play/01.png" alt="" class="img-fluid"></a></li>
-                                    <li><a href="https://ethereum.org/" title="Mist" target="_blank"><img src="assets/how-to-play/02.png" alt="" class="img-fluid"></a></li>
-                                    <li><a href="https://metamask.io/" title="MetaMask" target="_blank"><img src="assets/how-to-play/03.png" alt="" class="img-fluid"></a></li>
-                                    <li><a href="https://jaxx.io/" title="Jaxx" target="_blank"><img src="assets/how-to-play/04.png" alt="" class="img-fluid"></a></li>
-                                    <li><a href="https://www.exodus.io/" title="Exodus" target="_blank"><img src="assets/how-to-play/05.png" alt="" class="img-fluid"></a></li>
-                                </ul>
-                            </div>
-                            <p>2. Send the amount of ETH you want to bet on this address:</p>
-                            <p style="margin-bottom: 0px;">Bet min 0.01 ETH -Bet max: 20 ETH</p>
-                            <div class="popover__wrapper">
-                                <p class="address-game" id="address-game" data-clipboard-text="0xFeac34425a3Ba2FAfbbEEDB367aC5F4b4bB701D2">0 x F e a c 3 4 4 2 5 a 3 B a 2 F A f b b E E D B 3 6 7 a C 5 F 4 b 4 b B 7 0 1 D 2</p>
-                                <div class="push popover__content">
-                                    <p>Data required for transactions: <br>
-                                        Gas required: 300,000. <br>
-                                        Gwei required: 21.</p>
-                                </div>
-                            </div>
-                            <p>Wait for the result from 1 to 2 minutes, in LAST BET.</p>
-                            <p>3. Our prizes are:</p>
-                            <div class="contenedor-premios">
-                                    <img src="assets/how-to-play/premio1.png" alt="" class="img-fluid">
-                                    <img src="assets/how-to-play/premio2.png" alt="" class="img-fluid">
-                                    <img src="assets/how-to-play/premio3.png" alt="" class="img-fluid">
-                                    <img src="assets/how-to-play/premio4.png" alt="" class="img-fluid">
-                            </div>
-                            <div class="all-prizes" id="all-prizes-m">
-                                <img src="assets/how-to-play/4.png" alt="" class="img-fluid">
-                                <img src="assets/how-to-play/6.png" alt="" class="img-fluid">
-                                <img src="assets/how-to-play/11.png" alt="" class="img-fluid">
-                                <img src="assets/how-to-play/8.png" alt="" class="img-fluid">
-                                <img src="assets/how-to-play/9.png" alt="" class="img-fluid">
-                                <img src="assets/how-to-play/7.png" alt="" class="img-fluid">
-                                <img src="assets/how-to-play/15.png" alt="" class="img-fluid">
-                                <img src="assets/how-to-play/12.png" alt="" class="img-fluid">
-                                <img src="assets/how-to-play/13.png" alt="" class="img-fluid">
-                                <img src="assets/how-to-play/10.png" alt="" class="img-fluid">
-                                <img src="assets/how-to-play/14.png" alt="" class="img-fluid">
-                            </div>
-                            <button class="btn-prizes" onclick="mostrar_premios_m()">SHOW MORE PRIZES</button>
-                            <p>4. The prize will be sent automatically in your wallet.</p>
-                            <p>5. Good luck!</p>
-                        </div>
-                    </div>
-                    <!-- Free bets -->
-                    <div class="tab">
-                        <input id="tab-two" type="checkbox" name="tabs">
-                        <label for="tab-two">FREE BETS</label>
-                        <div class="tab-content">
-                            <div class="contenedor-promocion">
-                                <h2>YOU LOST?</h2>
-                                <h2>YOU WIN!</h2>
-                                <!-- Slider -->
-                                <div class="contenedor-slider-m">
-                                    <div class="slider-m">
-                                        <div class="slider-content-m">
-                                            <span></span>
-                                            <p><span class="negro">1.</span> Only those who have lost will receive their free bets</p>
-                                            <p><span class="negro">2.</span> The minimum bet of this promotion is .01 ETH, up to a maximum bet of 1 ETH.</p>
-                                            <p><span class="negro">3.</span> The url of the transaction made, must be published in the thread of the promotion.</p>
-                                        </div>
-                                    </div>
-                                    <div class="slider-m">
-                                        <div class="slider-content-m">
-                                            <p><span class="negro">4.</span> The public address that is in the url is to which the free bets are sent.</p>
-                                            <p><span class="negro">5.</span> Free bets with a value of 0.01 will be awarded until the amount lost is reached.</p>
-                                            <p><span class="negro">6.</span> Each bet is awarded within 4 hours of your last free bet.</p>
-                                        </div>
-                                    </div>
-                                    <div class="slider-m">
-                                        <div class="slider-content-m">
-                                            <p><span class="negro">7.</span> No other free bet can be awarded until you play the previously one.</p>
-                                            <p><span class="negro">8.</span> To collect the free bets, you must make the transaction at 0 ETH in our contract.</p>
-                                            <p><span class="negro">9.</span> Promotion valid until awarding 2000 free throws or until March 31, 2018.</p>
-                                        </div>
-                                    </div>
-                                </div>
-                                <!-- Controles slider -->
-                                <div class="contenedor-controles-m">
-                                    <div class="controls-m">
-                                        <ul></ul>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="contenedor-btn-reglas">
-                                <p id="reglas">GO POST</p>
-                            </div>
-                                <!-- Contenedor de los datos -->
-                            <div class="contenedor-Bdatos">
-                                <h3>THERE ARE 1000 FREE BETS LEFT!</h3>
-                                <div class="contenedor-maquina-juguete">
-                                    <div class="maquina-juguete">
-                                        <div class="img-machine-juguete">
-                                            <svg id="svg-juguete-m"></svg>
-                                            <p id="pote-juguete-m">20000 POINTS</p>
-                                        </div>
-                                    </div>
-                                    <div class="puntos-totales">
-                                        <div class="panel-puntos sombras-c">
-                                            <label>Points: </label>
-                                            <input type="text" disabled value="1000" id="puntos-jugador-m">
-                                        </div>
-                                    </div>
-                                    <div class="apuesta-juguete">
-                                        <label>BET: </label>
-                                        <input type="number" required min="100" max="500" step="100" onkeypress="return validaNumericos(event)" placeholder="100" id="apuesta_puntos-m">
-                                    </div>
-                                    <div class="btn-play-juguete">
-                                        <input type="image" src="assets/game/btn-play.png" onclick="jugar_por_puntos()">
-                                    </div>
-                                </div>
-                                <!-- <h2 class="">Check your free bets</h2>
-                                <div class="search">
-                                    <input type="text" name="addres-bets">
-                                    <button type="button" id="btn-private">Personal</button>
-                                    <button type="button" id="btn-all">All</button>
-                                </div>
-                                <div class="title-bets">
-                                    <div class="title-adr">
-                                        <p>Address</p>
-                                    </div>
-                                    <div class="title-bets">
-                                        <p>Free bets</p>
-                                    </div>
-                                </div>
-                                <div class="con-table" id="con-table-m">
-
-                                </div> -->
-                            </div>
-                        </div>
-                    </div>
-                    <!-- BETS -->
-                    <div class="tab">
-                        <input id="tab-three" type="checkbox" name="tabs">
-                        <label for="tab-three">LAST BET</label>
-                        <div class="tab-content">
-                            <div id="datos-m">
-
-                            </div>
-                        </div>
-                    </div>
-                    <!-- FAQS -->
-                    <div class="tab">
-                        <input id="tab-four" type="checkbox" name="tabs">
-                        <label for="tab-four">FAQS</label>
-                        <!-- Contenido -->
-                        <div class="tab-content">
-                            <h2>Frequent questions</h2>
-                            <div class="container-faqs">
-                                <h4>What is Jackypot?</h4>
-                                <p>It is a slots game with an accumulated prize that uses the technology of the Blockchain of Ethereum. It is conformed by the following characteristics:</p>
-                                <ol>
-                                    <li>It is the only one that uses ETHER cryptocurrency.</li>
-                                    <li>Automated payments.</li>
-                                    <li>Use an intelligent contract to perform each of its operations.</li>
-                                    <li>Each shooting probability is transparent and reliable.</li>
-                                    <li>The only requirement you need is an electronic portfolio of ETHEREUM.</li>
-                                </ol>
-                                <h4>Is it safe to play Jackypot?</h4>
-                                <p>Our game is based on Blockchain Technology, so each shipment is unique and encrypted. (Encrypted SHA3 method), which is equivalent to a set of infinite combinations between numbers, letters and signs, which makes it a secure method for your information since it prevents hacking of any kind and that is why Jackypot gives you the security of that will not be deciphered.</p>
-                                <h4>How to play Jackypot?</h4>
-                                <ol>
-                                    <li>Go to your ETH portfolio</li>
-                                    <li>You will deposit to the following address:
-                                        <p class="address-game" id="address-game" data-clipboard-text="0xFeac34425a3Ba2FAfbbEEDB367aC5F4b4bB701D2">0 x F e a c 3 4 4 2 5 a 3 B a 2 F A f b b E E D B 3 6 7 a C 5 F 4 b 4 b B 7 0 1 D 2</p>
-                                    </li>
-                                    <li>The amount between 0.01 Ether up to 20 Ether what you want to play.</li>
-                                    <li>Complete your transaction and Done</li>
-                                </ol>
-                                <h4>What wallets are used?</h4>
-                                <div class="wallets">
-                                    <ul>
-                                        <li><img src="assets/how-to-play/01.png" alt="" class="img-fluid" title="MyEtherWallet"></li>
-                                        <li><img src="assets/how-to-play/02.png" alt="" class="img-fluid" title="Mist"></li>
-                                        <li><img src="assets/how-to-play/03.png" alt="" class="img-fluid" title="MetaMask"></li>
-                                        <li><img src="assets/how-to-play/04.png" alt="" class="img-fluid" title="Jaxx"></li>
-                                        <li><img src="assets/how-to-play/05.png" alt="" class="img-fluid" title="Exodus"></li>
-                                    </ul>
-                                </div>
-                                <p>* all portfolios that accept betting games.</p>
-                                <h4>What is the minimum and maximum bet?</h4>
-                                <p>The bet minina in Jackypot is 0.01 Eth, up to 20 ETH as Maximum.</p>
-                                <h4>How are the prizes in Jackypot?</h4>
-                                <table class="table">
-                                    <thead>
-                                        <tr>
-                                            <th class="borde-vertical">Ways to Win</th>
-                                            <th class="borde-vertical">Examples</th>
-                                            <th class="borde-vertical">That is to say</th>
-                                            <th>Figures</th>
-                                        </tr>
-                                    </thead>
-                                    <tbody>
-                                        <tr>
-                                            <td class="borde-vertical borde-horizontal">Triple Figures</td>
-                                            <td class="borde-vertical borde-horizontal">Suppose you bet 1ETH and fall Currency & Currency & Currency. With this combination, you win your bet of 1ETH x 3 = 3 ETH.</td>
-                                            <td class="borde-vertical borde-horizontal">Get 300% of your bet</td>
-                                            <td class="borde-horizontal">
-                                                <img src="assets/faqs/triple.png" alt="Triple coins">
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <td class="borde-vertical borde-horizontal">Doubles Figures</td>
-                                            <td class="borde-vertical borde-horizontal">Suppose you bet 1ETH and fall Cherry & Cherry & Seven. With this combination, you win your bet of 1 ETH x1.1 = 1.1 ETH.</td>
-                                            <td class="borde-vertical borde-horizontal">Get 110% of your bet.</td>
-                                            <td class="borde-horizontal">
-                                                <img src="assets/faqs/dobles.png" alt="Double cherrys">
-                                            </td>
-                                        </tr>
-                                    </tbody>
-                                </table>
-                                <p>* Prize payments are automated</p>
-                                <h4>How many chances do I have to win in Jackypot?</h4>
-                                <p>You have the possibility to win up to 55.55% in prizes, contrary to what is determined in other betting sites.</p>
-                                <h4>Does Jackypot intervene in the results of the games?</h4>
-                                <p>Our game always gives a random result through the request we make to Oraclize, a company specializing in the transfer of: information, security and those who act as a data provider, which they request from Random.org, which is a service of generation of random information and thus these results are generated.</p>
-                                <p>That is, we do not intervene with the results of each game.</p>
-                                <h4>Is only Ethereum Cryptocurrency used?</h4>
-                                <p>At the moment Jackypot only uses the Ethereum coin.</p>
-                                <h4>Do you have Tutorials about Jackypot?</h4>
-                                <a href="https://www.youtube.com/watch?v=C3q54d83qq4&feature=youtu.be" target="_blank">
-                                    <button type="button" name="button" class="tutorial">Go Tutorial</button>
-                                </a>
-                                <h4>News about Jackypot:</h4>
-                                <a href="https://bitcoiner.today/es/jackypot-el-primer-jackpot-del-mundo-con-la-techologia-de-blockchain/" target="_blank"><button type="button" name="button" class="bitcoiner-today">BitcoinToday</button></a>
-                                <a href="https://cryptocurrencyhub.io/jackypot-the-first-jackpot-on-the-world-with-the-blockchain-s-technology-90bc7efcf04e" target="_blank"><button type="button" name="button" class="medium">Medium</button></a>
-                                <a href="https://steemit.com/blockchain/@jaimeeaton/jackypot-the-first-jackpot-on-the-world-with-the-blockchain-s-technology" target="_blank"><button type="button" name="button" class="steemit">Steemit</button></a>
-                                <h2>General questions:</h2>
-                                <h4>What is the smart contract?</h4>
-                                <p>This is a program code that allows you to automatically perform certain functions when certain conditions occur. To implement smart contracts, a decentralized environment that completely excludes the human factor is required. To use the transfer of value in an intelligent contract, it requires a cryptocurrency.</p>
-                                <h4>What is Blockchain?</h4>
-                                <p>Blockchain is a distributed database that does not have storage devices connected to a shared server. This database stores a constantly growing list of ordered records, called blocks. Each block contains a timestamp and a link to the previous block.</p>
-                                <h4>What is the process used in Jackypot?</h4>
-                                <ol>
-                                    <li>Users deposit the bet amount of Ethereum from their portfolio.</li>
-                                    <li>Jackypot has Blockchain technology using an intelligent contract that runs transparently and securely.</li>
-                                    <li>Our Oraclize provider who specializes in transparency connects with Random.org who are responsible for generating the random numbers.</li>
-                                    <li>Ramdom.org sends the random numbers that were generated to Oraclize.</li>
-                                    <li>Oraclize sends the data to the intelligent contract.</li>
-                                    <li>The contract interprets the results, calculates the prizes and directs them to the winners.</li>
-                                    <li>The results are reflected in Jackypot</li>
-                                </ol>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- Contrato -->
-                    <div class="tab">
-                        <input id="tab-five" type="checkbox" name="tabs">
-                        <label for="tab-five">CONTRACT</label>
-                        <div class="tab-content">
-                            <p>Our games are totally and completely open-source and free to use, enter to <a href="https://github.com/Jackypot/Jackypot-slot">GitHub</a>. All data are public and can be viewed at <a href="https://etherscan.io/address/0xfeac34425a3ba2fafbbeedb367ac5f4b4bb701d2#code">www.etherscan.io</a></p>
-                            <div class="img-git">
-                                <img src="assets/contract/github.png" alt="GitHub">
-                            </div>
-                        </div>
-                    </div>
-                    <!-- Terminos -->
-                    <div class="tab">
-                        <input id="tab-six" type="checkbox" name="tabs">
-                        <label for="tab-six">TERMS</label>
-                        <div class="tab-content">
-                            <h2>Terms and Conditions</h2>
-                            <ul>
-                                <li>By using our services, you accept and confirm that you have read the Terms and Conditions, which take effect thereafter.</li>
-                                <li>You declare that you are of legal age in the country or region you are in.</li>
-                                <li>If you live in a country or place where Internet gambling is not legal, please leave jackypot.io or we will not be responsible for the consequences that this brings.</li>
-                                <li>At jackypot.io we want the information on our page to be understandable and we are committed to legality, so we are not responsible for any misunderstandings and it is the user's responsibility to use said information.</li>
-                                <li>
-                                    <p>We are working every day of the year to make it possible for jackypot.io to work without problems, but we are NOT responsible for:</p>
-                                    <ol>
-                                        <li>Any problem or technical failure.</li>
-                                        <li>Theft of accounts by third parties.</li>
-                                        <li>Losses of cash or tokens.</li>
-                                        <li>Misuse of our platform.</li>
-                                        <li>Problems with your wallets.</li>
-                                        <li>And everything that is beyond our control.</li>
-                                    </ol>
-                                </li>
-                                <li>You are aware that by using our services and playing you may lose ETHER, and only you are fully responsible for any loss.</li>
-                                <li>You understand that it takes a few minutes for the process to play.</li>
-                                <li>We do not take charge of the delay in which the information is reflected in the system between the Blockchain, Etherscan, Oraclize and Random networks.</li>
-                                <li>You understand that we do not handle the Ethers that enter the pot or the results of the shots.</li>
-                                <li>You will not use software or allow other people to use your account for crimes against the law and / or generate damages to third parties, including the company.</li>
-                                <li>Jackypot.io has the right not to distribute the funds obtained if any activity mentioned above is detected that is altering the functioning of our services.</li>
-                                <li>You are informed that gambling causes addiction, operate at your own risk.</li>
-                                <li>You agree that you agree to make Ether transactions and that your address will appear in our open source.</li>
-                                <li>We have the right to modify the minimum and maximum amount of bets to play.</li>
-                                <li>We will NOT disclose the information we collect.</li>
-                                <li>Our terms and conditions may be modified at any time as the company jackypot.io considers or requires, and it is your own responsibility to read such changes.</li>
-                            </ul>
-                        </div>
-                    </div>
-                    <!-- Tranparencia -->
-                    <div class="tab">
-                        <input id="tab-seven" type="checkbox" name="tabs">
-                        <label for="tab-seven">TRANSPARENCY</label>
-                        <div class="tab-content">
-                            <h2>Transparency</h2>
-                            <div class="contenedor-transparencia">
-                                <p>Below is explained in detail, the process that is carried out in Jackypot.io</p>
-                                <img src="assets/footer/diagrama.png" alt="Image" class="img-fluid">
-                                <p>Users Contract Oraclize Smart Jackypot</p>
-                                <ol>
-                                    <li>Users deposit the bet amount of Ethereum from their portfolio.</li>
-                                    <li>Jackypot has Blockchain technology using an intelligent contract that runs transparently and securely.</li>
-                                    <li>Our Oraclize provider who specializes in transparency connects with Random.org who are responsible for generating the random numbers.</li>
-                                    <li>Ramdom.org sends the random numbers that were generated to Oraclize.</li>
-                                    <li>Oraclize sends the data to the intelligent contract.</li>
-                                    <li>The contract interprets the results, calculates the prizes and directs them to the winners.</li>
-                                    <li>The results are reflected in jackypot.</li>
-                                </ol>
-                                <p>Our game is based on the Blockchain, so each shipment is unique and encrypted. (Encrypted SHA3 method), which is equivalent to a set of infinite combinations between numbers, letters and signs, which makes it a secure method for your information since it prevents hacking of any kind and that is why Jackypot gives you the security of that will not be deciphered.</p>
-                                <p>Our policy is one of total transparency, since we have the high technology of the Blockchain that is connected to thousands of computers multiplying security, therefore no one else can alter or hack, this is confirmed by Ethereum.org; so the transaction and delivery of your prize are guaranteed in "Jackypot.io".</p>
-                                <p>This gives the Blockchain 100% security and is the reason why 176,727,709 million movements or transactions have been made since it was created; until the day this document was written.</p>
-                                <p>Different online games of chance offer high probabilities of winning a minimum of what is wagered, or offer misleading information as to the chances of the player having a profit. You can then verify this information in the following notes:</p>
-                                <p class="trunk"><a href="http://www.foxnews.com/story/2005/08/29/10-things-your-casino-wont-tell.html" target="_blank">http://www.foxnews.com/story/2005/08/29/10-things-your-casino-wont-tell.html</a></p>
-                                <p class="trunk"><a href="http://www.dailymail.co.uk/news/article-2555025/Who-Lions-Share-Las-Vegas-slot-machine-hit-jackpot-20-years-attracts-generations-gamblers-eager-win-2-3-MILLION-prize.html" target="_blank">http://www.dailymail.co.uk/news/article-2555025/Who-Lions-Share-Las-Vegas-slot-machine-hit-jackpot-20-years-attracts-generations-gamblers-eager-win-2-3-MILLION-prize.html</a></p>
-                                <p class="trunk"><a href="http://triblive.com/aande/gambling/5509017-74/casino-player-percent" target="_blank">http://triblive.com/aande/gambling/5509017-74/casino-player-percent</a></p>
-                                <p>That is why Jackypot is revolutionizing with the high technology of Blokchain applied in Ethereum, providing the best standards in security and speed, as well as having the possibility of winning up to 55.55% more, against what was determined in other sites of bets</p>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- Contactanos -->
-                    <div class="tab">
-                        <input id="tab-eight" type="checkbox" name="tabs">
-                        <label for="tab-eight">CONTACT US</label>
-                        <div class="tab-content">
-                            <h2>Contact Us</h2>
-                            <input type="text" name="" value="" placeholder="Name" class="show-input" id="name-m">
-                            <input type="text" name="" value="" placeholder="Email" class="show-input" id="email-m">
-                            <textarea name="name" class="show-textarea" id="comment-m"></textarea>
-                            <button type="button" name="button" class="btn-send-movil" onclick="datos_contactanos_m()">Send</button>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <!-- Footer -->
-            <!-- <div class="box footer">
+         </div>
+         <!-- Footer -->
+         <!-- <div class="box footer">
                 <div class="container-footer">
                     <div class="social-media">
                         <div class="social-img">
@@ -609,286 +846,374 @@
                     </div>
                 </div>
             </div> -->
-        </div>
-        <!-- Seccion de Sonido del juego -->
-    	<div id="contenedor-sonido" class="sonido-juego">
-            <audio id="sonido_game"><source src="assets/audio/sonido1.mp3" type="audio/mpeg" /></audio>
-        </div>
-        <!-- Preguntas frecuentes -->
-        <div class="faqs" id="faqs-window">
-            <h2>Frequent questions</h2>
-            <div class="container-faqs">
-                <h4>What is Jackypot?</h4>
-                <p>It is a slots game with an accumulated prize that uses the technology of the Blockchain of Ethereum. It is conformed by the following characteristics:</p>
-                <ol>
-                    <li>It is the only one that uses ETHER cryptocurrency.</li>
-                    <li>Automated payments.</li>
-                    <li>Use an intelligent contract to perform each of its operations.</li>
-                    <li>Each shooting probability is transparent and reliable.</li>
-                    <li>The only requirement you need is an electronic portfolio of ETHEREUM.</li>
-                </ol>
-                <h4>Is it safe to play Jackypot?</h4>
-                <p>Our game is based on Blockchain Technology, so each shipment is unique and encrypted. (Encrypted SHA3 method), which is equivalent to a set of infinite combinations between numbers, letters and signs, which makes it a secure method for your information since it prevents hacking of any kind and that is why Jackypot gives you the security of that will not be deciphered.</p>
-                <h4>How to play Jackypot?</h4>
-                <ol>
-                    <li>Go to your ETH portfolio</li>
-                    <li>You will deposit to the following address:
-                        <div class="popover__wrapper">
-                            <p class="address-game" id="address-game" data-clipboard-text="0xFeac34425a3Ba2FAfbbEEDB367aC5F4b4bB701D2">0 x F e a c 3 4 4 2 5 a 3 B a 2 F A f b b E E D B 3 6 7 a C 5 F 4 b 4 b B 7 0 1 D 2</p>
-                            <div class="push popover__content">
-                                <p>Data required for transactions: <br>
-                                    Gas required: 300,000. <br>
-                                    Gwei required: 21.</p>
-                            </div>
-                        </div>
-                    </li>
-                    <li>The amount between 0.01 Ether up to 20 Ether what you want to play.</li>
-                    <li>Complete your transaction and Done</li>
-                </ol>
-                <h4>What wallets are used?</h4>
-                <div class="wallets">
-                    <ul>
-                        <li><a href="https://www.myetherwallet.com/" title="MyEtherWallet" target="_blank"><img src="assets/how-to-play/01.png" alt="" class="img-fluid"></a></li>
-                        <li><a href="https://ethereum.org/" title="Mist" target="_blank"><img src="assets/how-to-play/02.png" alt="" class="img-fluid"></a></li>
-                        <li><a href="https://metamask.io/" title="MetaMask" target="_blank"><img src="assets/how-to-play/03.png" alt="" class="img-fluid"></a></li>
-                        <li><a href="https://jaxx.io/" title="Jaxx" target="_blank"><img src="assets/how-to-play/04.png" alt="" class="img-fluid"></a></li>
-                        <li><a href="https://www.exodus.io/" title="Exodus" target="_blank"><img src="assets/how-to-play/05.png" alt="" class="img-fluid"></a></li>
-                    </ul>
-                </div>
-                <p>* all portfolios that accept betting games.</p>
-                <h4>What is the minimum and maximum bet?</h4>
-                <p>The bet minina in Jackypot is 0.01 Eth, up to 20 ETH as Maximum.</p>
-                <h4>How are the prizes in Jackypot?</h4>
-                <table class="table">
-                    <thead>
-                        <tr>
-                            <th class="borde-vertical">Ways to Win</th>
-                            <th class="borde-vertical">Examples</th>
-                            <th class="borde-vertical">That is to say</th>
-                            <th>Figures</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td class="borde-vertical borde-horizontal">Triple Figures</td>
-                            <td class="borde-vertical borde-horizontal">Suppose you bet 1ETH and fall Currency & Currency & Currency. With this combination, you win your bet of 1ETH x 3 = 3 ETH.</td>
-                            <td class="borde-vertical borde-horizontal">Get 300% of your bet</td>
-                            <td class="borde-horizontal">
-                                <img src="assets/faqs/triple.png" alt="Triple coins">
-                            </td>
-                        </tr>
-                        <tr>
-                            <td class="borde-vertical borde-horizontal">Doubles Figures</td>
-                            <td class="borde-vertical borde-horizontal">Suppose you bet 1ETH and fall Cherry & Cherry & Seven. With this combination, you win your bet of 1 ETH x1.1 = 1.1 ETH.</td>
-                            <td class="borde-vertical borde-horizontal">Get 110% of your bet.</td>
-                            <td class="borde-horizontal">
-                                <img src="assets/faqs/dobles.png" alt="Double cherrys">
-                            </td>
-                        </tr>
-                    </tbody>
-                </table>
-                <p>* Prize payments are automated</p>
-                <h4>How many chances do I have to win in Jackypot?</h4>
-                <p>You have the possibility to win up to 55.55% in prizes, contrary to what is determined in other betting sites.</p>
-                <h4>Does Jackypot intervene in the results of the games?</h4>
-                <p>Our game always gives a random result through the request we make to Oraclize, a company specializing in the transfer of: information, security and those who act as a data provider, which they request from Random.org, which is a service of generation of random information and thus these results are generated.</p>
-                <p>That is, we do not intervene with the results of each game.</p>
-                <h4>Is only Ethereum Cryptocurrency used?</h4>
-                <p>At the moment Jackypot only uses the Ethereum coin.</p>
-                <h4>Do you have Tutorials about Jackypot?</h4>
-                <a href="https://www.youtube.com/watch?v=C3q54d83qq4&feature=youtu.be" target="_blank">
-                    <button type="button" name="button" class="tutorial">Go Tutorial</button>
-                </a>
-                <h4>News about Jackypot:</h4>
-                <a href="https://bitcoiner.today/en/jackypot-the-first-jackpot-in-the-world-with-blockchain-technology/" target="_blank"><button type="button" name="button" class="bitcoiner-today">BitcoinToday</button></a>
-                <a href="https://cryptocurrencyhub.io/jackypot-the-first-jackpot-on-the-world-with-the-blockchain-s-technology-90bc7efcf04e" target="_blank"><button type="button" name="button" class="medium">Medium</button></a>
-                <a href="https://steemit.com/blockchain/@jaimeeaton/jackypot-the-first-jackpot-on-the-world-with-the-blockchain-s-technology" target="_blank"><button type="button" name="button" class="steemit">Steemit</button></a>
-                <h2>General questions:</h2>
-                <h4>What is the smart contract?</h4>
-                <p>This is a program code that allows you to automatically perform certain functions when certain conditions occur. To implement smart contracts, a decentralized environment that completely excludes the human factor is required. To use the transfer of value in an intelligent contract, it requires a cryptocurrency.</p>
-                <h4>What is Blockchain?</h4>
-                <p>Blockchain is a distributed database that does not have storage devices connected to a shared server. This database stores a constantly growing list of ordered records, called blocks. Each block contains a timestamp and a link to the previous block.</p>
-                <h4>What is the process used in Jackypot?</h4>
-                <ol>
-                    <li>Users deposit the bet amount of Ethereum from their portfolio.</li>
-                    <li>Jackypot has Blockchain technology using an intelligent contract that runs transparently and securely.</li>
-                    <li>Our Oraclize provider who specializes in transparency connects with Random.org who are responsible for generating the random numbers.</li>
-                    <li>Ramdom.org sends the random numbers that were generated to Oraclize.</li>
-                    <li>Oraclize sends the data to the intelligent contract.</li>
-                    <li>The contract interprets the results, calculates the prizes and directs them to the winners.</li>
-                    <li>The results are reflected in Jackypot</li>
-                </ol>
+      </div>
+      <!-- Seccion de Sonido del juego -->
+      <div id="contenedor-sonido" class="sonido-juego">
+         <audio id="sonido_game">
+            <source src="assets/audio/sonido1.mp3" type="audio/mpeg" />
+         </audio>
+      </div>
+      <!-- Preguntas frecuentes -->
+      <div class="faqs" id="faqs-window">
+         <h2>Frequent questions</h2>
+         <div class="container-faqs">
+            <h4>What is Jackypot?</h4>
+            <p>It is a slots game with an accumulated prize that uses the technology of the Blockchain of Ethereum. It is conformed
+               by the following characteristics:</p>
+            <ol>
+               <li>It is the only one that uses ETHER cryptocurrency.</li>
+               <li>Automated payments.</li>
+               <li>Use an intelligent contract to perform each of its operations.</li>
+               <li>Each shooting probability is transparent and reliable.</li>
+               <li>The only requirement you need is an electronic portfolio of ETHEREUM.</li>
+            </ol>
+            <h4>Is it safe to play Jackypot?</h4>
+            <p>Our game is based on Blockchain Technology, so each shipment is unique and encrypted. (Encrypted SHA3 method),
+               which is equivalent to a set of infinite combinations between numbers, letters and signs, which makes it a
+               secure method for your information since it prevents hacking of any kind and that is why Jackypot gives you
+               the security of that will not be deciphered.</p>
+            <h4>How to play Jackypot?</h4>
+            <ol>
+               <li>Go to your ETH portfolio</li>
+               <li>You will deposit to the following address:
+                  <div class="popover__wrapper">
+                     <p class="address-game" id="address-game" data-clipboard-text="0xFeac34425a3Ba2FAfbbEEDB367aC5F4b4bB701D2">0 x F e a c 3 4 4 2 5 a 3 B a 2 F A f b b E E D B 3 6 7 a C 5 F 4 b 4 b B 7 0 1 D 2</p>
+                     <div class="push popover__content">
+                        <p>Data required for transactions:
+                           <br> Gas required: 300,000.
+                           <br> Gwei required: 21.</p>
+                     </div>
+                  </div>
+               </li>
+               <li>The amount between 0.01 Ether up to 20 Ether what you want to play.</li>
+               <li>Complete your transaction and Done</li>
+            </ol>
+            <h4>What wallets are used?</h4>
+            <div class="wallets">
+               <ul>
+                  <li>
+                     <a href="https://www.myetherwallet.com/" title="MyEtherWallet" target="_blank">
+                        <img src="assets/how-to-play/01.png" alt="" class="img-fluid">
+                     </a>
+                  </li>
+                  <li>
+                     <a href="https://ethereum.org/" title="Mist" target="_blank">
+                        <img src="assets/how-to-play/02.png" alt="" class="img-fluid">
+                     </a>
+                  </li>
+                  <li>
+                     <a href="https://metamask.io/" title="MetaMask" target="_blank">
+                        <img src="assets/how-to-play/03.png" alt="" class="img-fluid">
+                     </a>
+                  </li>
+                  <li>
+                     <a href="https://jaxx.io/" title="Jaxx" target="_blank">
+                        <img src="assets/how-to-play/04.png" alt="" class="img-fluid">
+                     </a>
+                  </li>
+                  <li>
+                     <a href="https://www.exodus.io/" title="Exodus" target="_blank">
+                        <img src="assets/how-to-play/05.png" alt="" class="img-fluid">
+                     </a>
+                  </li>
+               </ul>
             </div>
-        </div>
-        <!-- Contrato & transparencia-->
-        <div class="contrato-transp" id="contrato-window">
-            <h2>Contract</h2>
-            <p>Our games are totally and completely open-source and free to use, enter to GitHub. All data are public and can be viewed at <a href="https://www.etherscan.io" target="_blank">www.etherscan.io</a></p>
-            <ul class="git">
-                <li><a href="https://github.com/Jackypot/Jackypot-slot" target="_blank">https://github.com/Jackypot/Jackypot-slot</a></li>
-            </ul>
-            <ul class="eth">
-                <li><a href="https://etherscan.io/address/0xfeac34425a3ba2fafbbeedb367ac5f4b4bb701d2#code" target="_blank">https://etherscan.io/address/0xfeac34425a3ba2fafbbeedb367ac5f4b4bb701d2#code</a></li>
-            </ul>
-            <h2>Transparency</h2>
-            <div class="container-transparencia">
-                <p>Below is explained in detail, the process that is carried out in Jackypot.io</p>
-                <img src="assets/footer/diagrama.png" alt="Image" class="img-fluid">
-                <table class="representation-trans">
-                    <thead>
-                        <tr>
-                            <th class="borde-vertical">Symbols</th>
-                            <th>Representation</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td class="borde-vertical borde-horizontal"><img src="assets/game/slot/1.svg" alt="Cereza"></td>
-                            <td class="borde-horizontal"> = 1, 2, 3</td>
-                        </tr>
-                        <tr>
-                            <td class="borde-vertical borde-horizontal"><img src="assets/game/slot/2.svg" alt="Cereza"></td>
-                            <td class="borde-horizontal"> = 4, 5, 6</td>
-                        </tr>
-                        <tr>
-                            <td class="borde-vertical borde-horizontal"><img src="assets/game/slot/3.svg" alt="Cereza"></td>
-                            <td class="borde-horizontal"> = 7, 8, 9</td>
-                        </tr>
-                    </tbody>
-                </table>
-                <p>Users Contract Oraclize Smart Jackypot</p>
-                <ol>
-                    <li>Users deposit the bet amount of Ethereum from their portfolio.</li>
-                    <li>Jackypot has Blockchain technology using an intelligent contract that runs transparently and securely.</li>
-                    <li>Our Oraclize provider who specializes in transparency connects with Random.org who are responsible for generating the random numbers.</li>
-                    <li>Ramdom.org sends the random numbers that were generated to Oraclize.</li>
-                    <li>Oraclize sends the data to the intelligent contract.</li>
-                    <li>The contract interprets the results, calculates the prizes and directs them to the winners.</li>
-                    <li>The results are reflected in jackypot.</li>
-                </ol>
-                <p>Our game is based on the Blockchain, so each shipment is unique and encrypted. (Encrypted SHA3 method), which is equivalent to a set of infinite combinations between numbers, letters and signs, which makes it a secure method for your information since it prevents hacking of any kind and that is why Jackypot gives you the security of that will not be deciphered.</p>
-                <p>Our policy is one of total transparency, since we have the high technology of the Blockchain that is connected to thousands of computers multiplying security, therefore no one else can alter or hack, this is confirmed by Ethereum.org; so the transaction and delivery of your prize are guaranteed in "Jackypot.io".</p>
-                <p>This gives the Blockchain 100% security and is the reason why 176,727,709 million movements or transactions have been made since it was created; until the day this document was written.</p>
-                <p>Different online games of chance offer high probabilities of winning a minimum of what is wagered, or offer misleading information as to the chances of the player having a profit. You can then verify this information in the following notes:</p>
-                <p><a href="http://www.foxnews.com/story/2005/08/29/10-things-your-casino-wont-tell.html" target="_blank">http://www.foxnews.com/story/2005/08/29/10-things-your-casino-wont-tell.html</a></p>
-                <p><a href="http://www.dailymail.co.uk/news/article-2555025/Who-Lions-Share-Las-Vegas-slot-machine-hit-jackpot-20-years-attracts-generations-gamblers-eager-win-2-3-MILLION-prize.html" target="_blank">http://www.dailymail.co.uk/news/article-2555025/Who-Lions-Share-Las-Vegas-slot-machine-hit-jackpot-20-years-attracts-generations-gamblers-eager-win-2-3-MILLION-prize.html</a></p>
-                <p><a href="http://triblive.com/aande/gambling/5509017-74/casino-player-percent" target="_blank">http://triblive.com/aande/gambling/5509017-74/casino-player-percent</a></p>
-                <p>That is why Jackypot is revolutionizing with the high technology of Blokchain applied in Ethereum, providing the best standards in security and speed, as well as having the possibility of winning up to 55.55% more, against what was determined in other sites of bets</p>
+            <p>* all portfolios that accept betting games.</p>
+            <h4>What is the minimum and maximum bet?</h4>
+            <p>The bet minina in Jackypot is 0.01 Eth, up to 20 ETH as Maximum.</p>
+            <h4>How are the prizes in Jackypot?</h4>
+            <table class="table">
+               <thead>
+                  <tr>
+                     <th class="borde-vertical">Ways to Win</th>
+                     <th class="borde-vertical">Examples</th>
+                     <th class="borde-vertical">That is to say</th>
+                     <th>Figures</th>
+                  </tr>
+               </thead>
+               <tbody>
+                  <tr>
+                     <td class="borde-vertical borde-horizontal">Triple Figures</td>
+                     <td class="borde-vertical borde-horizontal">Suppose you bet 1ETH and fall Currency & Currency & Currency. With this combination, you win your bet
+                        of 1ETH x 3 = 3 ETH.</td>
+                     <td class="borde-vertical borde-horizontal">Get 300% of your bet</td>
+                     <td class="borde-horizontal">
+                        <img src="assets/faqs/triple.png" alt="Triple coins">
+                     </td>
+                  </tr>
+                  <tr>
+                     <td class="borde-vertical borde-horizontal">Doubles Figures</td>
+                     <td class="borde-vertical borde-horizontal">Suppose you bet 1ETH and fall Cherry & Cherry & Seven. With this combination, you win your bet of 1
+                        ETH x1.1 = 1.1 ETH.</td>
+                     <td class="borde-vertical borde-horizontal">Get 110% of your bet.</td>
+                     <td class="borde-horizontal">
+                        <img src="assets/faqs/dobles.png" alt="Double cherrys">
+                     </td>
+                  </tr>
+               </tbody>
+            </table>
+            <p>* Prize payments are automated</p>
+            <h4>How many chances do I have to win in Jackypot?</h4>
+            <p>You have the possibility to win up to 55.55% in prizes, contrary to what is determined in other betting sites.</p>
+            <h4>Does Jackypot intervene in the results of the games?</h4>
+            <p>Our game always gives a random result through the request we make to Oraclize, a company specializing in the
+               transfer of: information, security and those who act as a data provider, which they request from Random.org,
+               which is a service of generation of random information and thus these results are generated.</p>
+            <p>That is, we do not intervene with the results of each game.</p>
+            <h4>Is only Ethereum Cryptocurrency used?</h4>
+            <p>At the moment Jackypot only uses the Ethereum coin.</p>
+            <h4>Do you have Tutorials about Jackypot?</h4>
+            <a href="https://www.youtube.com/watch?v=C3q54d83qq4&feature=youtu.be" target="_blank">
+               <button type="button" name="button" class="tutorial">Go Tutorial</button>
+            </a>
+            <h4>News about Jackypot:</h4>
+            <a href="https://bitcoiner.today/en/jackypot-the-first-jackpot-in-the-world-with-blockchain-technology/" target="_blank">
+               <button type="button" name="button" class="bitcoiner-today">BitcoinToday</button>
+            </a>
+            <a href="https://cryptocurrencyhub.io/jackypot-the-first-jackpot-on-the-world-with-the-blockchain-s-technology-90bc7efcf04e"
+               target="_blank">
+               <button type="button" name="button" class="medium">Medium</button>
+            </a>
+            <a href="https://steemit.com/blockchain/@jaimeeaton/jackypot-the-first-jackpot-on-the-world-with-the-blockchain-s-technology"
+               target="_blank">
+               <button type="button" name="button" class="steemit">Steemit</button>
+            </a>
+            <h2>General questions:</h2>
+            <h4>What is the smart contract?</h4>
+            <p>This is a program code that allows you to automatically perform certain functions when certain conditions occur.
+               To implement smart contracts, a decentralized environment that completely excludes the human factor is required.
+               To use the transfer of value in an intelligent contract, it requires a cryptocurrency.</p>
+            <h4>What is Blockchain?</h4>
+            <p>Blockchain is a distributed database that does not have storage devices connected to a shared server. This database
+               stores a constantly growing list of ordered records, called blocks. Each block contains a timestamp and a
+               link to the previous block.</p>
+            <h4>What is the process used in Jackypot?</h4>
+            <ol>
+               <li>Users deposit the bet amount of Ethereum from their portfolio.</li>
+               <li>Jackypot has Blockchain technology using an intelligent contract that runs transparently and securely.</li>
+               <li>Our Oraclize provider who specializes in transparency connects with Random.org who are responsible for generating
+                  the random numbers.</li>
+               <li>Ramdom.org sends the random numbers that were generated to Oraclize.</li>
+               <li>Oraclize sends the data to the intelligent contract.</li>
+               <li>The contract interprets the results, calculates the prizes and directs them to the winners.</li>
+               <li>The results are reflected in Jackypot</li>
+            </ol>
+         </div>
+      </div>
+      <!-- Contrato & transparencia-->
+      <div class="contrato-transp" id="contrato-window">
+         <h2>Contract</h2>
+         <p>Our games are totally and completely open-source and free to use, enter to GitHub. All data are public and can be
+            viewed at
+            <a href="https://www.etherscan.io" target="_blank">www.etherscan.io</a>
+         </p>
+         <ul class="git">
+            <li>
+               <a href="https://github.com/Jackypot/Jackypot-slot" target="_blank">https://github.com/Jackypot/Jackypot-slot</a>
+            </li>
+         </ul>
+         <ul class="eth">
+            <li>
+               <a href="https://etherscan.io/address/0xfeac34425a3ba2fafbbeedb367ac5f4b4bb701d2#code" target="_blank">https://etherscan.io/address/0xfeac34425a3ba2fafbbeedb367ac5f4b4bb701d2#code</a>
+            </li>
+         </ul>
+         <h2>Transparency</h2>
+         <div class="container-transparencia">
+            <p>Below is explained in detail, the process that is carried out in Jackypot.io</p>
+            <img src="assets/footer/diagrama.png" alt="Image" class="img-fluid">
+            <table class="representation-trans">
+               <thead>
+                  <tr>
+                     <th class="borde-vertical">Symbols</th>
+                     <th>Representation</th>
+                  </tr>
+               </thead>
+               <tbody>
+                  <tr>
+                     <td class="borde-vertical borde-horizontal">
+                        <img src="assets/game/slot/1.svg" alt="Cereza">
+                     </td>
+                     <td class="borde-horizontal"> = 1, 2, 3</td>
+                  </tr>
+                  <tr>
+                     <td class="borde-vertical borde-horizontal">
+                        <img src="assets/game/slot/2.svg" alt="Cereza">
+                     </td>
+                     <td class="borde-horizontal"> = 4, 5, 6</td>
+                  </tr>
+                  <tr>
+                     <td class="borde-vertical borde-horizontal">
+                        <img src="assets/game/slot/3.svg" alt="Cereza">
+                     </td>
+                     <td class="borde-horizontal"> = 7, 8, 9</td>
+                  </tr>
+               </tbody>
+            </table>
+            <p>Users Contract Oraclize Smart Jackypot</p>
+            <ol>
+               <li>Users deposit the bet amount of Ethereum from their portfolio.</li>
+               <li>Jackypot has Blockchain technology using an intelligent contract that runs transparently and securely.</li>
+               <li>Our Oraclize provider who specializes in transparency connects with Random.org who are responsible for generating
+                  the random numbers.</li>
+               <li>Ramdom.org sends the random numbers that were generated to Oraclize.</li>
+               <li>Oraclize sends the data to the intelligent contract.</li>
+               <li>The contract interprets the results, calculates the prizes and directs them to the winners.</li>
+               <li>The results are reflected in jackypot.</li>
+            </ol>
+            <p>Our game is based on the Blockchain, so each shipment is unique and encrypted. (Encrypted SHA3 method), which
+               is equivalent to a set of infinite combinations between numbers, letters and signs, which makes it a secure
+               method for your information since it prevents hacking of any kind and that is why Jackypot gives you the security
+               of that will not be deciphered.</p>
+            <p>Our policy is one of total transparency, since we have the high technology of the Blockchain that is connected
+               to thousands of computers multiplying security, therefore no one else can alter or hack, this is confirmed
+               by Ethereum.org; so the transaction and delivery of your prize are guaranteed in "Jackypot.io".</p>
+            <p>This gives the Blockchain 100% security and is the reason why 176,727,709 million movements or transactions have
+               been made since it was created; until the day this document was written.</p>
+            <p>Different online games of chance offer high probabilities of winning a minimum of what is wagered, or offer misleading
+               information as to the chances of the player having a profit. You can then verify this information in the following
+               notes:
+            </p>
+            <p>
+               <a href="http://www.foxnews.com/story/2005/08/29/10-things-your-casino-wont-tell.html" target="_blank">http://www.foxnews.com/story/2005/08/29/10-things-your-casino-wont-tell.html</a>
+            </p>
+            <p>
+               <a href="http://www.dailymail.co.uk/news/article-2555025/Who-Lions-Share-Las-Vegas-slot-machine-hit-jackpot-20-years-attracts-generations-gamblers-eager-win-2-3-MILLION-prize.html"
+                  target="_blank">http://www.dailymail.co.uk/news/article-2555025/Who-Lions-Share-Las-Vegas-slot-machine-hit-jackpot-20-years-attracts-generations-gamblers-eager-win-2-3-MILLION-prize.html</a>
+            </p>
+            <p>
+               <a href="http://triblive.com/aande/gambling/5509017-74/casino-player-percent" target="_blank">http://triblive.com/aande/gambling/5509017-74/casino-player-percent</a>
+            </p>
+            <p>That is why Jackypot is revolutionizing with the high technology of Blokchain applied in Ethereum, providing
+               the best standards in security and speed, as well as having the possibility of winning up to 55.55% more,
+               against what was determined in other sites of bets</p>
+         </div>
+      </div>
+      <!-- Free bets -->
+      <div class="free-bets" id="free-bets-window">
+         <!-- Contendor de grid -->
+         <div class="contenedor-free-bets">
+            <!-- Promocion 1 -->
+            <div class="free-bets-promocion">
+               <!-- Contenedor de la promocion -->
+               <h2>Promotion 1</h2>
+               <h3>You lost ?... You Win!</h3>
+               <!-- Slider -->
+               <div class="contenedor-slider">
+                  <div class="slider">
+                     <div class="slider-content">
+                        <p>
+                           <span class="negro">1.</span> Only those who have lost will receive their free bets</p>
+                        <p>
+                           <span class="negro">2.</span> The minimum bet of this promotion is .01 ETH, up to a maximum bet of 1 ETH.</p>
+                        <p>
+                           <span class="negro">3.</span> The url of the transaction made in the promotion thread must be published in the bitcointalk
+                           forum.
+                        </p>
+                     </div>
+                  </div>
+                  <div class="slider">
+                     <div class="slider-content">
+                        <p>
+                           <span class="negro">4.</span> The public address that is in the url is to which the free bets are sent.</p>
+                        <p>
+                           <span class="negro">5.</span> Free bets with a value of 0.01 will be awarded until the amount lost is reached.</p>
+                        <p>
+                           <span class="negro">6.</span> Each bet is awarded within 4 hours of your last free bet.</p>
+                     </div>
+                  </div>
+                  <div class="slider">
+                     <div class="slider-content">
+                        <p>
+                           <span class="negro">7.</span> No other free bet can be awarded until you play the previously one.</p>
+                        <p>
+                           <span class="negro">8.</span> To collect the free bets, you must make the transaction at 0 ETH in our contract.</p>
+                        <p>
+                           <span class="negro">9.</span> Promotion valid until awarding 1000 free throws or until March 31, 2018.</p>
+                     </div>
+                  </div>
+               </div>
+               <!-- Controles slider -->
+               <div class="contenedor-controles">
+                  <div class="controls">
+                     <ul></ul>
+                  </div>
+               </div>
+               <div class="contenedor-btn-freeBets">
+                  <button type="button" name="button" class="btn-free-bet">Go post</button>
+               </div>
             </div>
-        </div>
-        <!-- Free bets -->
-        <div class="free-bets" id="free-bets-window">
-            <!-- Contendor de grid -->
-            <div class="contenedor-free-bets">
-                <!-- Promocion 1 -->
-                <div class="free-bets-promocion">
-                    <!-- Contenedor de la promocion -->
-                    <h2>Promotion 1</h2>
-                    <h3>You lost ?... You Win!</h3>
-                    <!-- Slider -->
-                    <div class="contenedor-slider">
-                        <div class="slider">
-                            <div class="slider-content">
-                                <p><span class="negro">1.</span> Only those who have lost will receive their free bets</p>
-                                <p><span class="negro">2.</span> The minimum bet of this promotion is .01 ETH, up to a maximum bet of 1 ETH.</p>
-                                <p><span class="negro">3.</span> The url of the transaction made in the promotion thread must be published in the bitcointalk forum.</p>
-                            </div>
-                        </div>
-                        <div class="slider">
-                            <div class="slider-content">
-                                <p><span class="negro">4.</span> The public address that is in the url is to which the free bets are sent.</p>
-                                <p><span class="negro">5.</span> Free bets with a value of 0.01 will be awarded until the amount lost is reached.</p>
-                                <p><span class="negro">6.</span> Each bet is awarded within 4 hours of your last free bet.</p>
-                            </div>
-                        </div>
-                        <div class="slider">
-                            <div class="slider-content">
-                                <p><span class="negro">7.</span> No other free bet can be awarded until you play the previously one.</p>
-                                <p><span class="negro">8.</span> To collect the free bets, you must make the transaction at 0 ETH in our contract.</p>
-                                <p><span class="negro">9.</span> Promotion valid until awarding 1000 free throws or until March 31, 2018.</p>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- Controles slider -->
-                    <div class="contenedor-controles">
-                        <div class="controls">
-                            <ul></ul>
-                        </div>
-                    </div>
-                    <div class="contenedor-btn-freeBets">
-                        <button type="button" name="button" class="btn-free-bet">Go post</button>
-                    </div>
-                </div>
-                <!-- Promocion 2 -->
-                <div class="free-bets-datos" id="contenedor-free-bets">
-                    <!-- Contenedor de los datos -->
-                    <div class="titulo-bets">
-                        <div class="titulo-1">
-                            <h2>Promotion 2</h2>
-                        </div>
-                        <div class="titulo-2">
-                            <h2 id="contador-tiros-entregados" class="sombras-c">Loading...</h2>
-                        </div>
-                    </div>
-                    <div class="contenedor-slider">
-                        <div class="slider">
-                            <div class="slider-content">
-                                <h3>Click PLAY and receive a free bet with a value of 0.01 ETH.</h3>
-                            </div>
-                        </div>
-                        <div class="slider">
-                            <div class="slider-content">
-                                <h3>To receive the free bet, you have to send your public address.</h3>
-                            </div>
-                        </div>
-                        <div class="slider">
-                            <div class="slider-content">
-                                <h3>Place free bets by sending 0 ETH to our contract.</h3>
-                            </div>
-                        </div>
-                        <div class="slider">
-                            <div class="slider-content">
-                                <h3>You can only receive a free bet every 24 hours.</h3>
-                            </div>
-                        </div>
-                        <div class="slider">
-                            <div class="slider-content">
-                                <h3>This promotion is only valid until you have delivered 1000 bets or until March 31.</h3>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="contenedor-controles">
-                        <div class="controls">
-                            <ul></ul>
-                        </div>
-                    </div>
-                    <div class="contenedor-maquina-juguete" id="contenedor-maquina-juguete">
-                        <div class="maquina-juguete">
-                            <div class="img-machine-juguete">
-                                <svg id="svg-juguete"></svg>
-                                <p id="pote-juguete">20000 POINTS</p>
-                            </div>
-                        </div>
-                        <div class="puntos-totales">
-                            <div class="panel-puntos sombras-c">
-                                <label>Your Points: </label>
-                                <input type="text" disabled value="1000" id="puntos-jugador">
-                            </div>
-                        </div>
-                        <div class="apuesta-juguete">
-                            <label>Your BET: </label>
-                            <input type="number" required min="100" max="500" step="100" onkeypress="return validaNumericos(event)" placeholder="100 - 500" id="apuesta_puntos" value="100">
-                        </div>
-                        <div class="btn-play-juguete">
-                            <input type="image" src="assets/game/btn-play.png" onclick="jugar_por_puntos()">
-                        </div>
-                    </div>
-                    <div class="contenedor-ganador" id="contenedor-ganador">
-                        <h3 style="margin-top: 50px; color: #30c730">Congratulations, You've Won 1 Free Bet with Value at 0.01 Ethereum</h3>
-                        <h3>Share with your friends to get a free bet!</h3>
-                        <button id="share-jackypot"> <img src="assets/footer/facebook-logo.png" alt="Facebook"> Share</button>
-                    </div>
-                    <!-- <div class="contenedor-Bdatos">
+            <!-- Promocion 2 -->
+            <div class="free-bets-datos" id="contenedor-free-bets">
+               <!-- Contenedor de los datos -->
+               <div class="titulo-bets">
+                  <div class="titulo-1">
+                     <h2>Promotion 2</h2>
+                  </div>
+                  <div class="titulo-2">
+                     <h2 id="contador-tiros-entregados" class="sombras-c">Loading...</h2>
+                  </div>
+               </div>
+               <div class="contenedor-slider">
+                  <div class="slider">
+                     <div class="slider-content">
+                        <h3>Click PLAY and receive a free bet with a value of 0.01 ETH.</h3>
+                     </div>
+                  </div>
+                  <div class="slider">
+                     <div class="slider-content">
+                        <h3>To receive the free bet, you have to send your public address.</h3>
+                     </div>
+                  </div>
+                  <div class="slider">
+                     <div class="slider-content">
+                        <h3>Place free bets by sending 0 ETH to our contract.</h3>
+                     </div>
+                  </div>
+                  <div class="slider">
+                     <div class="slider-content">
+                        <h3>You can only receive a free bet every 24 hours.</h3>
+                     </div>
+                  </div>
+                  <div class="slider">
+                     <div class="slider-content">
+                        <h3>This promotion is only valid until you have delivered 1000 bets or until March 31.</h3>
+                     </div>
+                  </div>
+               </div>
+               <div class="contenedor-controles">
+                  <div class="controls">
+                     <ul></ul>
+                  </div>
+               </div>
+               <div class="contenedor-maquina-juguete" id="contenedor-maquina-juguete">
+                  <div class="maquina-juguete">
+                     <div class="img-machine-juguete">
+                        <svg id="svg-juguete"></svg>
+                        <p id="pote-juguete">20000 POINTS</p>
+                     </div>
+                  </div>
+                  <div class="puntos-totales">
+                     <div class="panel-puntos sombras-c">
+                        <label>Your Points: </label>
+                        <input type="text" disabled value="1000" id="puntos-jugador">
+                     </div>
+                  </div>
+                  <div class="apuesta-juguete">
+                     <label>Your BET: </label>
+                     <input type="number" required min="100" max="500" step="100" onkeypress="return validaNumericos(event)" placeholder="100 - 500"
+                        id="apuesta_puntos" value="100">
+                  </div>
+                  <div class="btn-play-juguete">
+                     <input type="image" src="assets/game/btn-play.png" onclick="jugar_por_puntos()">
+                  </div>
+               </div>
+               <div class="contenedor-ganador" id="contenedor-ganador">
+                  <h3 style="margin-top: 50px; color: #30c730">Congratulations, You've Won 1 Free Bet with Value at 0.01 Ethereum</h3>
+                  <h3>Share with your friends to get a free bet!</h3>
+                  <button id="share-jackypot">
+                     <img src="assets/footer/facebook-logo.png" alt="Facebook"> Share</button>
+               </div>
+               <!-- <div class="contenedor-Bdatos">
                         <h2 class="">Check your free bets</h2>
                         <div class="search">
                             <input type="text" name="addres-bets">
@@ -907,258 +1232,327 @@
 
                         </div>
                     </div> -->
-                </div>
             </div>
-        </div>
-        <!-- Terminos-->
-        <div class="terms" id="terms-window">
-            <h2>Terms and Conditions</h2>
-            <ul>
-                <li>By using our services, you accept and confirm that you have read the Terms and Conditions, which take effect thereafter.</li>
-                <li>You declare that you are of legal age in the country or region you are in.</li>
-                <li>If you live in a country or place where Internet gambling is not legal, please leave jackypot.io or we will not be responsible for the consequences that this brings.</li>
-                <li>At jackypot.io we want the information on our page to be understandable and we are committed to legality, so we are not responsible for any misunderstandings and it is the user's responsibility to use said information.</li>
-                <li>
-                    <p>We are working every day of the year to make it possible for jackypot.io to work without problems, but we are NOT responsible for:</p>
-                    <ol>
-                        <li>Any problem or technical failure.</li>
-                        <li>Theft of accounts by third parties.</li>
-                        <li>Losses of cash or tokens.</li>
-                        <li>Misuse of our platform.</li>
-                        <li>Problems with your wallets.</li>
-                        <li>And everything that is beyond our control.</li>
-                    </ol>
-                </li>
-                <li>The minimum bet required in jackypot is .01 ETH and the maximum bet is 20 ETH.</li>
-                <li>You are aware that by using our services and playing you may lose ETHER, and only you are fully responsible for any loss.</li>
-                <li>You understand that it takes a few minutes for the process to play.</li>
-                <li>We do not take charge of the delay in which the information is reflected in the system between the Blockchain, Etherscan, Oraclize and Random networks.</li>
-                <li>You understand that we do not handle the Ethers that enter the pot or the results of the shots.</li>
-                <li>You will not use software or allow other people to use your account for crimes against the law and / or generate damages to third parties, including the company.</li>
-                <li>Jackypot.io has the right not to distribute the funds obtained if any activity mentioned above is detected that is altering the functioning of our services.</li>
-                <li>You are informed that gambling causes addiction, operate at your own risk.</li>
-                <li>You agree that you agree to make Ether transactions and that your address will appear in our open source.</li>
-                <li>We have the right to modify the minimum and maximum amount of bets to play.</li>
-                <li>We will NOT disclose the information we collect.</li>
-                <li>Our terms and conditions may be modified at any time as the company jackypot.io considers or requires, and it is your own responsibility to read such changes.</li>
-            </ul>
-        </div>
-        <!-- Contacto -->
-        <div class="contact" id="contact-window">
-            <div class="container-contact">
-                <div class="contactanos">
-                    <h2>Contact Us</h2>
-                    <form>
-                        <input name="name" type="text" class="feedback-input" placeholder="Name" id="name" />
-                        <input name="email" type="text" class="feedback-input" placeholder="Email" id="email"/>
-                        <textarea name="text" class="feedback-input" placeholder="Comment" id="comment"></textarea>
-                        <input type="button" value="Send" onclick="datos_contactanos()"/>
-                    </form>
-                </div>
-                <div class="informacion-adicional">
-                    <h2>If you have any questions or wish to get in touch with us directly enter:</h2>
+         </div>
+      </div>
+      <!-- Terminos-->
+      <div class="terms" id="terms-window">
+         <h2>Terms and Conditions</h2>
+         <ul>
+            <li>By using our services, you accept and confirm that you have read the Terms and Conditions, which take effect
+               thereafter.
+            </li>
+            <li>You declare that you are of legal age in the country or region you are in.</li>
+            <li>If you live in a country or place where Internet gambling is not legal, please leave jackypot.io or we will not
+               be responsible for the consequences that this brings.</li>
+            <li>At jackypot.io we want the information on our page to be understandable and we are committed to legality, so
+               we are not responsible for any misunderstandings and it is the user's responsibility to use said information.</li>
+            <li>
+               <p>We are working every day of the year to make it possible for jackypot.io to work without problems, but we
+                  are NOT responsible for:</p>
+               <ol>
+                  <li>Any problem or technical failure.</li>
+                  <li>Theft of accounts by third parties.</li>
+                  <li>Losses of cash or tokens.</li>
+                  <li>Misuse of our platform.</li>
+                  <li>Problems with your wallets.</li>
+                  <li>And everything that is beyond our control.</li>
+               </ol>
+            </li>
+            <li>The minimum bet required in jackypot is .01 ETH and the maximum bet is 20 ETH.</li>
+            <li>You are aware that by using our services and playing you may lose ETHER, and only you are fully responsible for
+               any loss.
+            </li>
+            <li>You understand that it takes a few minutes for the process to play.</li>
+            <li>We do not take charge of the delay in which the information is reflected in the system between the Blockchain,
+               Etherscan, Oraclize and Random networks.</li>
+            <li>You understand that we do not handle the Ethers that enter the pot or the results of the shots.</li>
+            <li>You will not use software or allow other people to use your account for crimes against the law and / or generate
+               damages to third parties, including the company.</li>
+            <li>Jackypot.io has the right not to distribute the funds obtained if any activity mentioned above is detected that
+               is altering the functioning of our services.</li>
+            <li>You are informed that gambling causes addiction, operate at your own risk.</li>
+            <li>You agree that you agree to make Ether transactions and that your address will appear in our open source.</li>
+            <li>We have the right to modify the minimum and maximum amount of bets to play.</li>
+            <li>We will NOT disclose the information we collect.</li>
+            <li>Our terms and conditions may be modified at any time as the company jackypot.io considers or requires, and it
+               is your own responsibility to read such changes.</li>
+         </ul>
+      </div>
+      <!-- Contacto -->
+      <div class="contact" id="contact-window">
+         <div class="container-contact">
+            <div class="contactanos">
+               <h2>Contact Us</h2>
+               <form>
+                  <input name="name" type="text" class="feedback-input" placeholder="Name" id="name" />
+                  <input name="email" type="text" class="feedback-input" placeholder="Email" id="email" />
+                  <textarea name="text" class="feedback-input" placeholder="Comment" id="comment"></textarea>
+                  <input type="button" value="Send" onclick="datos_contactanos()" />
+               </form>
+            </div>
+            <div class="informacion-adicional">
+               <h2>If you have any questions or wish to get in touch with us directly enter:</h2>
 
-                    <table>
-                        <tr>
-                            <td><img src="assets/footer/email.png" alt=""></td>
-                            <td><p>Email: <a href="mailto:contact@jackypot.io">contact@jackypot.io</a></p></td>
-                        </tr>
-                        <tr>
-                            <td><img src="assets/footer/twitter.png" alt=""></td>
-                            <td><p>Twitter: <a href="https://twitter.com/JackypotEth" target="_blank" title="Twitter">@JackypotETH</a></p></td>
-                        </tr>
-                        <tr>
-                            <td><img src="assets/footer/facebook.png" alt=""></td>
-                            <td><p>Facebook: <a href="https://www.facebook.com/jackypotofficial/" target="_blank" title="Facebook">Jackypotoficial</a></p></td>
-                        </tr>
-                        <tr>
-                            <td><img src="assets/footer/reddit.png" alt=""></td>
-                            <td><p>Reddit: <a href="https://www.reddit.com/user/Jackypot-official/" target="_blank" title="Reddit">Jackypot-official</a></p></td>
-                        </tr>
-                        <tr>
-                            <td><img src="assets/footer/youtube.png" alt=""></td>
-                            <td><p>Youtube: <a href="https://www.youtube.com/channel/UCgCKLBUzJ7Su14SgBio6dsA" target="_blank" title="Youtube">Jackypot.io</a></p></td>
-                        </tr>
-                    </table>
-                </div>
+               <table>
+                  <tr>
+                     <td>
+                        <img src="assets/footer/email.png" alt="">
+                     </td>
+                     <td>
+                        <p>Email:
+                           <a href="mailto:contact@jackypot.io">contact@jackypot.io</a>
+                        </p>
+                     </td>
+                  </tr>
+                  <tr>
+                     <td>
+                        <img src="assets/footer/twitter.png" alt="">
+                     </td>
+                     <td>
+                        <p>Twitter:
+                           <a href="https://twitter.com/JackypotEth" target="_blank" title="Twitter">@JackypotETH</a>
+                        </p>
+                     </td>
+                  </tr>
+                  <tr>
+                     <td>
+                        <img src="assets/footer/facebook.png" alt="">
+                     </td>
+                     <td>
+                        <p>Facebook:
+                           <a href="https://www.facebook.com/jackypotofficial/" target="_blank" title="Facebook">Jackypotoficial</a>
+                        </p>
+                     </td>
+                  </tr>
+                  <tr>
+                     <td>
+                        <img src="assets/footer/reddit.png" alt="">
+                     </td>
+                     <td>
+                        <p>Reddit:
+                           <a href="https://www.reddit.com/user/Jackypot-official/" target="_blank" title="Reddit">Jackypot-official</a>
+                        </p>
+                     </td>
+                  </tr>
+                  <tr>
+                     <td>
+                        <img src="assets/footer/youtube.png" alt="">
+                     </td>
+                     <td>
+                        <p>Youtube:
+                           <a href="https://www.youtube.com/channel/UCgCKLBUzJ7Su14SgBio6dsA" target="_blank" title="Youtube">Jackypot.io</a>
+                        </p>
+                     </td>
+                  </tr>
+               </table>
             </div>
-        </div>
+         </div>
+      </div>
 
-    </div>
-    <!-- Modals -->
-    <!-- How to play -->
-    <div class="how-play" id="how-play-window">
-        <!-- Modal how to play -->
-        <div class="modal" id="how-play-modal">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <span class="close" id="how-play-close">&times;</span>
-                    <h2>HOW TO PLAY</h2>
-                </div>
-                <div class="modal-body">
-                    <p>1. Open some of these wallets.</p>
-                    <div class="wallets">
-                        <ul>
-                            <li><a href="https://www.myetherwallet.com/" title="MyEtherWallet" target="_blank"><img src="assets/how-to-play/01.png" alt="" class="img-fluid"></a></li>
-                            <li><a href="https://ethereum.org/" title="Mist" target="_blank"><img src="assets/how-to-play/02.png" alt="" class="img-fluid"></a></li>
-                            <li><a href="https://metamask.io/" title="MetaMask" target="_blank"><img src="assets/how-to-play/03.png" alt="" class="img-fluid"></a></li>
-                            <li><a href="https://jaxx.io/" title="Jaxx" target="_blank"><img src="assets/how-to-play/04.png" alt="" class="img-fluid"></a></li>
-                            <li><a href="https://www.exodus.io/" title="Exodus" target="_blank"><img src="assets/how-to-play/05.png" alt="" class="img-fluid"></a></li>
-                        </ul>
-                    </div>
-                    <p>2. Send the amount of ETH you want to bet on this address:</p>
-                    <p style="margin-bottom: 0px;">Bet min 0.01 ETH -Bet max: 20 ETH</p>
-                    <div class="popover__wrapper">
-                        <p class="address-game" id="address-game" data-clipboard-text="0xFeac34425a3Ba2FAfbbEEDB367aC5F4b4bB701D2">0 x F e a c 3 4 4 2 5 a 3 B a 2 F A f b b E E D B 3 6 7 a C 5 F 4 b 4 b B 7 0 1 D 2</p>
-                        <div class="push popover__content">
-                            <p>Data required for transactions: <br>
-                                Gas required: 300,000. <br>
-                                Gwei required: 21.</p>
-                        </div>
-                    </div>
-                    <p>Wait for the result from 1 to 2 minutes, in <a title="Results" onclick="getfocus()" class="links">LAST BET</a>.</p>
-                    <p>3. Our prizes are:</p>
-                    <div class="contenedor-premios">
-                        <img src="assets/how-to-play/premio1.png" alt="" class="img-fluid">
-                        <img src="assets/how-to-play/premio2.png" alt="" class="img-fluid">
-                        <img src="assets/how-to-play/premio3.png" alt="" class="img-fluid">
-                        <img src="assets/how-to-play/premio4.png" alt="" class="img-fluid">
-                        <img src="assets/how-to-play/8.png" alt="" class="img-fluid">
-                        <img src="assets/how-to-play/12.png" alt="" class="img-fluid">
-                        <img src="assets/how-to-play/4.png" alt="" class="img-fluid">
-                        <img src="assets/how-to-play/9.png" alt="" class="img-fluid">
-                        <img src="assets/how-to-play/13.png" alt="" class="img-fluid">
-                        <img src="assets/how-to-play/11.png" alt="" class="img-fluid">
-                        <img src="assets/how-to-play/7.png" alt="" class="img-fluid">
-                        <img src="assets/how-to-play/14.png" alt="" class="img-fluid">
-                        <img src="assets/how-to-play/6.png" alt="" class="img-fluid">
-                        <img src="assets/how-to-play/15.png" alt="" class="img-fluid">
-                        <img src="assets/how-to-play/10.png" alt="" class="img-fluid">
-                    </div>
-                    <div class="contenedor_video">
-                        <button type="button" name="button" class="btn_video" onclick="openModal(this.id)" id="video">Show Tutorial</button>
-                    </div>
-                    <p>4. The prize will be sent automatically in your wallet.</p>
-                    <p>5. Good luck!</p>
-                </div>
+   </div>
+   <!-- Modals -->
+   <!-- How to play -->
+   <div class="how-play" id="how-play-window">
+      <!-- Modal how to play -->
+      <div class="modal" id="how-play-modal">
+         <div class="modal-content">
+            <div class="modal-header">
+               <span class="close" id="how-play-close">&times;</span>
+               <h2>HOW TO PLAY</h2>
             </div>
-        </div>
-    </div>
-    <!-- Reglas de la promocion en vigencia -->
-    <div class="reglas" id="reglas-window">
-        <!-- Modal content -->
-        <div class="modal" id="reglas-modal">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <span class="close" id="reglas-close">&times;</span>
-                    <h2>Rules of the promotion</h2>
-                </div>
-                <div class="modal-body">
-                    <p>1. Only those who have lost will receive their free bets</p>
-                    <p>2. The minimum bet of this promotion is .01 ETH, up to a maximum bet of 1 ETH.</p>
-                    <p>3. The url of the transaction made in the promotion thread must be published.</p>
-                    <p>4. The public address that is in the url is to which the free bets are sent.</p>
-                    <p>5. You will be awarded  free .01 ETH bets until you reach the lost amount.</p>
-                    <p>6. Bets are delivered between 3:00 and 11:00 p.m. Respecting the UTC Schedule.</p>
-                    <p>7. Each bet is awarded within 4 hours of your last free bet.</p>
-                    <p>8. No other free bet can be awarded until you play the previously one</p>
-                    <p class="strong">Example 1:</p>
-                    <p class="italic">Betting: .01 ETH = 1 free bet of .01 ETH</p>
-                    <table>
-                        <tr>
-                            <th class="borde-vertical">Betting amount</th>
-                            <th class="borde-vertical">Free bets</th>
-                            <th>Value of the bet</th>
-                        </tr>
-                        <tr>
-                            <td class="borde-horizontal borde-vertical">.01 ETH</td>
-                            <td class="borde-horizontal borde-vertical">1 Bet free</td>
-                            <td class="borde-horizontal">.01 ETH</td>
-                        </tr>
-                    </table>
-                    <p class="strong">Ejemplo 2:</p>
-                    <table>
-                        <tr>
-                            <th class="borde-vertical">Betting amount</th>
-                            <th class="borde-vertical">Free bets</th>
-                            <th>Value of the bet</th>
-                        </tr>
-                        <tr>
-                            <td rowspan="5" class="borde-horizontal borde-vertical">.05 ETH</td>
-                            <td class="borde-horizontal borde-vertical">1 Bet free</td>
-                            <td class="borde-horizontal">.01 ETH</td>
-                        </tr>
-                        <tr>
-                            <td class="borde-horizontal borde-vertical">1 Bet free</td>
-                            <td class="borde-horizontal">.01 ETH</td>
-                        </tr>
-                        <tr>
-                            <td class="borde-horizontal borde-vertical">1 Bet free</td>
-                            <td class="borde-horizontal">.01 ETH</td>
-                        </tr>
-                        <tr>
-                            <td class="borde-horizontal borde-vertical">1 Bet free</td>
-                            <td class="borde-horizontal">.01 ETH</td>
-                        </tr>
-                        <tr>
-                            <td class="borde-horizontal borde-vertical">1 Bet free</td>
-                            <td class="borde-horizontal">.01 ETH</td>
-                        </tr>
-                        <tr>
-                            <td class="borde-horizontal"></td>
-                            <td class="borde-horizontal borde-vertical"></td>
-                            <td class="borde-horizontal">Total: .05 ETH</td>
-                        </tr>
-                    </table>
-                    <p class="italic">Betting: .05 ETH = 5 free bets .01 ETH</p>
-                    <p>In the course of 4 hours, you will be awarded 1 bet of .01 ETH</p>
-                    <p>If the first free bet is charged at 3:00 p.m. (UTC), the next bet will be awarded at 7 p. M. (UTC) at most, but if that bet is played until 8 p.m. (UTC). The 4 hours will start running from that moment.</p>
-                    <p>* Until it reaches the amount of bets that matches the reward.</p>
-                    <p>8. To collect the free bets, you must make the transaction at 0 ETH in our contract, or click on the following link:</p>
-                    <p>10. This promotion is valid until the existence of the 2,000 available refunds is exhausted. (A refund equals a free bet of: 0.01 ETH), or until the limited date of March 31, 2018.</p>
-                    <p></p>
-                </div>
+            <div class="modal-body">
+               <p>1. Open some of these wallets.</p>
+               <div class="wallets">
+                  <ul>
+                     <li>
+                        <a href="https://www.myetherwallet.com/" title="MyEtherWallet" target="_blank">
+                           <img src="assets/how-to-play/01.png" alt="" class="img-fluid">
+                        </a>
+                     </li>
+                     <li>
+                        <a href="https://ethereum.org/" title="Mist" target="_blank">
+                           <img src="assets/how-to-play/02.png" alt="" class="img-fluid">
+                        </a>
+                     </li>
+                     <li>
+                        <a href="https://metamask.io/" title="MetaMask" target="_blank">
+                           <img src="assets/how-to-play/03.png" alt="" class="img-fluid">
+                        </a>
+                     </li>
+                     <li>
+                        <a href="https://jaxx.io/" title="Jaxx" target="_blank">
+                           <img src="assets/how-to-play/04.png" alt="" class="img-fluid">
+                        </a>
+                     </li>
+                     <li>
+                        <a href="https://www.exodus.io/" title="Exodus" target="_blank">
+                           <img src="assets/how-to-play/05.png" alt="" class="img-fluid">
+                        </a>
+                     </li>
+                  </ul>
+               </div>
+               <p>2. Send the amount of ETH you want to bet on this address:</p>
+               <p style="margin-bottom: 0px;">Bet min 0.01 ETH -Bet max: 20 ETH</p>
+               <div class="popover__wrapper">
+                  <p class="address-game" id="address-game" data-clipboard-text="0xFeac34425a3Ba2FAfbbEEDB367aC5F4b4bB701D2">0 x F e a c 3 4 4 2 5 a 3 B a 2 F A f b b E E D B 3 6 7 a C 5 F 4 b 4 b B 7 0 1 D 2</p>
+                  <div class="push popover__content">
+                     <p>Data required for transactions:
+                        <br> Gas required: 300,000.
+                        <br> Gwei required: 21.</p>
+                  </div>
+               </div>
+               <p>Wait for the result from 1 to 2 minutes, in
+                  <a title="Results" onclick="getfocus()" class="links">LAST BET</a>.</p>
+               <p>3. Our prizes are:</p>
+               <div class="contenedor-premios">
+                  <img src="assets/how-to-play/premio1.png" alt="" class="img-fluid">
+                  <img src="assets/how-to-play/premio2.png" alt="" class="img-fluid">
+                  <img src="assets/how-to-play/premio3.png" alt="" class="img-fluid">
+                  <img src="assets/how-to-play/premio4.png" alt="" class="img-fluid">
+                  <img src="assets/how-to-play/8.png" alt="" class="img-fluid">
+                  <img src="assets/how-to-play/12.png" alt="" class="img-fluid">
+                  <img src="assets/how-to-play/4.png" alt="" class="img-fluid">
+                  <img src="assets/how-to-play/9.png" alt="" class="img-fluid">
+                  <img src="assets/how-to-play/13.png" alt="" class="img-fluid">
+                  <img src="assets/how-to-play/11.png" alt="" class="img-fluid">
+                  <img src="assets/how-to-play/7.png" alt="" class="img-fluid">
+                  <img src="assets/how-to-play/14.png" alt="" class="img-fluid">
+                  <img src="assets/how-to-play/6.png" alt="" class="img-fluid">
+                  <img src="assets/how-to-play/15.png" alt="" class="img-fluid">
+                  <img src="assets/how-to-play/10.png" alt="" class="img-fluid">
+               </div>
+               <div class="contenedor_video">
+                  <button type="button" name="button" class="btn_video" onclick="openModal(this.id)" id="video">Show Tutorial</button>
+               </div>
+               <p>4. The prize will be sent automatically in your wallet.</p>
+               <p>5. Good luck!</p>
             </div>
-        </div>
-    </div>
-    <!-- Video -->
-    <div class="video" id="video-window">
-        <!-- Modal content -->
-        <div class="modal" id="video-modal">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <span class="close" id="video-close">&times;</span>
-                    <h2>TUTORIAL</h2>
-                </div>
-                <div class="modal-body">
-                    <div class="contenedor_video_div">
-                        <iframe width="100%" height="100%" src="https://www.youtube.com/embed/CvgGrcKvr4I" frameborder="0" allow="encrypted-media" allowfullscreen></iframe>
-                    </div>
-                </div>
+         </div>
+      </div>
+   </div>
+   <!-- Reglas de la promocion en vigencia -->
+   <div class="reglas" id="reglas-window">
+      <!-- Modal content -->
+      <div class="modal" id="reglas-modal">
+         <div class="modal-content">
+            <div class="modal-header">
+               <span class="close" id="reglas-close">&times;</span>
+               <h2>Rules of the promotion</h2>
             </div>
-        </div>
-    </div>
-    <!-- Btn compartir -->
-    <div class="video" id="compartir-window">
-            <!-- Modal content -->
-            <div class="modal" id="compartir-modal">
-                <div class="modal-content">
-                    <div class="modal-header">
-                        <span class="close" id="compartir-close">&times;</span>
-                        <h2>Share with your friends</h2>
-                    </div>
-                    <div class="modal-body">
-                        <h2>To continue, tell a friend about Jackypot</h2>                    
-                        <button id="share-jackypot"> <img src="assets/footer/facebook-logo.png" alt="Facebook"> Share</button>
-                    </div>
-                </div>
+            <div class="modal-body">
+               <p>1. Only those who have lost will receive their free bets</p>
+               <p>2. The minimum bet of this promotion is .01 ETH, up to a maximum bet of 1 ETH.</p>
+               <p>3. The url of the transaction made in the promotion thread must be published.</p>
+               <p>4. The public address that is in the url is to which the free bets are sent.</p>
+               <p>5. You will be awarded free .01 ETH bets until you reach the lost amount.</p>
+               <p>6. Bets are delivered between 3:00 and 11:00 p.m. Respecting the UTC Schedule.</p>
+               <p>7. Each bet is awarded within 4 hours of your last free bet.</p>
+               <p>8. No other free bet can be awarded until you play the previously one</p>
+               <p class="strong">Example 1:</p>
+               <p class="italic">Betting: .01 ETH = 1 free bet of .01 ETH</p>
+               <table>
+                  <tr>
+                     <th class="borde-vertical">Betting amount</th>
+                     <th class="borde-vertical">Free bets</th>
+                     <th>Value of the bet</th>
+                  </tr>
+                  <tr>
+                     <td class="borde-horizontal borde-vertical">.01 ETH</td>
+                     <td class="borde-horizontal borde-vertical">1 Bet free</td>
+                     <td class="borde-horizontal">.01 ETH</td>
+                  </tr>
+               </table>
+               <p class="strong">Ejemplo 2:</p>
+               <table>
+                  <tr>
+                     <th class="borde-vertical">Betting amount</th>
+                     <th class="borde-vertical">Free bets</th>
+                     <th>Value of the bet</th>
+                  </tr>
+                  <tr>
+                     <td rowspan="5" class="borde-horizontal borde-vertical">.05 ETH</td>
+                     <td class="borde-horizontal borde-vertical">1 Bet free</td>
+                     <td class="borde-horizontal">.01 ETH</td>
+                  </tr>
+                  <tr>
+                     <td class="borde-horizontal borde-vertical">1 Bet free</td>
+                     <td class="borde-horizontal">.01 ETH</td>
+                  </tr>
+                  <tr>
+                     <td class="borde-horizontal borde-vertical">1 Bet free</td>
+                     <td class="borde-horizontal">.01 ETH</td>
+                  </tr>
+                  <tr>
+                     <td class="borde-horizontal borde-vertical">1 Bet free</td>
+                     <td class="borde-horizontal">.01 ETH</td>
+                  </tr>
+                  <tr>
+                     <td class="borde-horizontal borde-vertical">1 Bet free</td>
+                     <td class="borde-horizontal">.01 ETH</td>
+                  </tr>
+                  <tr>
+                     <td class="borde-horizontal"></td>
+                     <td class="borde-horizontal borde-vertical"></td>
+                     <td class="borde-horizontal">Total: .05 ETH</td>
+                  </tr>
+               </table>
+               <p class="italic">Betting: .05 ETH = 5 free bets .01 ETH</p>
+               <p>In the course of 4 hours, you will be awarded 1 bet of .01 ETH</p>
+               <p>If the first free bet is charged at 3:00 p.m. (UTC), the next bet will be awarded at 7 p. M. (UTC) at most,
+                  but if that bet is played until 8 p.m. (UTC). The 4 hours will start running from that moment.</p>
+               <p>* Until it reaches the amount of bets that matches the reward.</p>
+               <p>8. To collect the free bets, you must make the transaction at 0 ETH in our contract, or click on the following
+                  link:
+               </p>
+               <p>10. This promotion is valid until the existence of the 2,000 available refunds is exhausted. (A refund equals
+                  a free bet of: 0.01 ETH), or until the limited date of March 31, 2018.</p>
+               <p></p>
             </div>
-        </div>
-    <script type="text/javascript" src="js/index.js"></script>
-    <script type="text/javascript" src="js/form.js"></script>
-    <script type="text/javascript" src="js/machine.js"></script>
-    <script type="text/javascript" src="js/slider.js"></script>
-    <script type="text/javascript" src="js/slider-maq.js"></script>
-    <script type="text/javascript" src="js/slider-m.js"></script>
+         </div>
+      </div>
+   </div>
+   <!-- Video -->
+   <div class="video" id="video-window">
+      <!-- Modal content -->
+      <div class="modal" id="video-modal">
+         <div class="modal-content">
+            <div class="modal-header">
+               <span class="close" id="video-close">&times;</span>
+               <h2>TUTORIAL</h2>
+            </div>
+            <div class="modal-body">
+               <div class="contenedor_video_div">
+                  <iframe width="100%" height="100%" src="https://www.youtube.com/embed/CvgGrcKvr4I" frameborder="0" allow="encrypted-media"
+                     allowfullscreen></iframe>
+               </div>
+            </div>
+         </div>
+      </div>
+   </div>
+   <!-- Btn compartir -->
+   <div class="video" id="compartir-window">
+      <!-- Modal content -->
+      <div class="modal" id="compartir-modal">
+         <div class="modal-content">
+            <div class="modal-header">
+               <span class="close" id="compartir-close">&times;</span>
+               <h2>Share with your friends</h2>
+            </div>
+            <div class="modal-body">
+               <h2>To continue, tell a friend about Jackypot</h2>
+               <button id="share-jackypot">
+                  <img src="assets/footer/facebook-logo.png" alt="Facebook"> Share</button>
+            </div>
+         </div>
+      </div>
+   </div>
+   <script type="text/javascript" src="js/index.js"></script>
+   <script type="text/javascript" src="js/form.js"></script>
+   <script type="text/javascript" src="js/machine.js"></script>
+   <script type="text/javascript" src="js/slider.js"></script>
+   <script type="text/javascript" src="js/slider-maq.js"></script>
+   <script type="text/javascript" src="js/slider-m.js"></script>
 </body>
+
 </html>
