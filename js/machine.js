@@ -368,10 +368,10 @@ function playGiro(a, b, c, profit, classe){
 
 	    // Variables pantallas de ordenador
         let x, y, z;
-	    var size = 80;
-	    var posX = 25;
-	    var posY = 140;
-	    var posZ = 247;
+	    let size = 80;
+	    let posX = 25;
+	    let posY = 140;
+	    let posZ = 247;
         let translado = 60
 
         function imagenesRandom(){
@@ -408,7 +408,7 @@ function playGiro(a, b, c, profit, classe){
         }
 
 	    // Declaramos el SVG
-	    var s = Snap(idSVG);
+	    let s = Snap(idSVG);
 	    // Limpiamos el campo
 	    s.clear();
 
@@ -818,24 +818,23 @@ function gana_pierde_puntos(num1, num2, num3){
     }, 800);
 }
 
+var una_vez_mensaje = false;
 document.getElementById('share-jackypot').addEventListener('click', function() {
   
-    FB.getLoginStatus(function(response) {
+    // FB.getLoginStatus(function(response) {
       
-      if (response.status === "connected")
-      {
-          FB.logout()
-      }
-      else{
           FB.login(function(res){
-              console.log(res);
+              
+            if(!una_vez_mensaje){
+              alert("We recommend that you enable pop-up windows in your browser");
+              una_vez_mensaje = true;
+            }
               
               FB.ui({
                 method: 'share',
                 href: 'https://jackypot.io',
                 display: 'popup',
               }, function(response){
-                    console.log(typeof response);
                     document.getElementById("contenedor-ganador").innerHTML = 
                         '<h3>Congratulations you just won a free bet! Please send your address to get the prize.</h3>'+
                         '<textarea name="name" rows="2" cols="auto" maxlength="42" spellcheck="false" placeholder="Paste your public address here." id="textAreaAddress"></textarea>' +
@@ -858,11 +857,7 @@ document.getElementById('share-jackypot').addEventListener('click', function() {
                     }
               });
           },{scope: 'publish_actions'})
-      }
-      
-      
-      
-  });
+//   });
 
 
 
@@ -871,14 +866,44 @@ document.getElementById('share-jackypot').addEventListener('click', function() {
 // **********************************************************
 // Funcion para free bets
 // **********************************************************
+(function(){
+    let num1 = Math.floor((Math.random() * 3) + 1);
+    let num2 = Math.floor((Math.random() * 3) + 1);
+    let num3 = Math.floor((Math.random() * 3) + 1);
+    
+    vw <= 480 ? idSVG = "#svg-juguete-m" : idSVG = "#svg-juguete";
 
-setTimeout(function(){
-    let num1 = Math.floor((Math.random() * 9) + 1);
-    let num2 = Math.floor((Math.random() * 9) + 1);
-    let num3 = Math.floor((Math.random() * 9) + 1);
+    let size = 80;
+    let posX = 25;
+    let posY = 140;
+    let posZ = 247;
+    let translado = 60
 
-    playGiro(num1, num2, num3, true, true);
-}, 8000);
+    if (vw <= 480){size = 50; posX = 15; posY = 79; posZ = 140; translado = 26;}
+    
+    let s = Snap(idSVG);
+    let x, y, z;    
+    // Resultado uno
+    setTimeout(function(){
+        x = s.image("assets/game/slot/"+num1+".svg", posX, 10, size, size);
+        x.animate({ transform: 'translate(0 '+translado+')' }, 250, mina.linear )
+    }, 100);
+    // Segundo resultado
+    setTimeout(function(){
+        y = s.image("assets/game/slot/"+num2+".svg", posY, 10, size, size);
+        y.animate({ transform: 'translate(0 '+translado+')' }, 250, mina.linear )
+    }, 300);
+    // Tercer resultado
+    setTimeout(function (){
+        z = s.image("assets/game/slot/"+num3+".svg", posZ, 10, size, size);
+        z.animate({ transform: 'translate(0 '+translado+')' }, 250, mina.linear )
+    }, 600);
+    
+})();
+// setTimeout(function(){
+
+    // playGiro(num1, num2, num3, true, true);
+// }, 8000);
 
 // FUNCION: Obtener el contador de numeros de tiros restantes
 function obtener_tiros_endpoint(){
