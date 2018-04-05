@@ -932,10 +932,13 @@ Free bets
 *************************************** */
 .free-bets-promocion{grid-area: b-promocion;}
 .free-bets-datos{grid-area: b-datos;}
+.free-bets-chat{grid-area: b-chat;}
 .contenedor-free-bets{
     display: grid;
     grid-gap: 13px 20px;
-    grid-template-areas: "b-promocion b-datos";
+    grid-template-areas: 
+    "b-promocion b-datos"
+    "b-chat b-chat";
     grid-template-columns: repeat(2, 1fr);
     padding: 10px;
     width: 96%;
@@ -951,6 +954,7 @@ Free bets
     border-width: 9px;
     border-style: outset;
     border-color: #32a0d1;
+    padding: 1% 5% 0% 5%;
 }
 .free-bets-promocion h2, .free-bets-promocion-m{
     color: #feda33;
@@ -1067,7 +1071,30 @@ Free bets
     border-style: dashed solid;
     border-color: #920303;
     overflow: hidden;
+    padding: 1% 5% 0px 5%;
 }
+.free-bets-datos, .free-bets-datos-m  p{
+    color: white;
+}
+/*seccion decomentarios*/
+.free-bets-chat
+{
+    background-color: #151515;
+    border-radius: 5px;
+    box-shadow: 0px 2px 5px 0px rgba(0, 0, 0, 0.5);
+    border-width: 10px;
+    border-style: dashed solid;
+    border-color: #920303;
+    overflow: hidden;
+    padding: 1% 5% 0px 5%;
+}
+#tt{
+    width: -webkit-fill-available;
+    line-height: 3em;
+    border-radius: .3em;
+}
+
+
 .contenedor-free-bets h2{text-align: start;}
 .free-bets-datos .controls li, .free-bets-datos-m .controls li{
     border-radius: 0px;
@@ -1474,3 +1501,39 @@ Contenedor de dic con video
     cursor: pointer;
     margin-bottom: 20px;
 }
+
+.amarillo{
+    color:#DAE60C
+}
+
+.verde{
+    color:#00B254
+}
+
+.blanco{
+    color:white;
+}
+.blocki2 img{
+    height: 25px; border-radius: 5px;}
+
+
+.box2{
+    background-color: white;
+    color: #151515;
+    border-radius: .3em;
+    font-size: .7em;
+    margin-top: 3%;
+    padding-top: .7%;
+    padding-left: 3%;
+}
+.box2 div{ display: inline-block; margin-right: 5% ; }
+
+.space{
+    margin-top: 25px;}
+.fix1{
+    margin-bottom: 5%;}
+
+.invisible{
+    display:none}
+.visible{ 
+    display:block}
