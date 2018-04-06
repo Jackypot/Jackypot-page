@@ -9,7 +9,7 @@ window.onload = ()=>{
     .then(
         (y)=>
         {
-            console.log(y.resultado)
+            
             desplegartabla(y.resultado)
         }
     )
@@ -19,45 +19,59 @@ window.onload = ()=>{
     )};
 var desplegartabla = (datos)=>{
     let tabla = document.querySelector("#lista");
-    let lista = datos.map((set)=>{
-        console.log(set)
-        let img = new Image();
-        img.src = blockies.toDataUrl(set.address);
+        
+             datos.map((set)=>
+            {
+                if(tabla.childNodes.length<4){
+                let img = new Image();
+                img.src = blockies.toDataUrl(set.address);
 
-        let div = document.createElement("div");
-        let blocki = document.createElement("div");
-        let address = document.createElement("div");
-        let tiros = document.createElement("div");
+                let div = document.createElement("div");
+                let blocki = document.createElement("div");
+                let address = document.createElement("div");
+                let tiros = document.createElement("div");
 
-        blocki.appendChild(img);
-        address.innerHTML = set.address;
-        tiros.innerHTML = "Free Bets  :  "+set.tirosGratis;
+                blocki.appendChild(img);
+                address.innerHTML = set.address;
+                tiros.innerHTML = "Free Bets  :  "+set.tirosGratis;
 
-        div.classList.add("box2");
-        blocki.classList.add("blocki2");
-        address.id="address";
+                div.classList.add("box2");
+                blocki.classList.add("blocki2");
+                address.id="address";
 
-        div.appendChild(blocki);
-        div.appendChild(address);
-        div.appendChild(tiros);
+                div.appendChild(blocki);
+                div.appendChild(address);
+                div.appendChild(tiros);
 
-        tabla.appendChild(div);
-    })}
+                tabla.appendChild(div);
+            }})
+        
+    }
 tt.oninput =()=>{
-   console.log(tt.value)
     let tabla = document.querySelectorAll("#address")
+    let z = document.querySelectorAll(".visible")
     for(let i in tabla)
     {   
 
         if(tabla[i].textContent){
-          tabla[i].textContent.includes(tt.value)?
+            let valor1 = tabla[i].textContent.toLowerCase();
+            let valor2 = tt.value.toLowerCase();
+          valor1.includes(valor2)?
           vis(tabla[i].parentNode.classList):
           invis(tabla[i].parentNode.classList)
           
         }
     }
+   
+    if(document.querySelectorAll(".visible").length==0){
+        vis(mensaje.classList);
+    }else{
+        if(z[0].id!="mensaje"){invis(mensaje.classList)}
+    }
+
     }
 var vis = (x)=>{
+
     x.remove("invisible")
     x.add("visible")}
 var invis = (x)=>{
