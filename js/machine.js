@@ -894,6 +894,7 @@ function openModal(e) {
       contract_window.style.display = "block";
       // When the user clicks on <span> (x), close the modal
       span.onclick = function () {
+            
          modal.style.display = "none";
          contract_window.style.display = "none";
       }
@@ -1238,4 +1239,15 @@ function envioRecursoPromocionMaquina() {
    } else {
       alert("It seems that the field is empty or your address is not complete.");
    }
+}
+
+// - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+// mailchimp
+// - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+var chimp=()=>{
+      setTimeout(function(){ 
+
+            openModal(mail)
+      }, 15000);
+    
 }
