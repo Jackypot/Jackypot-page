@@ -49,7 +49,7 @@ var vis = (x)=>{
 var invis = (x)=>{
     x.remove("visible")
     x.add("invisible")}
-var borrartabla = () => {
+var borrartabla = () => {//metodo que elimina, los childnodes del nodo lista
     
     while (lista.firstChild) {
         lista.removeChild(lista.firstChild);

@@ -446,6 +446,7 @@ Game
     height: 29px;
     width: 200px;
     cursor: pointer;
+    margin-bottom: 5%;
 }
 /* ***************************************
 Chat o tabla
@@ -1528,20 +1529,9 @@ Contenedor de dic con video
 }
 .box2 div{ display: inline-block; margin-right: 5% ; }
 .tut{
+
     float: right;
-    margin-bottom: 3%;
-    width: fit-content;
-    background: #DAE60C;
-    border-radius: 5px;
-    border: 0;
-    cursor: pointer;
-    color: white;
-    font-size: 19px;
-    padding-top: 5px;
-    padding-bottom: 10px;
-    transition: all 0.3s;
-    margin-top: -4px;
-    font-weight: 700;
+      
 }
 .fix2{
     display: inline;
