@@ -44,8 +44,7 @@ function validaNumericos(event) {
     return false;
 }
 
-function abrirVideo(){ document.getElementById("contenedor_video_div").style.display = "block"; }
-function cerrarVideo(){ document.getElementById("contenedor_video_div").style.display = "none"; }
+
 
 
 
@@ -338,3 +337,10 @@ class Btn_Swich {
 (function(){
 	new Btn_Swich();
 })();
+
+function abrirVideo(){ 
+    document.getElementById("contenedor_video_div").style.display = "block";
+}
+function cerrarVideo(){ 
+
+    document.getElementById("contenedor_video_div").style.display = "none";  }

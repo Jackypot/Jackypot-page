@@ -483,7 +483,6 @@ Chat o tabla
 
 .activo{
     font-weight: bold;
-    color: black !important;
 }
 
 .active_btn{
@@ -989,7 +988,24 @@ Free bets
     box-shadow: 1px 1px 1px 1px rgb(0,0,0);
     margin-bottom: 10px;
 }
-
+ .a2{
+    display: inline-block;
+    margin-right:15%; 
+    color: white;
+    
+}
+.a1{
+    display: inline-block;
+    margin-left:25%; 
+    margin-right:15%; 
+    color:white;
+}
+/* .fa-twitter-square{
+    color:white;
+}
+.fa-telegram{
+    color:white;
+} */
 /* Slider */
 .contenedor-promocion{
     overflow: hidden;
@@ -1544,4 +1560,9 @@ Contenedor de dic con video
 .invisible{
     display:none}
 .visible{ 
-    display:block}
+    display:block
+}
+
+.fix3{
+    color:#FF0000;
+}

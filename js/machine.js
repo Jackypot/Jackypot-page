@@ -1,3 +1,36 @@
+// - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+// youtube
+// - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+// 2. This code loads the IFrame Player API code asynchronously.
+var tag = document.createElement('script');
+tag.src = "https://www.youtube.com/iframe_api";
+var firstScriptTag = document.getElementsByTagName('script')[0];
+firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
+var done = false;
+var bets;
+var freebets
+
+function onYouTubeIframeAPIReady() {
+  bets = new YT.Player('bets', {
+    height: '100%',
+    width: '100%',
+    videoId: 'aLna4G5I8_c',
+    playerVars: {rel: 0},
+  });
+  freebets = new YT.Player('freebets', {
+      height: '100%',
+      width: '100%',
+      videoId: '6aX6QdiDD3k',
+      playerVars: {rel: 0},
+    });
+}
+function stopVideo() {
+  bets.stopVideo();
+  freebets.stopVideo();
+}
+
+
+
 // **********************************************************
 // Obtencion del tamaño de Viewport en relacion a Width
 // **********************************************************
@@ -877,12 +910,14 @@ var temp = "";
 function openModal(e) {
    contract_window = document.getElementById(e + '-window');
    modal = document.getElementById(e + '-modal');
-
+   console.log("aqui estoy")
    // Get the button that opens the modal
    var btn = document.getElementById(e);
    // Get the <span> element that closes the modal
    var span = document.getElementById(e + '-close');
    if (temp !== e && temp !== "") {
+        
+      
       let a = document.getElementById(temp + '-window').style.display = "none";
       let b = document.getElementById(temp + '-modal').style.display = "none";
    }
@@ -897,6 +932,7 @@ function openModal(e) {
             
          modal.style.display = "none";
          contract_window.style.display = "none";
+         stopVideo();
       }
    }
    if (e == "how-play") {
@@ -1251,3 +1287,4 @@ var chimp=()=>{
       }, 15000);
     
 }
+
