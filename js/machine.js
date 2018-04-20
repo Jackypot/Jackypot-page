@@ -14,13 +14,13 @@ function onYouTubeIframeAPIReady() {
   bets = new YT.Player('bets', {
     height: '100%',
     width: '100%',
-    videoId: 'aLna4G5I8_c',
+    videoId: '6M_nY-l4aNI',
     playerVars: {rel: 0},
   });
   freebets = new YT.Player('freebets', {
       height: '100%',
       width: '100%',
-      videoId: '6aX6QdiDD3k',
+      videoId: '6RhL7scOics',
       playerVars: {rel: 0},
     });
 }
