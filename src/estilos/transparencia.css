@@ -1,0 +1,51 @@
+/* ***************************************
+transparencia
+*************************************** */
+.transparencia h2{
+    text-align: center;
+    color: rgb(254,210,49);
+    font-size: 29px;
+}
+.trunk{
+    width: 90%;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.representation-trans img{
+    width: 40px;
+    height: 40px;
+}
+
+.representation-trans{
+    border-radius: 5px;
+    border: none;
+    box-shadow: 1px 1px 1px 1px rgba(255, 255, 255, 0.5);
+    width: 300px;
+    text-align: center;
+    margin: 0 auto;
+}
+
+.container-transparencia{
+    margin: 0 auto;
+    color: white;
+    
+}
+.container-transparencia th{
+    background-color: #f7f6e7;
+    
+    color: red;
+    text-align: center;
+    height: 40px;
+    position: static;
+    top: 0px;
+    
+    border-spacing: 0px;
+}
+.container-transparencia .img-fluid{
+    display: block;
+    width: auto;
+    margin: 0 auto;
+}
+.container-transparencia a{color: white;}

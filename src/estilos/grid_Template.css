@@ -1,0 +1,33 @@
+.navigation {grid-area: nav;}
+.introduction, .content, .information{background-color: rgb(54, 66, 86); height: 80vh}
+.introduction {grid-area: intr; overflow: hidden;}
+.content {grid-area: conte;}
+.collapse {grid-area: collap; display: none;}
+.information {grid-area: info; overflow: hidden;}
+.footer {grid-area: footer; background-color: #f7f6e7;}
+
+.wrapper {
+    color: #404969;
+    margin: 0 auto;
+    background-color: rgb(64, 86, 119);
+    width: 80%;
+    height: 80%;
+}
+
+.wrapper {
+    display: grid;
+    grid-gap: 13px 20px;
+    grid-template-columns: 25% auto 25%;
+    grid-template-areas:
+    "nav  nav  nav"
+    "intr conte info"
+    "footer  footer  footer";
+}
+
+.box {
+    color: white;
+    border-radius: 5px;
+    padding: 9px;
+}
+
+.header, .footer {background-color: white;}

@@ -1,0 +1,18 @@
+
+
+.terms{
+    background: rgb(64, 86, 119);
+    width: 1000px;
+    height: auto;
+    margin: auto;
+    overflow: auto;
+    margin-left: auto;
+}
+
+
+
+.terms li{
+    color: cornsilk;
+}
+
+

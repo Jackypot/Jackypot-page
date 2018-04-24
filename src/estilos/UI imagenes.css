@@ -1,0 +1,6 @@
+/* ***************************************
+Ul imagenes
+*************************************** */
+
+ul.git { list-style-image: url('../assets/contract/git.png'); }
+ul.eth { list-style-image: url('../assets/contract/eth.png'); }

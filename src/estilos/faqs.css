@@ -1,0 +1,105 @@
+/* ***************************************
+Frecuents Questions
+*************************************** */
+.faqs, .terms, .contact, .free-bets, .contrato-transp{
+    
+    position: absolute;
+    top: 84px;
+    height: 82vh;
+    background-color: rgb(54, 66, 86);
+    border-radius: 5px;
+    overflow-x: auto;
+    padding: 17px;
+    margin-bottom: 10px;
+    width: 70%;
+}
+
+.faqs p{
+    color: white;
+    font: 100;
+    font-size: 20PX;
+    font-family: Arial;
+    text-align: center,justify;
+    margin-left: 2cm;
+}
+
+.faqs ul li {
+    list-style: none;
+    margin-left: 2cm;
+    display: inline;
+}
+.faqs ol{
+    margin-left: 2cm;
+    list-style-type: decimal;
+    
+}
+.faqs a button{
+    margin-left: 2cm;
+    display: inline;
+
+}
+.container-faqs{color: white;}
+.container-faqs h4{color: #fdee34; font-size: 22px;}
+.container-faqs h2, .faqs h2{
+    text-align: center;
+    color: #fed232;
+    font-weight: bold;
+    font-size: 29px;
+}
+.container-faqs .img-fluid{
+    width: 5%;
+}
+.table{
+    width: 98%;
+    border-radius: 5px;
+    box-shadow: 1px 1px 1px 1px rgba(255, 255, 255, 0.5);
+}
+
+.table img{margin-top: 8px;}
+
+.borde-vertical{border-right: 1px solid rgba(255, 255, 255, 0.2);}
+.borde-horizontal{border-top: 1px solid rgba(255, 255, 255, 0.2);}
+.container-faqs a{margin-right: 10px}
+
+.tutorial, .bitcoiner-today, .medium, .steemit{
+    text-shadow: 0 1px 0 rgba(0, 0, 0, 0.2);
+    background-color: black;
+    transition: all 500ms;
+}
+
+.tutorial, .bitcoiner-today, .medium, .steemit{
+    height: 40px;
+    border: none;
+    width: 97px;
+    color: white;
+}
+
+.tutorial{box-shadow: 2px 2px 2px 0 rgba(0, 0, 0, 0.1), 4px 4px 0 0 #f00;}
+.tutorial:hover{
+    background-color: #f00;
+    box-shadow: 2px 2px 2px 0 rgba(0, 0, 0, 0.1), 4px 4px 0 0 #171F24;
+    text-shadow: 0 1px 0 rgba(0, 0, 0, 0.2);
+}
+
+.bitcoiner-today{box-shadow: 2px 2px 2px 0 rgba(0, 0, 0, 0.1), 4px 4px 0 0 #ff9900;}
+.bitcoiner-today:hover{
+    background-color: #ff9900;
+    box-shadow: 2px 2px 2px 0 rgba(0, 0, 0, 0.1), 4px 4px 0 0 #171F24;
+    text-shadow: 0 1px 0 rgba(0, 0, 0, 0.2);
+}
+
+.medium{box-shadow: 2px 2px 2px 0 rgba(0, 0, 0, 0.1), 4px 4px 0 0 #fff;}
+.medium:hover{
+    background-color: #fff;
+    box-shadow: 2px 2px 2px 0 rgba(0, 0, 0, 0.1), 4px 4px 0 0 #171F24;
+    text-shadow: 0 1px 0 rgba(0, 0, 0, 0.2);
+}
+
+.steemit{box-shadow: 2px 2px 2px 0 rgba(0, 0, 0, 0.1), 4px 4px 0 0 #06D6A9;}
+.steemit:hover{
+    background-color: #06D6A9;
+    box-shadow: 2px 2px 2px 0 rgba(0, 0, 0, 0.1), 4px 4px 0 0 #171F24;
+    text-shadow: 0 1px 0 rgba(0, 0, 0, 0.2);
+}
+
+.tutorial:hover, .bitcoiner-today:hover, .medium:hover, .steemit:hover{cursor: pointer; color: black;}

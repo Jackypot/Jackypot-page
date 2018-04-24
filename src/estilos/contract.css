@@ -1,0 +1,16 @@
+/* ***************************************
+contrato
+*************************************** */
+.contrato-transp{color: white;
+margin:0 auto;
+font-size: 20px;}
+.contrato-transp h2{
+    color: yellow;
+    text-align: center;
+}
+.contrato-transp a{
+    color: white;
+}
+.contrato-transp ul{
+    list-style: none;
+}

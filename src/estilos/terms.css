@@ -1,0 +1,15 @@
+/* ***************************************
+Terminos
+*************************************** */
+.terms{
+    color: white;
+}
+
+.terms h2{
+    color: #fed232;
+    font-size: 29px;
+    text-align: center;
+}
+.terms ul{
+    font-size: 20px;
+}

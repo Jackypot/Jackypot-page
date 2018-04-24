@@ -1,0 +1,67 @@
+/* ***************************************
+Navigation
+*************************************** */
+.logo {grid-area: logo;}
+.nav {
+    grid-area: nav-bar;
+    text-align: center;
+    font-weight: bold;
+}
+
+.container-navigation{
+    display: grid;
+    grid-template-columns: 25% 75%;
+    grid-template-areas:
+    "logo  nav-bar";
+}
+.nav a{
+    
+    text-decoration: none;
+    
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    white-space: nowrap;
+    overflow: hidden;
+    color: red;
+    border-radius: 5px;
+    padding: 17px;
+}
+
+.nav ul{
+   
+    
+    background: #f7f6e7;
+    color: red;
+    border-radius: 5px;
+    margin: 0px auto;
+    height: 54px;
+}
+
+
+.nav li{
+    display: inline-block;
+    width: 16%;
+    padding-top: 17px;
+   
+   
+
+    text-overflow: ellipsis;
+}
+
+.nav a.active{
+    background-color: rgba(0, 0, 0, 0.3);
+}
+
+.nav a:hover{
+    cursor: pointer;
+    background-color: rgba(0, 0, 0, 0.3);
+}
+
+.span-nav{
+    position: relative;
+    top: -15px;
+    left: -18px;
+    font-size: 9px;
+}

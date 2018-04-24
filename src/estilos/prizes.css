@@ -1,0 +1,20 @@
+/* ***************************************
+prizes
+*************************************** */
+.contenedor-prizes{
+    width: 530px;
+    height: 335px;
+    margin: 0px auto;
+}
+
+.all-prizes{
+    width: 80%;
+    display: none;
+}
+.all-prizes .representation-trans{
+    width: 100%;
+}
+
+#how-play-modal .contenedor-premios img{width: 25%;}
+#how-play-modal .contenedor-premios{width: 100%; text-align: center;}
+
